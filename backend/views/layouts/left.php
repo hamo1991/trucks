@@ -32,6 +32,13 @@
                 'items' => [
                     ['label' => 'Website Menu', 'options' => ['class' => 'header']],
                     ['label' => 'Gii', 'icon' => 'file-code-o', 'url' => ['/gii']],
+                    ['label' => 'страницы', 'icon' => 'dashboard', 'url' => ['/pages']],
+                    ['label' => 'Choose-Us', 'icon' => 'dashboard', 'url' => ['/choose']],
+                    ['label' => 'Service', 'icon' => 'dashboard', 'url' => ['/service']],
+                    ['label' => 'Technology', 'icon' => 'dashboard', 'url' => ['/technology']],
+                    ['label' => 'Pictures', 'icon' => 'dashboard', 'url' => ['/pictures']],
+                    ['label' => 'Info', 'icon' => 'dashboard', 'url' => ['/info']],
+                    ['label' => 'Slider', 'icon' => 'dashboard', 'url' => ['/slider']],
                     ['label' => 'Login', 'url' => ['site/login'], 'visible' => Yii::$app->user->isGuest],
                     [
                         'label' => 'Some tools',
