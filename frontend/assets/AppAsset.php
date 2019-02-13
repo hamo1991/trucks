@@ -34,6 +34,7 @@ class AppAsset extends AssetBundle
         'js/avoid.console.error.js',
         'js/waypoints.min.js',
         'js/wow.min.js',
+        'js/script.js'
 
 
     ];

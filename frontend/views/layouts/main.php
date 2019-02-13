@@ -114,8 +114,11 @@ AppAsset::register($this);
         </div>
     </div>
 </header>
+<div class="test">
+    <?= $content ?>
 
-<?= $content ?>
+</div>
+
 
 
 <footer class="footer-area section-padding-80-0">
