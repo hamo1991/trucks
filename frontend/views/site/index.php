@@ -195,7 +195,7 @@ $this->title = 'Akame';
             </div>
         </div>
 
-        <div class="row">
+        <div class="row owl">
 
             <!-- Single Service Area -->
             <div class="col-12 col-sm-6 col-lg-3">
