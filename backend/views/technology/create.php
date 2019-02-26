@@ -5,7 +5,7 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model common\models\Technology */
 
-$this->title = 'Create Technology';
+$this->title = 'Добавить новая техника';
 $this->params['breadcrumbs'][] = ['label' => 'Technologies', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
