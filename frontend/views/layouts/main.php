@@ -41,10 +41,14 @@ AppAsset::register($this);
                 </div>
                 <div class="col-7">
                     <div class="top-header-content text-right">
-                        <p><i class="fa fa-clock-o" aria-hidden="true"></i> Mon-Sat: 8.00 to 17.00 <span
+                        <p><i class="fa fa-clock-o" aria-hidden="true"></i> Mon-Sat:   <?php
+                            echo \frontend\widgets\info\InfoWidget::widget(['action' => 'work_time']);
+                            ?></a> <span
                                     class="mx-2"></span> | <span class="mx-2"></span> <i class="fa fa-phone"
                                                                                          aria-hidden="true"></i> Call
-                            us: (+12)-345-6789</p>
+                            us:   <?php
+                            echo \frontend\widgets\info\InfoWidget::widget(['action' => 'phone']);
+                            ?></a></p>
                     </div>
                 </div>
             </div>
@@ -149,8 +153,9 @@ AppAsset::register($this);
 
                     <!-- Open Times -->
                     <div class="open-time">
-                        <p>Monday: Friday: 10.00 - 23.00</p>
-                        <p>Saturday: 10.00 - 19.00</p>
+                        <p>Monday: Friday:   <?php
+                            echo \frontend\widgets\info\InfoWidget::widget(['action' => 'work_time']);
+                            ?></a></p>
                     </div>
 
                     <!-- Social Info -->
@@ -172,9 +177,15 @@ AppAsset::register($this);
 
                     <!-- Contact Address -->
                     <div class="contact-address">
-                        <p>Tel: (+12) 345 678 910</p>
-                        <p>E-mail: Hello.colorlib@gmail.com</p>
-                        <p>Address: Iris Watson, P.O. Box 283 8562 Fusce Rd, NY</p>
+                        <p>Tel:   <?php
+                            echo \frontend\widgets\info\InfoWidget::widget(['action' => 'phone']);
+                            ?></a></p>
+                        <p>E-mail:   <?php
+                            echo \frontend\widgets\info\InfoWidget::widget(['action' => 'email']);
+                            ?></a></p>
+                        <p>Address:   <?php
+                            echo \frontend\widgets\info\InfoWidget::widget(['action' => 'address']);
+                            ?></a></p>
                     </div>
                 </div>
             </div>

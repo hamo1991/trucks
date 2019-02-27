@@ -28,7 +28,7 @@ class Info extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['type', 'content', 'slug'], 'required'],
+            [['type', 'content'], 'required'],
             [['type', 'content', 'slug'], 'string', 'max' => 255],
         ];
     }
