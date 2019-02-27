@@ -39,6 +39,7 @@
                     ['label' => 'Pictures', 'icon' => 'dashboard', 'url' => ['/pictures']],
                     ['label' => 'Info', 'icon' => 'dashboard', 'url' => ['/info']],
                     ['label' => 'Slider', 'icon' => 'dashboard', 'url' => ['/slider']],
+                    ['label' => 'Messages', 'icon' => 'dashboard', 'url' => ['/email']],
                     ['label' => 'Login', 'url' => ['site/login'], 'visible' => Yii::$app->user->isGuest],
                     [
                         'label' => 'Some tools',

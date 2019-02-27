@@ -9,7 +9,6 @@ use yii\widgets\DetailView;
 $this->title = $model->title;
 $this->params['breadcrumbs'][] = ['label' => 'Sliders', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
-\yii\web\YiiAsset::register($this);
 ?>
 <div class="slider-view">
 
@@ -29,12 +28,18 @@ $this->params['breadcrumbs'][] = $this->title;
     <?= DetailView::widget([
         'model' => $model,
         'attributes' => [
-            'id',
-            'image',
-            'title',
+//            'id',
+            'title:html',
             'description:ntext',
             'content:ntext',
-            'slug',
+            [
+                'attribute' => 'image',
+                'format' => 'raw',
+                'filter' => '',
+                'value' => function($model){
+                    return Html::img(\yii\helpers\Url::to('/frontend/web/images/uploads/slider/'. $model->image),['width' => '120px','height' => '80px',]);
+                }
+            ] ,
         ],
     ]) ?>
 

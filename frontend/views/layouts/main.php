@@ -77,33 +77,33 @@ AppAsset::register($this);
                         <!-- Nav Start -->
                         <div class="classynav">
                             <ul id="nav">
-                                <li class="active"><a href="<?= \yii\helpers\Url::to(['/']) . 'site/' ?>">Home</a></li>
+                                <li><a href="<?= \yii\helpers\Url::to(['/']) . 'site/' ?>">Home</a></li>
                                 <li><a href="<?= \yii\helpers\Url::to(['/']) . 'site/transports' ?>">Transports</a></li>
                                 <li><a href="<?= \yii\helpers\Url::to(['/']) . 'site/services' ?>">Services</a></li>
                                 <li><a href="<?= \yii\helpers\Url::to(['/']) . 'site/about' ?>">About Us</a></li>
                                 <li><a href="<?= \yii\helpers\Url::to(['/']) . 'site/contact' ?>">Contact</a></li>
-                                <?php
-                                if (Yii::$app->user->isGuest) {
-                                    ?>
-                                    <li><a href="<?= \yii\helpers\Url::to(['/']) . 'site/signup' ?>">Signup</a></li>
-                                    <li><a href="<?= \yii\helpers\Url::to(['/']) . 'site/login' ?>">Login</a></li>
-                                    <?php
-                                } else {
-                                    ?>
-                                    <li>
-                                        <form action="<?= \yii\helpers\Url::to(['/']) . 'site/logout' ?>" method="post">
-                                            <input type="hidden" name="_csrf-frontend" value="wqOKrocOxVjlwA10wE3aL9happ62mB-JkYcttODH4s6o17ze3TugNJ2zNReJD69GqmvH8t_hU8ajsRzcmoKOoQ==">
-                                            <button class="btn btn-link logout" name="submit" type="submit"><a id="logout">Logout
-                                                    (<?= Yii::$app->user->identity->username ?>)</a>
-                                            </button>
-
-
-                                        </form>
-                                    </li>
-                                    <?php
-                                }
-
-                                ?>
+<!--                                --><?php
+//                                if (Yii::$app->user->isGuest) {
+//                                    ?>
+<!--                                    <li><a href="--><?//= \yii\helpers\Url::to(['/']) . 'site/signup' ?><!--">Signup</a></li>-->
+<!--                                    <li><a href="--><?//= \yii\helpers\Url::to(['/']) . 'site/login' ?><!--">Login</a></li>-->
+<!--                                    --><?php
+//                                } else {
+//                                    ?>
+<!--                                    <li>-->
+<!--                                        <form action="--><?//= \yii\helpers\Url::to(['/']) . 'site/logout' ?><!--" method="post">-->
+<!--                                            <input type="hidden" name="_csrf-frontend" value="wqOKrocOxVjlwA10wE3aL9happ62mB-JkYcttODH4s6o17ze3TugNJ2zNReJD69GqmvH8t_hU8ajsRzcmoKOoQ==">-->
+<!--                                            <button class="btn btn-link logout" name="submit" type="submit"><a id="logout">Logout-->
+<!--                                                    (--><?//= Yii::$app->user->identity->username ?><!--)</a>-->
+<!--                                            </button>-->
+<!---->
+<!---->
+<!--                                        </form>-->
+<!--                                    </li>-->
+<!--                                    --><?php
+//                                }
+//
+//                                ?>
 
                             </ul>
                         </div>
