@@ -3,11 +3,12 @@
 use yii\helpers\Html;
 use yii\grid\GridView;
 use yii\widgets\Pjax;
+
 /* @var $this yii\web\View */
 /* @var $searchModel common\models\TechnologySearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Technologies';
+$this->title = 'Tехника';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="technology-index">
@@ -17,7 +18,8 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a('Create Technology', ['create'], ['class' => 'btn btn-success']) ?>
+
+        <?= Html::a('Добавить новая техника', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?= GridView::widget([
@@ -27,10 +29,29 @@ $this->params['breadcrumbs'][] = $this->title;
             ['class' => 'yii\grid\SerialColumn'],
 
             'id',
-            'title',
-            'image',
-            'price_date',
-            'min_price',
+            [
+                'label' => 'Названия',
+                'attribute' => 'title',
+            ],
+            [
+                'label' => 'Картинка',
+                'attribute' => 'image',
+                'format' => 'raw',
+                'filter' => '',
+                'value' => function ($model) {
+                    return Html::img(\yii\helpers\Url::to('@home/images/uploads/equipment/' . $model->image), ['width' => '100px', 'class' => 'img']);
+                }
+            ],
+            [
+                'label' => 'Ежедневная плата',
+                'attribute' => 'price_date',
+            ],
+            [
+                'label' => 'Минимальная цена',
+                'attribute' => 'min_price',
+
+            ],
+
             //'is_new',
             //'slug',
 

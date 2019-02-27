@@ -119,8 +119,6 @@ AppAsset::register($this);
 
 </div>
 
-
-
 <footer class="footer-area section-padding-80-0">
     <div class="container">
         <div class="row justify-content-between">
@@ -138,7 +136,7 @@ AppAsset::register($this);
                     <!-- Copywrite Text -->
                     <div class="copywrite-text">
                         <p>Copyright &copy;2019 All rights reserved<i class="fa fa-heart-o" aria-hidden="true"></i> by
-                            <a href="https://colorlib.com" target="_blank">Group-9 Developers</a></p>
+                            <a href="/">Group-9 Developers</a></p>
                     </div>
                 </div>
             </div>

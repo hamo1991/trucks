@@ -35,7 +35,7 @@
                     ['label' => 'страницы', 'icon' => 'dashboard', 'url' => ['/pages']],
                     ['label' => 'Choose-Us', 'icon' => 'dashboard', 'url' => ['/choose']],
                     ['label' => 'Service', 'icon' => 'dashboard', 'url' => ['/service']],
-                    ['label' => 'Technology', 'icon' => 'dashboard', 'url' => ['/technology']],
+                    ['label' => 'Tехника', 'icon' => 'car', 'url' => ['/technology']],
                     ['label' => 'Pictures', 'icon' => 'dashboard', 'url' => ['/pictures']],
                     ['label' => 'Info', 'icon' => 'dashboard', 'url' => ['/info']],
                     ['label' => 'Slider', 'icon' => 'dashboard', 'url' => ['/slider']],

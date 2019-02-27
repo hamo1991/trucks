@@ -2,7 +2,7 @@
 
 /* @var $this yii\web\View */
 
-$this->title = 'Akame';
+$this->title = 'Trucks';
 ?>
 <section class="welcome-area">
     <div class="welcome-slides owl-carousel">

@@ -12,20 +12,27 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'title')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'title')->textInput(['maxlength' => true])->label('Названия') ?>
 
-    <?= $form->field($model, 'image')->textInput(['maxlength' => true]) ?>
+    <?php
+    if(!empty($model->image)){
+        echo Html::img(\yii\helpers\Url::to('@home/images/uploads/equipment/'.$model->image),['width' => '100px','class'=>'img']);
 
-    <?= $form->field($model, 'price_date')->textInput() ?>
+    }
+    ?>
 
-    <?= $form->field($model, 'min_price')->textInput() ?>
+    <?= $form->field($model, 'image')->fileInput()->label('Картинка') ?>
 
-    <?= $form->field($model, 'is_new')->dropDownList([ '0', '1', ], ['prompt' => '']) ?>
+    <?= $form->field($model, 'price_date')->textInput()->label('Ежедневная плата') ?>
+
+    <?= $form->field($model, 'min_price')->textInput()->label('Минимальная цена') ?>
+
+    <?= $form->field($model, 'is_new')->dropDownList([ '0', '1', ], ['prompt' => ''])->label('Новинка') ?>
 
     <?= $form->field($model, 'slug')->textInput(['maxlength' => true]) ?>
 
     <div class="form-group">
-        <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>
+        <?= Html::submitButton('Сохранить', ['class' => 'btn btn-success']) ?>
     </div>
 
     <?php ActiveForm::end(); ?>
