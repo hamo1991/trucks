@@ -86,6 +86,21 @@ $this->params['breadcrumbs'][] = $this->title;
 <!-- Contact Area Start -->
 <section class="akame-contact-area bg-gray section-padding-80">
     <div class="container">
+        <?php if (Yii::$app->session->hasFlash('success')): ?>
+            <div class="alert alert-success">
+                <button aria-hidden="true" style="display: block" data-dismiss="alert" class="close" type="button">X
+                </button>
+                <?= Yii::$app->session->getFlash('success') ?>
+            </div>
+        <?php endif; ?>
+
+
+        <?php if (Yii::$app->session->hasFlash('error')): ?>
+            <div class="alert alert-danger">
+                <button aria-hidden="true" data-dismiss="alert" class="close" type="button">X</button>
+                <?= Yii::$app->session->getFlash('error') ?>
+            </div>
+        <?php endif; ?>
         <div class="row">
             <!-- Section Heading -->
             <div class="col-12">
@@ -127,9 +142,9 @@ $this->params['breadcrumbs'][] = $this->title;
 
                 <?= $form->field($model, 'body')->textarea(['rows' => 6]) ?>
 
-                <?= $form->field($model, 'verifyCode')->widget(Captcha::className(), [
-                    'template' => '<div class="row"><div class="col-lg-3">{image}</div><div class="col-lg-6">{input}</div></div>',
-                ]) ?>
+<!--                --><?//= $form->field($model, 'verifyCode')->widget(Captcha::className(), [
+//                    'template' => '<div class="row"><div class="col-lg-3">{image}</div><div class="col-lg-6">{input}</div></div>',
+//                ]) ?>
 
                 <div class="form-group text-center">
                     <?= Html::submitButton('Submit', ['class' => 'btn akame-btn btn-3 mt-15 active', 'name' => 'contact-button']) ?>

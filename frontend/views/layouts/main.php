@@ -60,8 +60,8 @@ AppAsset::register($this);
                 <nav class="classy-navbar justify-content-between" id="akameNav">
 
                     <!-- Logo -->
-                    <a class="nav-brand" href="<?= \yii\helpers\Url::to(['/']) . 'site/' ?>"><img
-                                src="<?= \yii\helpers\Url::to(['/']) . 'images/logo.png' ?>" alt=""></a>
+                    <a class="nav-brand" href="<?= \yii\helpers\Url::to(['/']) . 'site/' ?>"><img style="width: 250px;height: 60px"
+                                src="<?= \yii\helpers\Url::to(['/']) . 'images/logo.jpg' ?>" alt="logo"></a>
 
                     <!-- Navbar Toggler -->
                     <div class="classy-navbar-toggler">
@@ -127,8 +127,8 @@ AppAsset::register($this);
             <div class="col-12 col-sm-6 col-md-4">
                 <div class="single-footer-widget mb-80">
                     <!-- Footer Logo -->
-                    <a href="<?= \yii\helpers\Url::to(['/']) . 'site/' ?>" class="footer-logo"><img
-                                src="<?= \yii\helpers\Url::to(['/']) . 'images/logo.png' ?>" alt=""></a>
+<!--                    <a href="--><?//= \yii\helpers\Url::to(['/']) . 'site/' ?><!--" class="footer-logo"><img-->
+<!--                                src="--><?//= \yii\helpers\Url::to(['/']) . 'images/logo.jpg' ?><!--" alt=""></a>-->
 
                     <p class="mb-30">We would love to serve you and let you enjoy your culinary experience. Excepteur
                         sint occaecat cupidatat non proident.</p>

@@ -26,18 +26,18 @@ class ContactForm extends \yii\db\ActiveRecord {
             // email has to be a valid email address
             ['email', 'email'],
             // verifyCode needs to be entered correctly
-            ['verifyCode', 'captcha'],
+//            ['verifyCode', 'captcha'],
         ];
     }
 
     /**
      * {@inheritdoc}
      */
-    public function attributeLabels() {
-        return [
-            'verifyCode' => 'Verification Code',
-        ];
-    }
+//    public function attributeLabels() {
+//        return [
+//            'verifyCode' => 'Verification Code',
+//        ];
+//    }
 
     /**
      * Sends an email to the specified email address using the information collected by this model.

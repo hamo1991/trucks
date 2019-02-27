@@ -160,7 +160,17 @@ class TechnologyController extends Controller
      */
     public function actionDelete($id)
     {
-        $this->findModel($id)->delete();
+        $model = $this->findModel($id);
+        $image = $model->image;
+        $imgPath = Yii::getAlias('@frontend') . '/web/images/uploads/equipment/';
+        $file = $imgPath . $image;
+        if ($image == '') {
+            $this->findModel($id)->delete();
+        } elseif (file_exists($file)) {
+            unlink($file);
+            $this->findModel($id)->delete();
+        }
+
 
         return $this->redirect(['index']);
     }

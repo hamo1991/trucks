@@ -40,7 +40,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 'format' => 'raw',
                 'filter' => '',
                 'value' => function ($model) {
-                    return Html::img(\yii\helpers\Url::to('@home/images/uploads/equipment/' . $model->image), ['width' => '100px', 'class' => 'img']);
+                    return Html::img(\yii\helpers\Url::to('/frontend/web/images/uploads/equipment/' . $model->image), ['width' => '100px', 'class' => 'img']);
                 }
             ],
             [
