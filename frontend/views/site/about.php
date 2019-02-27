@@ -14,11 +14,12 @@ $this->params['breadcrumbs'][] = $this->title;
         <div class="row">
             <div class="col-12">
                 <div class="breadcrumb-content">
-                    <h2>About Us</h2>
+                    <h2>О Нас</h2>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="<?= \yii\helpers\Url::to(['/']) . 'site/' ?>"><i class="icon_house_alt"></i> Home</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">About</li>
+                            <li class="breadcrumb-item"><a href="<?= \yii\helpers\Url::to(['/']) . 'site/' ?>"><i
+                                            class="icon_house_alt"></i> Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">О Нас</li>
                         </ol>
                     </nav>
                 </div>
@@ -35,19 +36,29 @@ $this->params['breadcrumbs'][] = $this->title;
             <!-- Section Heading -->
             <div class="col-12 col-lg-6">
                 <div class="section-heading text-right mb-80 pr-5 pt-3">
-                    <p>New York • Since 2004</p>
-                    <h2>About Our Stories</h2>
-                    <span>History</span>
+                    <p>Москва</p>
+                    <?php
+                    if (!empty($about)) {
+                    foreach ($about
+
+                    as $a) {
+                    ?>
+                    <h2><?= $a['title'] ?></h2>
+                    <span>История</span>
                 </div>
             </div>
 
             <div class="col-12 col-lg-6">
                 <div class="about--us--content mb-80">
-                    <p>At Hairone Salon, we are lorem ipsum dolor sit amet, consectetur adipi elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <p><?= $a['content'] ?></p>
                     <img src="<?= \yii\helpers\Url::to(['/']) . 'images/signature.png' ?>" alt="">
                     <h4>Lara Croft</h4>
                 </div>
             </div>
+            <?php
+                }
+            }
+            ?>
         </div>
     </div>
 </section>
@@ -61,8 +72,9 @@ $this->params['breadcrumbs'][] = $this->title;
         <div class="row">
             <div class="col-12">
                 <div class="video-content-area mb-80">
-                    <img src="<?= \yii\helpers\Url::to(['/']) . 'images/44.jpg' ?>" alt="">
-                    <a href="https://www.youtube.com/watch?v=Ldd8yjjo6jA" class="video-play-btn wow bounceInDown" data-wow-delay="200ms"><i class="fa fa-play"></i></a>
+                    <img src="<?= \yii\helpers\Url::to(['/images/uploads/about']) . '/' . $a['image'] ?>" alt="">
+                    <a href="<?= $a['url'] ?>" class="video-play-btn wow bounceInDown"
+                       data-wow-delay="200ms"><i class="fa fa-play"></i></a>
                 </div>
             </div>
         </div>
@@ -71,36 +83,36 @@ $this->params['breadcrumbs'][] = $this->title;
             <!-- Single Cool Facts Area -->
             <div class="col-12 col-sm-6 col-lg-3">
                 <div class="single-cool-facts-area text-center mb-80 wow fadeInUp" data-wow-delay="200ms">
-                    <span>Case</span>
-                    <h2 class="counter">457</h2>
-                    <p>Projects Completed</p>
+                    <span>ПРОЕКТЫ</span>
+                    <h2 class="counter">359</h2>
+                    <p>ЗАВЕРШЕННЫЕ ПРОЕКТЫ</p>
                 </div>
             </div>
 
             <!-- Single Cool Facts Area -->
             <div class="col-12 col-sm-6 col-lg-3">
                 <div class="single-cool-facts-area text-center mb-80 wow fadeInUp" data-wow-delay="400ms">
-                    <span>Client</span>
-                    <h2 class="counter">343</h2>
-                    <p>Happy Customers</p>
+                    <span>КЛИЕНТЫ</span>
+                    <h2 class="counter">250</h2>
+                    <p>СЧАСТЛИВЫЕ КЛИЕНТЫ</p>
                 </div>
             </div>
 
             <!-- Single Cool Facts Area -->
             <div class="col-12 col-sm-6 col-lg-3">
                 <div class="single-cool-facts-area text-center mb-80 wow fadeInUp" data-wow-delay="600ms">
-                    <span>Award</span>
-                    <h2 class="counter">379</h2>
-                    <p>Award Winners</p>
+                    <span>УСЛУГИ</span>
+                    <h2 class="counter">4</h2>
+                    <p>НОВЫЕ УСЛУГИ</p>
                 </div>
             </div>
 
             <!-- Single Cool Facts Area -->
             <div class="col-12 col-sm-6 col-lg-3">
                 <div class="single-cool-facts-area text-center mb-80 wow fadeInUp" data-wow-delay="800ms">
-                    <span>Style</span>
-                    <h2 class="counter">97</h2>
-                    <p>Different Hairstyles</p>
+                    <span>ТЕХНОЛОГИЯ</span>
+                    <h2 class="counter">3</h2>
+                    <p>НОВАЯ ТЕХНОЛОГИЯ</p>
                 </div>
             </div>
         </div>
@@ -118,7 +130,8 @@ $this->params['breadcrumbs'][] = $this->title;
                     <!-- Single Testimonial Slide -->
                     <div class="single-testimonial-slide">
                         <img src="<?= \yii\helpers\Url::to(['/']) . 'images/quote.png' ?>" alt="">
-                        <p>BlueFresh is so simple, it's so easy to use. And from the customer's standpoint it's very intuitive, the platform is pretty much unlimited features!</p>
+                        <p>BlueFresh is so simple, it's so easy to use. And from the customer's standpoint it's very
+                            intuitive, the platform is pretty much unlimited features!</p>
                         <div class="ratings-name d-flex align-items-center justify-content-center">
                             <div class="ratings mr-3">
                                 <i class="icon_star"></i>
@@ -134,7 +147,8 @@ $this->params['breadcrumbs'][] = $this->title;
                     <!-- Single Testimonial Slide -->
                     <div class="single-testimonial-slide">
                         <img src="<?= \yii\helpers\Url::to(['/']) . 'images/quote.png' ?>" alt="">
-                        <p>BlueFresh is so simple, it's so easy to use. And from the customer's standpoint it's very intuitive, the platform is pretty much unlimited features!</p>
+                        <p>BlueFresh is so simple, it's so easy to use. And from the customer's standpoint it's very
+                            intuitive, the platform is pretty much unlimited features!</p>
                         <div class="ratings-name d-flex align-items-center justify-content-center">
                             <div class="ratings mr-3">
                                 <i class="icon_star"></i>
@@ -150,7 +164,8 @@ $this->params['breadcrumbs'][] = $this->title;
                     <!-- Single Testimonial Slide -->
                     <div class="single-testimonial-slide">
                         <img src="<?= \yii\helpers\Url::to(['/']) . 'images/quote.png' ?>" alt="">
-                        <p>BlueFresh is so simple, it's so easy to use. And from the customer's standpoint it's very intuitive, the platform is pretty much unlimited features!</p>
+                        <p>BlueFresh is so simple, it's so easy to use. And from the customer's standpoint it's very
+                            intuitive, the platform is pretty much unlimited features!</p>
                         <div class="ratings-name d-flex align-items-center justify-content-center">
                             <div class="ratings mr-3">
                                 <i class="icon_star"></i>

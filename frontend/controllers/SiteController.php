@@ -15,6 +15,7 @@ use frontend\models\ResetPasswordForm;
 use frontend\models\SignupForm;
 use frontend\models\ContactForm;
 use common\models\Slider;
+use common\models\About;
 
 /**
  * Site controller
@@ -146,7 +147,12 @@ class SiteController extends Controller
      */
     public function actionAbout()
     {
-        return $this->render('about');
+
+        $about = About::find()->asArray()->all();
+
+        return $this->render('about',[
+            'about' => $about
+        ]);
     }
 
     /**
