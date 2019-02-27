@@ -1,6 +1,8 @@
 <?php
+
 namespace frontend\controllers;
 
+use common\models\Technology;
 use Yii;
 use yii\base\InvalidParamException;
 use yii\web\BadRequestHttpException;
@@ -217,11 +219,17 @@ class SiteController extends Controller
         ]);
     }
 
-    public function actionTransports() {
-        return $this->render('transports');
+    public function actionTransports()
+    {
+
+        $transports = Technology::find()->asArray()->all();
+        return $this->render('transports', [
+            'transports' => $transports
+        ]);
     }
 
-    public function actionServices() {
+    public function actionServices()
+    {
         return $this->render('services');
     }
 }
