@@ -464,6 +464,7 @@ img {
   padding: 0 10px;
   height: 38px;
   line-height: 38px;
+  font-weight: bold;
 }
 .breakpoint-on .classynav ul li .dropdown {
   width: 100%;

@@ -10,11 +10,11 @@ $this->title = 'Transports';
         <div class="row">
             <div class="col-12">
                 <div class="breadcrumb-content">
-                    <h2>Транспорты</h2>
+                    <h2>Спецтехника</h2>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="<?= \yii\helpers\Url::to(['/']) . 'site/' ?>"><i class="icon_house_alt"></i> Главная</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Транспорты</li>
+                            <li class="breadcrumb-item active" aria-current="page">Спецтехника</li>
                         </ol>
                     </nav>
                 </div>

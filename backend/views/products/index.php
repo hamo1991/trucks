@@ -4,20 +4,20 @@ use yii\helpers\Html;
 use yii\grid\GridView;
 use yii\widgets\Pjax;
 /* @var $this yii\web\View */
-/* @var $searchModel common\models\AboutSearch */
+/* @var $searchModel common\models\ProductsSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Abouts';
+$this->title = 'Products';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="about-index">
+<div class="products-index">
 
     <h1><?= Html::encode($this->title) ?></h1>
     <?php Pjax::begin(); ?>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a('Create About', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Create Products', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?= GridView::widget([
@@ -29,8 +29,14 @@ $this->params['breadcrumbs'][] = $this->title;
             'id',
             'title',
             'content',
-            'image',
-            'url:url',
+            [
+                'attribute' => 'image',
+                'format' => 'raw',
+                'filter' => '',
+                'value' => function($model){
+                    return Html::img(\yii\helpers\Url::to('/frontend/web/images/uploads/products/'. $model->image),['width' => '120px','height' => '80px',]);
+                }
+            ] ,
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

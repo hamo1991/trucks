@@ -16,6 +16,7 @@ use frontend\models\SignupForm;
 use frontend\models\ContactForm;
 use common\models\Slider;
 use common\models\About;
+use common\models\Products;
 
 /**
  * Site controller
@@ -77,8 +78,10 @@ class SiteController extends Controller
     public function actionIndex()
     {
         $slider = Slider::find()->asArray()->all();
+        $products = Products::find()->asArray()->all();
         return $this->render('index',[
-            'slider' => $slider
+            'slider' => $slider,
+            'products' => $products
         ]);
     }
 
