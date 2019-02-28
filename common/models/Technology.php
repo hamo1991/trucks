@@ -2,7 +2,8 @@
 namespace common\models;
 
 use Yii;
-use yii\behaviors\SluggableBehavior;
+//use yii\behaviors\SluggableBehavior;
+use common\behaviors\SlugBehavior;
 
 /**
  * This is the model class for table "technology".
@@ -27,7 +28,16 @@ class Technology extends \yii\db\ActiveRecord
     {
         return 'technology';
     }
-
+	public function behaviors()
+	{
+		return [
+			'slug' => [
+				'class' => SlugBehavior::className(),
+				'in_attribute' => 'title',
+				'out_attribute' => 'slug',
+			],
+		];
+	}
 //    public function behaviors()
 //    {
 //        return [
@@ -45,7 +55,7 @@ class Technology extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['title', 'price_date', 'min_price'], 'required'],
+            [['title', ], 'required'],
             [['price_date', 'min_price'], 'integer'],
             [['is_new'], 'string'],
             [['title', 'image', 'slug'], 'string', 'max' => 255],

@@ -4,20 +4,20 @@ use yii\helpers\Html;
 use yii\grid\GridView;
 use yii\widgets\Pjax;
 /* @var $this yii\web\View */
-/* @var $searchModel common\models\ServiceSearch */
+/* @var $searchModel common\models\ChooseusSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Services';
+$this->title = 'Почему Мы';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="service-index">
+<div class="chooseus-index">
 
     <h1><?= Html::encode($this->title) ?></h1>
     <?php Pjax::begin(); ?>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a('Create Service', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Создать', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?= GridView::widget([
@@ -25,20 +25,30 @@ $this->params['breadcrumbs'][] = $this->title;
         'filterModel' => $searchModel,
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
-            'title',
+
 	        [
-		        'attribute' => 'image',
+		        'attribute' => 'title',
 		        'format' => 'raw',
 		        'filter'=> '',
 		        'value' => function($model){
-                    return Html::img(\yii\helpers\Url::to('/frontend/web/images/uploads/service/'. $model->image),['width' => '120px','height' => '80px',]);
+			        return $model->title;
 		        }
 	        ] ,
-            'slug',
-            'is_new',
-            //'title',
-            //'description:ntext',
-            //'price',
+
+
+
+            [
+                'attribute' => 'image',
+                'format' => 'raw',
+                'filter'=> '',
+                'value' => function($model){
+                    return Html::img(\yii\helpers\Url::to('/frontend/web/images/uploads/chuseus/'. $model->image),['width' => '120px','height' => '80px',]);
+                }
+            ] ,
+            'reasonone',
+            'reasontwo',
+            'reasonthree',
+            //'reasonfour',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

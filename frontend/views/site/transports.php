@@ -11,6 +11,7 @@ $this->title = 'Transports';
             <div class="col-12">
                 <div class="breadcrumb-content">
                     <h2>Спецтехника</h2>
+
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="<?= \yii\helpers\Url::to(['/']) . 'site/' ?>"><i class="icon_house_alt"></i> Главная</a></li>
@@ -30,7 +31,9 @@ $this->title = 'Transports';
         <div class="row">
             <div class="col-12">
                 <div class="portfolio-menu text-center mb-50">
+
                     <button class="btn active" data-filter="*">Все</button>
+
                     <?php  if(!empty($transports)){
                         foreach ($transports as $transport){
                             ?>
@@ -38,6 +41,7 @@ $this->title = 'Transports';
                             <?php
                         }
                         ?>
+
 
 
                     <?php

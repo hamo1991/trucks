@@ -14,9 +14,11 @@ use frontend\models\PasswordResetRequestForm;
 use frontend\models\ResetPasswordForm;
 use frontend\models\SignupForm;
 use frontend\models\ContactForm;
+use common\models\Chooseus;
 use common\models\Slider;
 use common\models\About;
 use common\models\Products;
+
 
 /**
  * Site controller
@@ -77,11 +79,14 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
+    	$choose=Chooseus::find()->asArray()->all();
         $slider = Slider::find()->asArray()->all();
         $products = Products::find()->asArray()->all();
         return $this->render('index',[
             'slider' => $slider,
-            'products' => $products
+            'products' => $products,
+	        'choose'=>$choose
+
         ]);
     }
 
@@ -235,10 +240,5 @@ class SiteController extends Controller
         return $this->render('transports', [
             'transports' => $transports
         ]);
-    }
-
-    public function actionServices()
-    {
-        return $this->render('services');
     }
 }

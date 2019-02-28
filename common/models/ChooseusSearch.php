@@ -1,15 +1,15 @@
 <?php
 
-namespace backend\models;
+namespace common\models;
 
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use common\models\ChooseUs;
+use common\models\Chooseus;
 
 /**
- * ChooseSearch represents the model behind the search form of `common\models\ChooseUs`.
+ * ChooseusSearch represents the model behind the search form of `common\models\Chooseus`.
  */
-class ChooseSearch extends ChooseUs
+class ChooseusSearch extends Chooseus
 {
     /**
      * {@inheritdoc}
@@ -18,7 +18,7 @@ class ChooseSearch extends ChooseUs
     {
         return [
             [['id'], 'integer'],
-            [['type', 'content'], 'safe'],
+            [['title','image', 'reasonone', 'reasontwo', 'reasonthree', 'reasonfour'], 'safe'],
         ];
     }
 
@@ -40,7 +40,7 @@ class ChooseSearch extends ChooseUs
      */
     public function search($params)
     {
-        $query = ChooseUs::find();
+        $query = Chooseus::find();
 
         // add conditions that should always apply here
 
@@ -61,8 +61,11 @@ class ChooseSearch extends ChooseUs
             'id' => $this->id,
         ]);
 
-        $query->andFilterWhere(['like', 'type', $this->type])
-            ->andFilterWhere(['like', 'content', $this->content]);
+        $query->andFilterWhere(['like', 'title', $this->title])
+            ->andFilterWhere(['like', 'reasonone', $this->reasonone])
+            ->andFilterWhere(['like', 'reasontwo', $this->reasontwo])
+            ->andFilterWhere(['like', 'reasonthree', $this->reasonthree])
+            ->andFilterWhere(['like', 'reasonfour', $this->reasonfour]);
 
         return $dataProvider;
     }

@@ -3,13 +3,13 @@
 use yii\helpers\Html;
 
 /* @var $this yii\web\View */
-/* @var $model common\models\ChooseUs */
+/* @var $model common\models\Chooseus */
 
-$this->title = 'Create Choose Us';
-$this->params['breadcrumbs'][] = ['label' => 'Choose uses', 'url' => ['index']];
+$this->title = 'Create Chooseus';
+$this->params['breadcrumbs'][] = ['label' => 'Chooseuses', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="choose-us-create">
+<div class="chooseus-create">
 
     <h1><?= Html::encode($this->title) ?></h1>
 

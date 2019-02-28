@@ -5,20 +5,24 @@ namespace common\models;
 use Yii;
 
 /**
- * This is the model class for table "choose_us".
+ * This is the model class for table "chooseus".
  *
  * @property int $id
- * @property string $type
- * @property string $content
+ * @property string $title
+ * @property string $image
+ * @property string $reasonone
+ * @property string $reasontwo
+ * @property string $reasonthree
+ * @property string $reasonfour
  */
-class ChooseUs extends \yii\db\ActiveRecord
+class Chooseus extends \yii\db\ActiveRecord
 {
     /**
      * {@inheritdoc}
      */
     public static function tableName()
     {
-        return 'choose_us';
+        return 'chooseus';
     }
 
     /**
@@ -27,8 +31,8 @@ class ChooseUs extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['type', 'content'], 'required'],
-            [['type', 'content'], 'string', 'max' => 255],
+            [['title', ],'required'],
+            [['title','image', 'reasonone', 'reasontwo', 'reasonthree', 'reasonfour'], 'string', 'max' => 255],
         ];
     }
 
@@ -39,8 +43,12 @@ class ChooseUs extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'type' => 'Type',
-            'content' => 'Content',
+            'title' => 'Заглавие',
+	        'image'=>'Картина',
+            'reasonone' => 'Первая причина',
+            'reasontwo' => 'Вторая причина',
+            'reasonthree' => 'Третья причина',
+            'reasonfour' => 'Четвертая причина',
         ];
     }
 }

@@ -32,15 +32,18 @@
                 'items' => [
                     ['label' => 'Website Menu', 'options' => ['class' => 'header']],
                     ['label' => 'Gii', 'icon' => 'file-code-o', 'url' => ['/gii']],
+
                     ['label' => 'О Нас', 'icon' => 'fas fa-columns', 'url' => ['/about']],
-                    ['label' => 'Choose-Us', 'icon' => 'dashboard', 'url' => ['/choose']],
-                    ['label' => 'Service', 'icon' => 'dashboard', 'url' => ['/service']],
+
+                    ['label' => 'Почему Мы', 'icon' => 'dashboard', 'url' => ['/chooseus']],
+                    ['label' => 'Услуги', 'icon' => 'dashboard', 'url' => ['/service']],
                     ['label' => 'Tехника', 'icon' => 'car', 'url' => ['/technology']],
                     ['label' => 'Товары ', 'icon' => 'car', 'url' => ['/products']],
                     ['label' => 'Pictures', 'icon' => 'dashboard', 'url' => ['/pictures']],
                     ['label' => 'Info', 'icon' => 'dashboard', 'url' => ['/info']],
                     ['label' => 'Слайдер', 'icon' => 'fas fa-play', 'url' => ['/slider']],
                     ['label' => 'Сообщения', 'icon' => 'fas fa-envelope', 'url' => ['/email']],
+
                     ['label' => 'Login', 'url' => ['site/login'], 'visible' => Yii::$app->user->isGuest],
                     [
                         'label' => 'Some tools',

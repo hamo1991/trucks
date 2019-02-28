@@ -77,11 +77,14 @@ AppAsset::register($this);
                         <!-- Nav Start -->
                         <div class="classynav">
                             <ul id="nav">
+
                                 <li><a href="<?= \yii\helpers\Url::to(['/']) . 'site/' ?>">ГЛАВНАЯ</a></li>
                                 <li><a href="<?= \yii\helpers\Url::to(['/']) . 'site/transports' ?>">СПЕЦТЕХНИКА</a></li>
-                                <li><a href="<?= \yii\helpers\Url::to(['/']) . 'site/services' ?>">УСЛУГИ</a></li>
+                                <li><a href="<?= \yii\helpers\Url::to(['/']) . 'service/' ?>">УСЛУГИ</a></li>
                                 <li><a href="<?= \yii\helpers\Url::to(['/']) . 'site/about' ?>">О НАС</a></li>
                                 <li><a href="<?= \yii\helpers\Url::to(['/']) . 'site/contact' ?>">КОНТАКТ</a></li>
+
+
 <!--                                --><?php
 //                                if (Yii::$app->user->isGuest) {
 //                                    ?>
@@ -104,6 +107,7 @@ AppAsset::register($this);
 //                                }
 //
 //                                ?>
+
 
                             </ul>
                         </div>

@@ -4,14 +4,14 @@ use yii\helpers\Html;
 use yii\widgets\DetailView;
 
 /* @var $this yii\web\View */
-/* @var $model common\models\ChooseUs */
+/* @var $model common\models\Chooseus */
 
-$this->title = $model->id;
-$this->params['breadcrumbs'][] = ['label' => 'Choose uses', 'url' => ['index']];
+$this->title = $model->title;
+$this->params['breadcrumbs'][] = ['label' => 'Chooseuses', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 \yii\web\YiiAsset::register($this);
 ?>
-<div class="choose-us-view">
+<div class="chooseus-view">
 
     <h1><?= Html::encode($this->title) ?></h1>
 
@@ -29,9 +29,19 @@ $this->params['breadcrumbs'][] = $this->title;
     <?= DetailView::widget([
         'model' => $model,
         'attributes' => [
-            'id',
-            'type',
-            'content',
+            'title',
+            [
+                'attribute' => 'image',
+                'format' => 'raw',
+                'filter'=> '',
+                'value' => function($model){
+                    return Html::img(\yii\helpers\Url::to('/frontend/web/images/uploads/chuseus/'. $model->image),['width' => '120px','height' => '80px',]);
+                }
+            ] ,
+            'reasonone',
+            'reasontwo',
+            'reasonthree',
+            'reasonfour',
         ],
     ]) ?>
 

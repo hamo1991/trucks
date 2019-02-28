@@ -4,7 +4,7 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
 /* @var $this yii\web\View */
-/* @var $model backend\models\ServiceSearch */
+/* @var $model common\models\ServiceSearch */
 /* @var $form yii\widgets\ActiveForm */
 ?>
 
@@ -20,11 +20,9 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'id') ?>
 
-    <?= $form->field($model, 'tech_id') ?>
-
     <?= $form->field($model, 'image') ?>
 
-    <?= $form->field($model, 'slug') ?>
+<!--    --><?//= $form->field($model, 'slug') ?>
 
     <?= $form->field($model, 'is_new') ?>
 

@@ -4,11 +4,11 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
 /* @var $this yii\web\View */
-/* @var $model backend\models\ChooseSearch */
+/* @var $model common\models\ChooseusSearch */
 /* @var $form yii\widgets\ActiveForm */
 ?>
 
-<div class="choose-us-search">
+<div class="chooseus-search">
 
     <?php $form = ActiveForm::begin([
         'action' => ['index'],
@@ -20,9 +20,17 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'id') ?>
 
-    <?= $form->field($model, 'type') ?>
+    <?= $form->field($model, 'title') ?>
 
-    <?= $form->field($model, 'content') ?>
+	<?= $form->field($model, 'image') ?>
+
+    <?= $form->field($model, 'reasonone') ?>
+
+    <?= $form->field($model, 'reasontwo') ?>
+
+    <?= $form->field($model, 'reasonthree') ?>
+
+    <?php // echo $form->field($model, 'reasonfour') ?>
 
     <div class="form-group">
         <?= Html::submitButton('Search', ['class' => 'btn btn-primary']) ?>
