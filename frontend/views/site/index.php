@@ -7,7 +7,7 @@ $this->title = 'Akame';
 <section class="welcome-area">
     <div class="welcome-slides owl-carousel">
         <!-- Single Welcome Slide -->
-        <div class="single-welcome-slide bg-img" style="background-image: url(<?= \yii\helpers\Url::to(['/']) . 'images/16.jpg' ?>);">
+        <div class="single-welcome-slide bg-img" style="background-image: url(<?= \yii\helpers\Url::to(['/']) . 'images/slider_2_stop.jpg' ?>);">
             <!-- Welcome Content -->
             <div class="welcome-content h-100">
                 <div class="container h-100">
@@ -56,7 +56,7 @@ $this->title = 'Akame';
             <!-- Section Heading -->
             <div class="col-12">
                 <div class="section-heading text-center">
-                    <h2>Our Work</h2>
+                    <h2>Наши услуги</h2>
                     <p>Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                 </div>
             </div>
@@ -67,11 +67,11 @@ $this->title = 'Akame';
         <div class="row">
             <div class="col-12">
                 <div class="portfolio-menu text-center mb-30">
-                    <button class="btn active" data-filter="*">All</button>
-                    <button class="btn" data-filter=".haircuts">Haircuts</button>
-                    <button class="btn" data-filter=".dye">Dye</button>
-                    <button class="btn" data-filter=".shave">Shave</button>
-                    <button class="btn" data-filter=".hairstyle">Hairstyle</button>
+                    <button class="btn active" data-filter="*">ВСЕ</button>
+                    <button class="btn" data-filter=".haircuts">СПЕЦТЕХНИКА</button>
+                    <button class="btn" data-filter=".dye">БЛАГОУСТРОЙСТВО</button>
+                    <button class="btn" data-filter=".shave">АСФАЛЬТИРОВАНЫЕ </button>
+                    <button class="btn" data-filter=".hairstyle">СЫПУЧИЕ МАТЕРИАЛЫ</button>
                 </div>
             </div>
         </div>
@@ -250,7 +250,7 @@ $this->title = 'Akame';
             <div class="col-12 col-lg-6">
                 <!-- Section Heading -->
                 <div class="section-heading">
-                    <h2>Why Choose Us</h2>
+                    <h2>Почему Выбирают Нас</h2>
                     <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                 </div>
                 <!-- Choose Us Content -->

@@ -8,7 +8,7 @@ use backend\models\ServiceSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
-
+use yii\web\UploadedFile;
 /**
  * ServiceController implements the CRUD actions for Service model.
  */
@@ -67,6 +67,16 @@ class ServiceController extends Controller
         $model = new Service();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
+	        $imgFile=UploadedFile::getInstance($model,'image');
+	        if (!empty($imgFile)){
+		        $filePath = Yii::getAlias('@frontend') . '/web/images/upload/service/';
+		        $imgaName = Yii::$app->security->generateRandomString() . '.' . $imgFile->extension;
+		        $path=$filePath.$imgaName;
+		        if ($imgFile->saveAs($path)){
+			        $model->image = $imgaName;
+			        $model->save(['image']);
+		        }
+	        }
             return $this->redirect(['view', 'id' => $model->id]);
         }
 
@@ -85,9 +95,34 @@ class ServiceController extends Controller
     public function actionUpdate($id)
     {
         $model = $this->findModel($id);
+	    $old_image = $model->image;
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+	        $imgFile=UploadedFile::getInstance($model,'image');
+	        if (!empty($imgFile)){
+		        $filePath = Yii::getAlias('@frontend') . '/web/images/upload/service/';
+		        $imgaName = Yii::$app->security->generateRandomString() . '.' . $imgFile->extension;
+		        $path=$filePath.$imgaName;
+
+		        if ($imgFile->saveAs($path)){
+			        if (file_exists($old_image)){
+				        unset($old_image);
+			        } else{
+				        $model->image = $imgaName;
+				        $model->save(['image']);
+			        }
+		        }
+	        }else{
+		        $model->image = $old_image;
+		        $model->save(['image']);
+	        }
+
+
+
+
+
+
+	        return $this->redirect(['view', 'id' => $model->id]);
         }
 
         return $this->render('update', [

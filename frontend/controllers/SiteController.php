@@ -12,6 +12,8 @@ use frontend\models\PasswordResetRequestForm;
 use frontend\models\ResetPasswordForm;
 use frontend\models\SignupForm;
 use frontend\models\ContactForm;
+use common\models\Service;
+
 
 /**
  * Site controller
@@ -217,7 +219,5 @@ class SiteController extends Controller
         return $this->render('transports');
     }
 
-    public function actionServices() {
-        return $this->render('services');
-    }
+
 }

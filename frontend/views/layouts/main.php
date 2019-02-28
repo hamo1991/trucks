@@ -77,11 +77,11 @@ AppAsset::register($this);
                         <!-- Nav Start -->
                         <div class="classynav">
                             <ul id="nav">
-                                <li class="active"><a href="<?= \yii\helpers\Url::to(['/']) . 'site/' ?>">Home</a></li>
-                                <li><a href="<?= \yii\helpers\Url::to(['/']) . 'site/transports' ?>">Transports</a></li>
-                                <li><a href="<?= \yii\helpers\Url::to(['/']) . 'site/services' ?>">Services</a></li>
-                                <li><a href="<?= \yii\helpers\Url::to(['/']) . 'site/about' ?>">About Us</a></li>
-                                <li><a href="<?= \yii\helpers\Url::to(['/']) . 'site/contact' ?>">Contact</a></li>
+                                <li class="active"><a href="<?= \yii\helpers\Url::to(['/']) . 'site/' ?>">Главная </a></li>
+                                <li><a href="<?= \yii\helpers\Url::to(['/']) . 'site/transports' ?>">Спецтехники</a></li>
+                                <li><a href="<?= \yii\helpers\Url::to(['/']) . 'service/' ?>">Услуги</a></li>
+                                <li><a href="<?= \yii\helpers\Url::to(['/']) . 'site/about' ?>">О Нас</a></li>
+                                <li><a href="<?= \yii\helpers\Url::to(['/']) . 'site/contact' ?>">Контакти</a></li>
                                 <?php
                                 if (Yii::$app->user->isGuest) {
                                     ?>

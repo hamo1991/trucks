@@ -4,7 +4,7 @@ use yii\helpers\Html;
 use yii\grid\GridView;
 use yii\widgets\Pjax;
 /* @var $this yii\web\View */
-/* @var $searchModel backend\models\ServiceSearch */
+/* @var $searchModel common\models\ServiceSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
 $this->title = 'Services';
@@ -25,15 +25,22 @@ $this->params['breadcrumbs'][] = $this->title;
         'filterModel' => $searchModel,
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
-
-            'id',
+//
+            'title',
             'tech_id',
-            'image',
+	        [
+		        'attribute' => 'image',
+		        'format' => 'raw',
+		        'filter'=> '',
+		        'value' => function($model){
+			        return Html::img(\yii\helpers\Url::to('@image/'.$model->image),['width'=>'120px','height'=>'100px',]);
+		        }
+	        ] ,
             'slug',
             'is_new',
-            'title',
-            'description:ntext',
-            'price',
+            //'title',
+            //'description:ntext',
+            //'price',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

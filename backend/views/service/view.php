@@ -31,7 +31,14 @@ $this->params['breadcrumbs'][] = $this->title;
         'attributes' => [
             'id',
             'tech_id',
-            'image',
+	        [
+		        'attribute' => 'image',
+		        'format' => 'raw',
+		        'filter'=> '',
+		        'value' => function($model){
+			        return Html::img(\yii\helpers\Url::to('@image/'.$model->image),['width'=>'150px','height'=>'150px',]);
+		        }
+	        ] ,
             'slug',
             'is_new',
             'title',

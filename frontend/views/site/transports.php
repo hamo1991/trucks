@@ -10,7 +10,7 @@ $this->title = 'Transports';
         <div class="row">
             <div class="col-12">
                 <div class="breadcrumb-content">
-                    <h2>Transports</h2>
+                    <h2>Спецтехники</h2>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="<?= \yii\helpers\Url::to(['/']) . 'site/' ?>"><i class="icon_house_alt"></i> Home</a></li>
@@ -30,12 +30,12 @@ $this->title = 'Transports';
         <div class="row">
             <div class="col-12">
                 <div class="portfolio-menu text-center mb-50">
-                    <button class="btn active" data-filter="*">All</button>
-                    <button class="btn" data-filter=".haircuts">Haircuts</button>
-                    <button class="btn" data-filter=".coloring">Coloring</button>
-                    <button class="btn" data-filter=".barber">Barber</button>
-                    <button class="btn" data-filter=".shaving">Shaving</button>
-                    <button class="btn" data-filter=".hairstyle">Hairstyle</button>
+                    <button class="btn active" data-filter="*">ВСЕ</button>
+                    <button class="btn" data-filter=".haircuts">Камази</button>
+                    <button class="btn" data-filter=".coloring">Подъемный краны</button>
+                    <button class="btn" data-filter=".barber">Бетононасосы</button>
+                    <button class="btn" data-filter=".shaving">Мусоровозы</button>
+                    <button class="btn" data-filter=".hairstyle">Катокы</button>
                     <button class="btn" data-filter=".massage">Massages</button>
                 </div>
             </div>
