@@ -60,8 +60,8 @@ AppAsset::register($this);
                 <nav class="classy-navbar justify-content-between" id="akameNav">
 
                     <!-- Logo -->
-                    <a class="nav-brand" href="<?= \yii\helpers\Url::to(['/']) . 'site/' ?>"><img
-                                src="<?= \yii\helpers\Url::to(['/']) . 'images/logo.png' ?>" alt=""></a>
+                    <a class="nav-brand" href="<?= \yii\helpers\Url::to(['/']) . 'site/' ?>"><img style="width: 250px;height: 60px"
+                                src="<?= \yii\helpers\Url::to(['/']) . 'images/logo.jpg' ?>" alt="logo"></a>
 
                     <!-- Navbar Toggler -->
                     <div class="classy-navbar-toggler">
@@ -77,33 +77,33 @@ AppAsset::register($this);
                         <!-- Nav Start -->
                         <div class="classynav">
                             <ul id="nav">
-                                <li class="active"><a href="<?= \yii\helpers\Url::to(['/']) . 'site/' ?>">Главная </a></li>
-                                <li><a href="<?= \yii\helpers\Url::to(['/']) . 'site/transports' ?>">Спецтехники</a></li>
+                                <li><a href="<?= \yii\helpers\Url::to(['/']) . 'site/' ?>">Главная</a></li>
+                                <li><a href="<?= \yii\helpers\Url::to(['/']) . 'site/transports' ?>">Транспорты</a></li>
                                 <li><a href="<?= \yii\helpers\Url::to(['/']) . 'service/' ?>">Услуги</a></li>
                                 <li><a href="<?= \yii\helpers\Url::to(['/']) . 'site/about' ?>">О Нас</a></li>
-                                <li><a href="<?= \yii\helpers\Url::to(['/']) . 'site/contact' ?>">Контакти</a></li>
-                                <?php
-                                if (Yii::$app->user->isGuest) {
-                                    ?>
-                                    <li><a href="<?= \yii\helpers\Url::to(['/']) . 'site/signup' ?>">Signup</a></li>
-                                    <li><a href="<?= \yii\helpers\Url::to(['/']) . 'site/login' ?>">Login</a></li>
-                                    <?php
-                                } else {
-                                    ?>
-                                    <li>
-                                        <form action="<?= \yii\helpers\Url::to(['/']) . 'site/logout' ?>" method="post">
-                                            <input type="hidden" name="_csrf-frontend" value="wqOKrocOxVjlwA10wE3aL9happ62mB-JkYcttODH4s6o17ze3TugNJ2zNReJD69GqmvH8t_hU8ajsRzcmoKOoQ==">
-                                            <button class="btn btn-link logout" name="submit" type="submit"><a id="logout">Logout
-                                                    (<?= Yii::$app->user->identity->username ?>)</a>
-                                            </button>
-
-
-                                        </form>
-                                    </li>
-                                    <?php
-                                }
-
-                                ?>
+                                <li><a href="<?= \yii\helpers\Url::to(['/']) . 'site/contact' ?>">Контакт</a></li>
+                                <!--                                --><?php
+		                        //                                if (Yii::$app->user->isGuest) {
+		                        //                                    ?>
+                                <!--                                    <li><a href="--><?//= \yii\helpers\Url::to(['/']) . 'site/signup' ?><!--">Signup</a></li>-->
+                                <!--                                    <li><a href="--><?//= \yii\helpers\Url::to(['/']) . 'site/login' ?><!--">Login</a></li>-->
+                                <!--                                    --><?php
+		                        //                                } else {
+		                        //                                    ?>
+                                <!--                                    <li>-->
+                                <!--                                        <form action="--><?//= \yii\helpers\Url::to(['/']) . 'site/logout' ?><!--" method="post">-->
+                                <!--                                            <input type="hidden" name="_csrf-frontend" value="wqOKrocOxVjlwA10wE3aL9happ62mB-JkYcttODH4s6o17ze3TugNJ2zNReJD69GqmvH8t_hU8ajsRzcmoKOoQ==">-->
+                                <!--                                            <button class="btn btn-link logout" name="submit" type="submit"><a id="logout">Logout-->
+                                <!--                                                    (--><?//= Yii::$app->user->identity->username ?><!--)</a>-->
+                                <!--                                            </button>-->
+                                <!---->
+                                <!---->
+                                <!--                                        </form>-->
+                                <!--                                    </li>-->
+                                <!--                                    --><?php
+		                        //                                }
+		                        //
+		                        //                                ?>
 
                             </ul>
                         </div>
@@ -119,8 +119,6 @@ AppAsset::register($this);
 
 </div>
 
-
-
 <footer class="footer-area section-padding-80-0">
     <div class="container">
         <div class="row justify-content-between">
@@ -129,8 +127,8 @@ AppAsset::register($this);
             <div class="col-12 col-sm-6 col-md-4">
                 <div class="single-footer-widget mb-80">
                     <!-- Footer Logo -->
-                    <a href="<?= \yii\helpers\Url::to(['/']) . 'site/' ?>" class="footer-logo"><img
-                                src="<?= \yii\helpers\Url::to(['/']) . 'images/logo.png' ?>" alt=""></a>
+<!--                    <a href="--><?//= \yii\helpers\Url::to(['/']) . 'site/' ?><!--" class="footer-logo"><img-->
+<!--                                src="--><?//= \yii\helpers\Url::to(['/']) . 'images/logo.jpg' ?><!--" alt=""></a>-->
 
                     <p class="mb-30">We would love to serve you and let you enjoy your culinary experience. Excepteur
                         sint occaecat cupidatat non proident.</p>
@@ -138,7 +136,7 @@ AppAsset::register($this);
                     <!-- Copywrite Text -->
                     <div class="copywrite-text">
                         <p>Copyright &copy;2019 All rights reserved<i class="fa fa-heart-o" aria-hidden="true"></i> by
-                            <a href="https://colorlib.com" target="_blank">Group-9 Developers</a></p>
+                            <a href="/">Group-9 Developers</a></p>
                     </div>
                 </div>
             </div>

@@ -2,47 +2,44 @@
 
 /* @var $this yii\web\View */
 
-$this->title = 'Akame';
+$this->title = 'Trucks';
 ?>
 <section class="welcome-area">
     <div class="welcome-slides owl-carousel">
-        <!-- Single Welcome Slide -->
-        <div class="single-welcome-slide bg-img" style="background-image: url(<?= \yii\helpers\Url::to(['/']) . 'images/slider_2_stop.jpg' ?>);">
-            <!-- Welcome Content -->
-            <div class="welcome-content h-100">
-                <div class="container h-100">
-                    <div class="row h-100 align-items-center">
-                        <!-- Welcome Text -->
-                        <div class="col-12 col-md-9 col-lg-6">
-                            <div class="welcome-text">
-                                <h2 data-animation="fadeInUp" data-delay="100ms">We Care About <br> Your Hair</h2>
-                                <p data-animation="fadeInUp" data-delay="400ms">“Discover your own style. Don't try to repeat what has already been written - have the courage to do your own thing and don't be afraid to do something different.”</p>
-                                <a href="<?= \yii\helpers\Url::to(['/']) . 'site/about' ?>" class="btn akame-btn" data-animation="fadeInUp" data-delay="700ms">About Us</a>
+
+        <?php
+        if (!empty($slider)) {
+            foreach ($slider as $slide) {
+                ?>
+                <div class="single-welcome-slide bg-img" style="background-image: url(<?='/images/uploads/slider/' . $slide['image'] ?>);">
+                    <!-- Welcome Content -->
+                    <div class="welcome-content h-100">
+                        <div class="container h-100">
+                            <div class="row h-100 align-items-center">
+                                <!-- Welcome Text -->
+                                <div class="col-12 col-md-9 col-lg-6">
+                                    <div class="welcome-text">
+                                        <h2  data-animation="fadeInUp" data-delay="100ms"><?= $slide['title'] ?></h2>
+                                        <p data-animation="fadeInUp" data-delay="400ms"><?= $slide['content'] ?></p>
+<!--                                        <a href="--><?//= \yii\helpers\Url::to(['/']) . 'site/about' ?><!--" class="btn akame-btn" data-animation="fadeInUp" data-delay="700ms">About Us</a>-->
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
+                <?php
+            }
+        }
+        ?>
 
         <!-- Single Welcome Slide -->
-        <div class="single-welcome-slide bg-img" style="background-image: url(<?= \yii\helpers\Url::to(['/']) . 'images/17.jpg' ?>);">
-            <!-- Welcome Content -->
-            <div class="welcome-content h-100">
-                <div class="container h-100">
-                    <div class="row h-100 align-items-center">
-                        <!-- Welcome Text -->
-                        <div class="col-12 col-md-9 col-lg-6">
-                            <div class="welcome-text">
-                                <h2 data-animation="fadeInUp" data-delay="100ms">We Care About <br> Your Hair</h2>
-                                <p data-animation="fadeInUp" data-delay="400ms">“Discover your own style. Don't try to repeat what has already been written - have the courage to do your own thing and don't be afraid to do something different.”</p>
-                                <a href="<?= \yii\helpers\Url::to(['/']) . 'site/about' ?>" class="btn akame-btn active" data-animation="fadeInUp" data-delay="700ms">About Us</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+
+
+        <!-- Single Welcome Slide -->
+
+
     </div>
 </section>
 <!-- Welcome Area End -->
@@ -376,18 +373,18 @@ $this->title = 'Akame';
 
 
 <!-- Call To Action Area Start -->
-<section class="akame-cta-area bg-gray section-padding-80">
-    <div class="container">
+<section class="akame-cta-area bg-gray section-padding-80" style="background-image: url(<?= \yii\helpers\Url::to(['/']) . 'images/slider_5ds.jpg' ?>);background-size: cover">
+    <div class="container" >
         <div class="row">
             <div class="col-12 col-sm-10 col-xl-5">
                 <div class="cta-content">
-                    <h2>Make Stilo Your <br>Number One Choice</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut la.</p>
+                    <h2>Лучшее предложение на рынке!</h2>
+                    <p style="color: black;font-weight: bold;font-size: 17px">Быстрая доставка и точное соблюдение сроков</p>
                 </div>
             </div>
         </div>
     </div>
 
     <!-- CTA Thumbnail -->
-    <div class="cta-thumbnail bg-img" style="background-image: url(<?= \yii\helpers\Url::to(['/']) . 'images/cta.png' ?>);"></div>
+    <div class="cta-thumbnail bg-img" ></div>
 </section>

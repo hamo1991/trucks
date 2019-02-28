@@ -1,6 +1,8 @@
 <?php
+
 namespace frontend\controllers;
 
+use common\models\Technology;
 use Yii;
 use yii\base\InvalidParamException;
 use yii\web\BadRequestHttpException;
@@ -12,7 +14,9 @@ use frontend\models\PasswordResetRequestForm;
 use frontend\models\ResetPasswordForm;
 use frontend\models\SignupForm;
 use frontend\models\ContactForm;
-use common\models\Service;
+
+use common\models\Slider;
+use common\models\About;
 
 
 /**
@@ -74,7 +78,10 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        return $this->render('index');
+        $slider = Slider::find()->asArray()->all();
+        return $this->render('index',[
+            'slider' => $slider
+        ]);
     }
 
     /**
@@ -142,7 +149,12 @@ class SiteController extends Controller
      */
     public function actionAbout()
     {
-        return $this->render('about');
+
+        $about = About::find()->asArray()->all();
+
+        return $this->render('about',[
+            'about' => $about
+        ]);
     }
 
     /**
@@ -215,9 +227,12 @@ class SiteController extends Controller
         ]);
     }
 
-    public function actionTransports() {
-        return $this->render('transports');
+    public function actionTransports()
+    {
+
+        $transports = Technology::find()->asArray()->all();
+        return $this->render('transports', [
+            'transports' => $transports
+        ]);
     }
-
-
 }

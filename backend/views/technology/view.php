@@ -16,8 +16,8 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Update', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
-        <?= Html::a('Delete', ['delete', 'id' => $model->id], [
+        <?= Html::a('Обновить', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
+        <?= Html::a('Удалять', ['delete', 'id' => $model->id], [
             'class' => 'btn btn-danger',
             'data' => [
                 'confirm' => 'Are you sure you want to delete this item?',
@@ -30,12 +30,38 @@ $this->params['breadcrumbs'][] = $this->title;
         'model' => $model,
         'attributes' => [
             'id',
-            'title',
-            'image',
-            'price_date',
-            'min_price',
-            'is_new',
-            'slug',
+            [
+                'label' => 'Названия',
+                'attribute' => 'title',
+            ],
+            [
+                'label' => 'Картинка',
+                'attribute' => 'image',
+                'format' => 'raw',
+                'filter' => '',
+                'value' => function ($model) {
+                    return Html::img(\yii\helpers\Url::to('/frontend/web/images/uploads/equipment/' . $model->image), ['width' => '100px', 'class' => 'img']);
+                }
+            ],
+            [
+                'label' => 'Ежедневная плата',
+                'attribute' => 'price_date',
+            ],
+            [
+                'label' => 'Минимальная цена',
+                'attribute' => 'min_price',
+
+            ],
+            [
+                'label' => 'Новинка',
+                'attribute' => 'is_new',
+            ],
+            [
+                'label' => 'URL',
+                'attribute' => 'slug',
+            ],
+
+
         ],
     ]) ?>
 

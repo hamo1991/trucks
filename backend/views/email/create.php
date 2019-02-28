@@ -2,14 +2,15 @@
 
 use yii\helpers\Html;
 
-/* @var $this yii\web\View */
-/* @var $model common\models\Pages */
 
-$this->title = 'Create Pages';
-$this->params['breadcrumbs'][] = ['label' => 'Pages', 'url' => ['index']];
+/* @var $this yii\web\View */
+/* @var $model backend\models\Email */
+
+$this->title = 'Create Email';
+$this->params['breadcrumbs'][] = ['label' => 'Emails', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="pages-create">
+<div class="email-create">
 
     <h1><?= Html::encode($this->title) ?></h1>
 

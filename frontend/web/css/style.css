@@ -493,7 +493,6 @@ width: 674px;
 
 /* :: 7.0 Header CSS */
 .header-area {
-  background-image: url("../images/background.png");!important;
   position: relative;
   z-index: 10;
   width: 100%;

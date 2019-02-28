@@ -8,6 +8,8 @@ use common\models\TechnologySearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\web\UploadedFile;
+
 
 /**
  * TechnologyController implements the CRUD actions for Technology model.
@@ -65,10 +67,37 @@ class TechnologyController extends Controller
     public function actionCreate()
     {
         $model = new Technology();
+        $model_image = $model->image;
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
+
+            $image  = UploadedFile::getInstance($model,'image');
+
+            if (!empty($image)) {
+
+                $imgName = Yii::$app->security->generateRandomString() . '.' . $image->extension;
+
+                $filePath = Yii::getAlias('@frontend').'/web/images/uploads/equipment/';
+                if(!is_dir($filePath)){
+                    mkdir($filePath);
+                }
+
+                $path = $filePath . $model_image;
+                if ($image->saveAs($filePath.$imgName)) {
+                    $model->image = $imgName;
+                    if (file_exists($path) && is_file($path)) {
+                        unlink($path);
+                    }
+                }
+
+            }else{
+                $model->image = $model_image;
+            }
+
+            $model->save(false);
             return $this->redirect(['view', 'id' => $model->id]);
         }
+
 
         return $this->render('create', [
             'model' => $model,
@@ -86,7 +115,34 @@ class TechnologyController extends Controller
     {
         $model = $this->findModel($id);
 
+        $model_image = $model->image;
+
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
+
+            $image  = UploadedFile::getInstance($model,'image');
+
+            if (!empty($image)) {
+
+                $imgName = Yii::$app->security->generateRandomString() . '.' . $image->extension;
+
+                $filePath = Yii::getAlias('@frontend').'/web/images/uploads/equipment/';
+                if(!is_dir($filePath)){
+                    mkdir($filePath);
+                }
+
+                $path = $filePath . $model_image;
+                if ($image->saveAs($filePath.$imgName)) {
+                    $model->image = $imgName;
+                    if (file_exists($path) && is_file($path)) {
+                        unlink($path);
+                    }
+                }
+
+            }else{
+                $model->image = $model_image;
+            }
+
+            $model->save(false);
             return $this->redirect(['view', 'id' => $model->id]);
         }
 
@@ -104,7 +160,17 @@ class TechnologyController extends Controller
      */
     public function actionDelete($id)
     {
-        $this->findModel($id)->delete();
+        $model = $this->findModel($id);
+        $image = $model->image;
+        $imgPath = Yii::getAlias('@frontend') . '/web/images/uploads/equipment/';
+        $file = $imgPath . $image;
+        if ($image == '') {
+            $this->findModel($id)->delete();
+        } elseif (file_exists($file)) {
+            unlink($file);
+            $this->findModel($id)->delete();
+        }
+
 
         return $this->redirect(['index']);
     }

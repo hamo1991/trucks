@@ -5,21 +5,22 @@ namespace common\models;
 use Yii;
 
 /**
- * This is the model class for table "pages".
+ * This is the model class for table "about".
  *
  * @property int $id
  * @property string $title
+ * @property string $content
  * @property string $image
- * @property string $slug
+ * @property string $url
  */
-class Pages extends \yii\db\ActiveRecord
+class About extends \yii\db\ActiveRecord
 {
     /**
      * {@inheritdoc}
      */
     public static function tableName()
     {
-        return 'pages';
+        return 'about';
     }
 
     /**
@@ -28,8 +29,10 @@ class Pages extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['title', 'image', 'slug'], 'required'],
-            [['title', 'image', 'slug'], 'string', 'max' => 255],
+            [['title', 'content','url'], 'required'],
+            [['title'], 'string', 'max' => 100],
+            [['content'], 'string'],
+            [['image', 'url'], 'string', 'max' => 255],
         ];
     }
 
@@ -41,8 +44,9 @@ class Pages extends \yii\db\ActiveRecord
         return [
             'id' => 'ID',
             'title' => 'Title',
+            'content' => 'Content',
             'image' => 'Image',
-            'slug' => 'Slug',
+            'url' => 'Url',
         ];
     }
 }

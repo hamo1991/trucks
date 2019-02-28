@@ -3,19 +3,19 @@
 namespace backend\controllers;
 
 use Yii;
-use common\models\Pages;
-use backend\models\PagesSearch;
+use backend\models\Email;
+use yii\data\ActiveDataProvider;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
- * PagesController implements the CRUD actions for Pages model.
+ * EmailController implements the CRUD actions for Email model.
  */
-class PagesController extends Controller
+class EmailController extends Controller
 {
     /**
-     * {@inheritdoc}
+     * @inheritdoc
      */
     public function behaviors()
     {
@@ -30,23 +30,32 @@ class PagesController extends Controller
     }
 
     /**
-     * Lists all Pages models.
+     * Lists all Email models.
      * @return mixed
      */
     public function actionIndex()
     {
-        $searchModel = new PagesSearch();
-        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+        $dataProvider = new ActiveDataProvider([
+            'query' => Email::find(),
+            'pagination' => [
+                'pageSize' => 15
+            ],
+            'sort' => [
+                'defaultOrder' => [
+                    'date' => SORT_DESC
+                ]
+            ]
+        ]);
 
         return $this->render('index', [
-            'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
+
         ]);
     }
 
     /**
-     * Displays a single Pages model.
-     * @param integer $id
+     * Displays a single Email model.
+     * @param string $id
      * @return mixed
      * @throws NotFoundHttpException if the model cannot be found
      */
@@ -58,13 +67,13 @@ class PagesController extends Controller
     }
 
     /**
-     * Creates a new Pages model.
+     * Creates a new Email model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
     public function actionCreate()
     {
-        $model = new Pages();
+        $model = new Email();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
@@ -76,9 +85,9 @@ class PagesController extends Controller
     }
 
     /**
-     * Updates an existing Pages model.
+     * Updates an existing Email model.
      * If update is successful, the browser will be redirected to the 'view' page.
-     * @param integer $id
+     * @param string $id
      * @return mixed
      * @throws NotFoundHttpException if the model cannot be found
      */
@@ -96,9 +105,9 @@ class PagesController extends Controller
     }
 
     /**
-     * Deletes an existing Pages model.
+     * Deletes an existing Email model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
-     * @param integer $id
+     * @param string $id
      * @return mixed
      * @throws NotFoundHttpException if the model cannot be found
      */
@@ -110,15 +119,15 @@ class PagesController extends Controller
     }
 
     /**
-     * Finds the Pages model based on its primary key value.
+     * Finds the Email model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
-     * @param integer $id
-     * @return Pages the loaded model
+     * @param string $id
+     * @return Email the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = Pages::findOne($id)) !== null) {
+        if (($model = Email::findOne($id)) !== null) {
             return $model;
         }
 

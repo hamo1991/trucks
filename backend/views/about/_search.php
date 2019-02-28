@@ -4,11 +4,11 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
 /* @var $this yii\web\View */
-/* @var $model backend\models\PagesSearch */
+/* @var $model common\models\AboutSearch */
 /* @var $form yii\widgets\ActiveForm */
 ?>
 
-<div class="pages-search">
+<div class="about-search">
 
     <?php $form = ActiveForm::begin([
         'action' => ['index'],
@@ -22,9 +22,11 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'title') ?>
 
+    <?= $form->field($model, 'content') ?>
+
     <?= $form->field($model, 'image') ?>
 
-    <?= $form->field($model, 'slug') ?>
+    <?= $form->field($model, 'url') ?>
 
     <div class="form-group">
         <?= Html::submitButton('Search', ['class' => 'btn btn-primary']) ?>

@@ -7,7 +7,7 @@ use yii\widgets\Pjax;
 /* @var $searchModel common\models\SliderSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Sliders';
+$this->title = 'Slider';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="slider-index">
@@ -26,12 +26,17 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'id',
-            'image',
             'title',
-            'description:ntext',
+//            'description:ntext',
             'content:ntext',
-            //'slug',
+            [
+                'attribute' => 'image',
+                'format' => 'raw',
+                'filter' => '',
+                'value' => function($model){
+                    return Html::img(\yii\helpers\Url::to('/frontend/web/images/uploads/slider/'. $model->image),['width' => '120px','height' => '80px',]);
+                }
+            ] ,
 
             ['class' => 'yii\grid\ActionColumn'],
         ],
