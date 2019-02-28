@@ -51,6 +51,7 @@ class ContactForm extends \yii\db\ActiveRecord {
         $model->content = $this->body;
         $model->email = $this->email;
         $model->name = $this->name;
+        $model->tel = $this->subject;
         $model->save(false);
 
         return Yii::$app->mailer->compose()

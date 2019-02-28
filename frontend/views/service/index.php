@@ -49,7 +49,7 @@ $this->title = 'Services';
 
 <div class="myDiv">
 
-    <div class="divImg service-thumbnail  jarallax" style="background-image: url(<?= \yii\helpers\Url::to(['/']).'images/upload/service/' . $service['image'] ?>);"></div>
+    <div class="divImg service-thumbnail  jarallax" style="background-image: url(<?= \yii\helpers\Url::to(['/']).'images/uploads/service/' . $service['image'] ?>);"></div>
 </div>
 
 

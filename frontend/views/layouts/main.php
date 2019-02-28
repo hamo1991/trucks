@@ -36,7 +36,7 @@ AppAsset::register($this);
             <div class="row h-100 align-items-center">
                 <div class="col-5">
                     <div class="top-header-content">
-                        <p>Welcome to hair salon!</p>
+                        <p>Дабро пожаловать!</p>
                     </div>
                 </div>
                 <div class="col-7">
@@ -79,31 +79,33 @@ AppAsset::register($this);
                             <ul id="nav">
                                 <li><a href="<?= \yii\helpers\Url::to(['/']) . 'site/' ?>">Главная</a></li>
                                 <li><a href="<?= \yii\helpers\Url::to(['/']) . 'site/transports' ?>">Транспорты</a></li>
+
                                 <li><a href="<?= \yii\helpers\Url::to(['/']) . 'service/' ?>">Услуги</a></li>
                                 <li><a href="<?= \yii\helpers\Url::to(['/']) . 'site/about' ?>">О Нас</a></li>
                                 <li><a href="<?= \yii\helpers\Url::to(['/']) . 'site/contact' ?>">Контакт</a></li>
-                                <!--                                --><?php
-		                        //                                if (Yii::$app->user->isGuest) {
-		                        //                                    ?>
-                                <!--                                    <li><a href="--><?//= \yii\helpers\Url::to(['/']) . 'site/signup' ?><!--">Signup</a></li>-->
-                                <!--                                    <li><a href="--><?//= \yii\helpers\Url::to(['/']) . 'site/login' ?><!--">Login</a></li>-->
-                                <!--                                    --><?php
-		                        //                                } else {
-		                        //                                    ?>
-                                <!--                                    <li>-->
-                                <!--                                        <form action="--><?//= \yii\helpers\Url::to(['/']) . 'site/logout' ?><!--" method="post">-->
-                                <!--                                            <input type="hidden" name="_csrf-frontend" value="wqOKrocOxVjlwA10wE3aL9happ62mB-JkYcttODH4s6o17ze3TugNJ2zNReJD69GqmvH8t_hU8ajsRzcmoKOoQ==">-->
-                                <!--                                            <button class="btn btn-link logout" name="submit" type="submit"><a id="logout">Logout-->
-                                <!--                                                    (--><?//= Yii::$app->user->identity->username ?><!--)</a>-->
-                                <!--                                            </button>-->
-                                <!---->
-                                <!---->
-                                <!--                                        </form>-->
-                                <!--                                    </li>-->
-                                <!--                                    --><?php
-		                        //                                }
-		                        //
-		                        //                                ?>
+<!--                                --><?php
+//                                if (Yii::$app->user->isGuest) {
+//                                    ?>
+<!--                                    <li><a href="--><?//= \yii\helpers\Url::to(['/']) . 'site/signup' ?><!--">Signup</a></li>-->
+<!--                                    <li><a href="--><?//= \yii\helpers\Url::to(['/']) . 'site/login' ?><!--">Login</a></li>-->
+<!--                                    --><?php
+//                                } else {
+//                                    ?>
+<!--                                    <li>-->
+<!--                                        <form action="--><?//= \yii\helpers\Url::to(['/']) . 'site/logout' ?><!--" method="post">-->
+<!--                                            <input type="hidden" name="_csrf-frontend" value="wqOKrocOxVjlwA10wE3aL9happ62mB-JkYcttODH4s6o17ze3TugNJ2zNReJD69GqmvH8t_hU8ajsRzcmoKOoQ==">-->
+<!--                                            <button class="btn btn-link logout" name="submit" type="submit"><a id="logout">Logout-->
+<!--                                                    (--><?//= Yii::$app->user->identity->username ?><!--)</a>-->
+<!--                                            </button>-->
+<!---->
+<!---->
+<!--                                        </form>-->
+<!--                                    </li>-->
+<!--                                    --><?php
+//                                }
+//
+//                                ?>
+
 
                             </ul>
                         </div>

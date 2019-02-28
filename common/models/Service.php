@@ -3,7 +3,8 @@
 namespace common\models;
 
 use Yii;
-
+use yii\behaviors\SluggableBehavior;
+use common\behaviors\SlugBehavior;
 /**
  * This is the model class for table "service".
  *
@@ -28,6 +29,16 @@ class Service extends \yii\db\ActiveRecord
     {
         return 'service';
     }
+	public function behaviors()
+	{
+		return [
+			'slug' => [
+				'class' => SlugBehavior::class,
+				'in_attribute' => 'title',
+				'out_attribute' => 'slug',
+			],
+			];
+	}
 
     /**
      * {@inheritdoc}

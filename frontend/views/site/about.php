@@ -18,7 +18,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="<?= \yii\helpers\Url::to(['/']) . 'site/' ?>"><i
-                                            class="icon_house_alt"></i> Home</a></li>
+                                            class="icon_house_alt"></i> Главная</a></li>
                             <li class="breadcrumb-item active" aria-current="page">О Нас</li>
                         </ol>
                     </nav>

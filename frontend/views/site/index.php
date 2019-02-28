@@ -53,7 +53,8 @@ $this->title = 'Trucks';
             <!-- Section Heading -->
             <div class="col-12">
                 <div class="section-heading text-center">
-                    <h2>Наши услуги</h2>
+
+                    <h2>Наши работы</h2>
                     <p>Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                 </div>
             </div>
@@ -234,31 +235,45 @@ $this->title = 'Trucks';
     </div>
 </section>
 <!-- Our Service Area End -->
-
+<?php var_dump($choose)?>
 <!-- Why Choose Us Area Start -->
 <section class="why-choose-us-area bg-gray section-padding-80-0">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-12 col-lg-6">
                 <div class="choose-us-thumbnail mt-30 mb-80">
-                    <div class="choose-us-img bg-img" style="background-image: url(<?= \yii\helpers\Url::to(['/']) . 'images/4.jpg' ?>);"></div>
+
+                    <div class="choose-us-img bg-img" style="background-image: url(<?= \yii\helpers\Url::to(['/images/uploads/chuseus/']) .'/' .$choose[0]['image'] ?>);"></div>
                 </div>
             </div>
             <div class="col-12 col-lg-6">
                 <!-- Section Heading -->
+	            <?php
+	            if (!empty($choose)){
+		            foreach ($choose as $chus){
+
+		        ?>
                 <div class="section-heading">
-                    <h2>Почему Выбирают Нас</h2>
+
+                    <h2><?=$chus['title']?></h2>
                     <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                 </div>
                 <!-- Choose Us Content -->
                 <div class="choose-us-content mt-30 mb-80">
                     <ul>
-                        <li><i class="fa fa-check-square-o" aria-hidden="true"></i> We Strive For LIVE Answer On Our Calls.</li>
-                        <li><i class="fa fa-check-square-o" aria-hidden="true"></i> A Wide Spectrum Of Skills And Experience.</li>
-                        <li><i class="fa fa-check-square-o" aria-hidden="true"></i> Fast Response To Requests &amp; Critical Response Time Guaranteed.</li>
-                        <li><i class="fa fa-check-square-o" aria-hidden="true"></i> We Help Solve Your Business Problems.</li>
+                        <li><i class="fa fa-check-square-o" aria-hidden="true"></i><?=$chus['reasonone']?></li>
+                        <li><i class="fa fa-check-square-o" aria-hidden="true"></i><?=$chus['reasontwo']?></li>
+                        <li><i class="fa fa-check-square-o" aria-hidden="true"></i><?=$chus['reasonthree']?></li>
+                        <li><i class="fa fa-check-square-o" aria-hidden="true"></i><?=$chus['reasonfour']?></li>
                     </ul>
+
                 </div>
+                  <?php
+                    }
+	            }
+	            ?>
+
+
             </div>
         </div>
     </div>

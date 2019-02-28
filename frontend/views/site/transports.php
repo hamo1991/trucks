@@ -10,11 +10,13 @@ $this->title = 'Transports';
         <div class="row">
             <div class="col-12">
                 <div class="breadcrumb-content">
-                    <h2>Спецтехники</h2>
+
+                    <h2>Транспорты</h2>
+
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="<?= \yii\helpers\Url::to(['/']) . 'site/' ?>"><i class="icon_house_alt"></i> Home</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Transports</li>
+                            <li class="breadcrumb-item"><a href="<?= \yii\helpers\Url::to(['/']) . 'site/' ?>"><i class="icon_house_alt"></i> Главная</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Транспорты</li>
                         </ol>
                     </nav>
                 </div>
@@ -31,7 +33,8 @@ $this->title = 'Transports';
             <div class="col-12">
                 <div class="portfolio-menu text-center mb-50">
 
-                    <button class="btn active" data-filter="*">All</button>
+                    <button class="btn active" data-filter="*">Все</button>
+
                     <?php  if(!empty($transports)){
                         foreach ($transports as $transport){
                             ?>
