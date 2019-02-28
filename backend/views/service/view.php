@@ -29,7 +29,6 @@ $this->params['breadcrumbs'][] = $this->title;
     <?= DetailView::widget([
         'model' => $model,
         'attributes' => [
-            'id',
             [
                 'attribute' => 'image',
                 'format' => 'raw',
@@ -38,7 +37,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     return Html::img(\yii\helpers\Url::to('/frontend/web/images/uploads/service/'. $model->image),['width' => '120px','height' => '80px',]);
                 }
             ] ,
-            'slug',
+//            'slug',
             'is_new',
             'title',
             'description:ntext',

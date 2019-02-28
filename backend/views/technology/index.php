@@ -53,7 +53,7 @@ $this->params['breadcrumbs'][] = $this->title;
             ],
 
             //'is_new',
-            //'slug',
+//            'slug',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],
