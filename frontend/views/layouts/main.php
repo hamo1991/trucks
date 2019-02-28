@@ -36,7 +36,7 @@ AppAsset::register($this);
             <div class="row h-100 align-items-center">
                 <div class="col-5">
                     <div class="top-header-content">
-                        <p>Welcome to hair salon!</p>
+                        <p>Дабро пожаловать!</p>
                     </div>
                 </div>
                 <div class="col-7">
@@ -77,11 +77,11 @@ AppAsset::register($this);
                         <!-- Nav Start -->
                         <div class="classynav">
                             <ul id="nav">
-                                <li><a href="<?= \yii\helpers\Url::to(['/']) . 'site/' ?>">Home</a></li>
-                                <li><a href="<?= \yii\helpers\Url::to(['/']) . 'site/transports' ?>">Transports</a></li>
-                                <li><a href="<?= \yii\helpers\Url::to(['/']) . 'site/services' ?>">Services</a></li>
-                                <li><a href="<?= \yii\helpers\Url::to(['/']) . 'site/about' ?>">About Us</a></li>
-                                <li><a href="<?= \yii\helpers\Url::to(['/']) . 'site/contact' ?>">Contact</a></li>
+                                <li><a href="<?= \yii\helpers\Url::to(['/']) . 'site/' ?>">Главная</a></li>
+                                <li><a href="<?= \yii\helpers\Url::to(['/']) . 'site/transports' ?>">Транспорты</a></li>
+                                <li><a href="<?= \yii\helpers\Url::to(['/']) . 'site/services' ?>">Услуги</a></li>
+                                <li><a href="<?= \yii\helpers\Url::to(['/']) . 'site/about' ?>">О Нас</a></li>
+                                <li><a href="<?= \yii\helpers\Url::to(['/']) . 'site/contact' ?>">Контакт</a></li>
 <!--                                --><?php
 //                                if (Yii::$app->user->isGuest) {
 //                                    ?>

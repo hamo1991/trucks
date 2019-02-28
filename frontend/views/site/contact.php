@@ -19,11 +19,11 @@ $this->params['breadcrumbs'][] = $this->title;
         <div class="row">
             <div class="col-12">
                 <div class="breadcrumb-content">
-                    <h2>Contact</h2>
+                    <h2>Контакт</h2>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="<?= \yii\helpers\Url::to(['/']) . 'site/' ?>"><i class="icon_house_alt"></i> Home</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Contact</li>
+                            <li class="breadcrumb-item"><a href="<?= \yii\helpers\Url::to(['/']) . 'site/' ?>"><i class="icon_house_alt"></i> Главная</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Контакт</li>
                         </ol>
                     </nav>
                 </div>
@@ -105,8 +105,8 @@ $this->params['breadcrumbs'][] = $this->title;
             <!-- Section Heading -->
             <div class="col-12">
                 <div class="section-heading text-center">
-                    <h2>Leave message</h2>
-                    <p>Our staff will call back later and answer your questions.</p>
+                    <h2>Напишите нам</h2>
+                    <p>Наши сотрудники перезвонят позже и ответят на ваши вопросы.</p>
                 </div>
             </div>
         </div>
@@ -134,13 +134,13 @@ $this->params['breadcrumbs'][] = $this->title;
                 <?php $form = ActiveForm::begin(['id' => 'contact-form','class' => 'akame-contact-form border-0 p-0']); ?>
 
 
-                <?= $form->field($model, 'name')->textInput(['autofocus' => true,'class' => 'form-control mb-30'])->label('Имя') ?>
+                <?= $form->field($model, 'name')->textInput(['autofocus' => true,'placeholder' => 'Ваше имя ','class' => 'form-control mb-30'])->label('Имя') ?>
 
-                <?= $form->field($model, 'email') ?>
+                <?= $form->field($model, 'email')->textInput(['placeholder' => 'Ваше Email']) ?>
 
-                <?= $form->field($model, 'subject')->label('Тема') ?>
+                <?= $form->field($model, 'subject')->label('Номер телефона')->input('number',['placeholder' => "Ваш телефон "]) ?>
 
-                <?= $form->field($model, 'body')->textarea(['rows' => 6])->label('Сообщение') ?>
+                <?= $form->field($model, 'body')->textarea(['rows' => 6,'placeholder' => 'Текст сообщения '])->label('Сообщение') ?>
 
 <!--                --><?//= $form->field($model, 'verifyCode')->widget(Captcha::className(), [
 //                    'template' => '<div class="row"><div class="col-lg-3">{image}</div><div class="col-lg-6">{input}</div></div>',

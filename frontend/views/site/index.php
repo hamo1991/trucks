@@ -51,7 +51,7 @@ $this->title = 'Trucks';
             <!-- Section Heading -->
             <div class="col-12">
                 <div class="section-heading text-center">
-                    <h2>Our Work</h2>
+                    <h2>Наши работы</h2>
                     <p>Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                 </div>
             </div>
