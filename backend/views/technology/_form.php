@@ -20,11 +20,9 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'min_price')->textInput()->label('Минимальная цена') ?>
 
-    <?= $form->field($model, 'content')->textInput()
-    ?>
+    <?= $form->field($model, 'content')->textInput() ?>
 
-    <?= $form->field($model, 'description')->textInput()
-    ?>
+    <?= $form->field($model, 'description')->textInput() ?>
 
     <?= $form->field($model, 'is_new')->dropDownList([ '0', '1', ])->label('Новинка') ?>
 

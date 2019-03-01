@@ -314,6 +314,8 @@ input:focus {
   /*object-fit: cover;*/
   /*background-attachment: scroll;*/
 /*}*/
+
+
 .single_padding{
   padding:40px;
 }
@@ -538,7 +540,7 @@ width: 674px;
         height: 70px; } }
     @media only screen and (max-width: 767px) {
       .classy-nav-container .classy-navbar .nav-brand {
-        max-width: 90px;
+        max-width: 200px;
         margin-right: 15px; } }
     .classy-nav-container .classy-navbar .classynav ul li a {
       font-size: 20px;
@@ -1205,6 +1207,8 @@ width: 674px;
       -o-transition-duration: 500ms;
       transition-duration: 500ms;
       width: 100%;
+      height:180px;!important;
+      object-fit: cover;
       -webkit-filter: grayscale(100%);
       filter: grayscale(100%); }
     .single-team-member .team-member-img .team-social-info {
@@ -1233,7 +1237,9 @@ width: 674px;
           box-shadow: 0 2px 40px 8px rgba(15, 15, 15, 0.15);
           color: #ffffff; }
   .single-team-member .team-member-info {
-    padding: 20px 30px; }
+    padding: 20px 30px;
+    height:60px;!important;
+    }
     .single-team-member .team-member-info h5 {
       display: block;
       margin-bottom: 10px; }

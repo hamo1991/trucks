@@ -58,7 +58,7 @@ $this->title = 'Transports';
                            <a href="<?= \yii\helpers\Url::to('@web/information/' . $trans['slug']) ?>"><div class="overlay-content d-flex align-items-center justify-content-center">
                                 <div class="overlay-text text-center">
                                     <h4><?= $trans['title']?></h4>
-                                    <p>Consectetur adipisicing elit sed doe</p>
+                                    <p><?=$trans['description']?></p>
                                 </div>
                             </div>
                            </a>
