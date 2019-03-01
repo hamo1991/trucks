@@ -34,10 +34,10 @@ $this->params['breadcrumbs'][] = $this->title;
                 'attribute' => 'title',
             ],
 
-	        [
-		        'label' => 'Характеристика',
-		        'attribute' => 'description',
-	        ],
+//	        [
+//		        'label' => 'Характеристика',
+//		        'attribute' => 'description',
+//	        ],
             [
                 'label' => 'Картинка',
                 'attribute' => 'image',

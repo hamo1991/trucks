@@ -3,6 +3,7 @@
 namespace frontend\controllers;
 
 use common\models\Technology;
+use common\models\Yourpark;
 use Yii;
 use yii\base\InvalidParamException;
 use yii\web\BadRequestHttpException;
@@ -82,10 +83,12 @@ class SiteController extends Controller
     	$choose=Chooseus::find()->asArray()->all();
         $slider = Slider::find()->asArray()->all();
         $products = Products::find()->asArray()->all();
+        $material=Yourpark::find()->asArray()->all();
         return $this->render('index',[
             'slider' => $slider,
             'products' => $products,
-	        'choose'=>$choose
+	        'choose'=>$choose,
+	        'material'=>$material,
 
         ]);
     }

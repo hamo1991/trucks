@@ -46,7 +46,7 @@ $this->title = 'Trucks';
             <!-- Section Heading -->
             <div class="col-12">
                 <div class="section-heading text-center">
-                    <h2>Наши товары</h2>
+                    <h2>Чудо садики</h2>
                     <p>Лучшее предложение на рынке!</p>
                 </div>
             </div>
@@ -125,6 +125,56 @@ $this->title = 'Trucks';
 <div class="container">
     <div class="border-top mt-3"></div>
 </div>
+
+<!-- Why Choose Us Area Start -->
+<section class="why-choose-us-area bg-gray section-padding-80-0">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-12 col-lg-6">
+                <div class="choose-us-thumbnail mt-30 mb-80">
+                    <div class="choose-us-img bg-img" style="background-image: url(<?= \yii\helpers\Url::to(['/images/uploads/chuseus/']) .'/' .$choose[0]['image'] ?>);"></div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-6">
+                <!-- Section Heading -->
+	            <?php
+	            if (!empty($choose)){
+		            foreach ($choose as $chus){
+
+		        ?>
+                <div class="section-heading">
+
+                    <h2><?=$chus['title']?></h2>
+                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+                </div>
+                <!-- Choose Us Content -->
+                <div class="choose-us-content mt-30 mb-80">
+                    <ul>
+
+                        <li><i class="fa fa-check-square-o" aria-hidden="true"></i><?=$chus['reasonone']?></li>
+                        <li><i class="fa fa-check-square-o" aria-hidden="true"></i><?=$chus['reasontwo']?></li>
+                        <li><i class="fa fa-check-square-o" aria-hidden="true"></i><?=$chus['reasonthree']?></li>
+                        <li><i class="fa fa-check-square-o" aria-hidden="true"></i><?=$chus['reasonfour']?></li>
+
+                    </ul>
+
+                </div>
+                  <?php
+                    }
+	            }
+	            ?>
+
+
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Why Choose Us Area End -->
+
+
+
+
 <!-- Our Service Area Start -->
 <section class="akame-service-area section-padding-80-0">
     <div class="container">
@@ -170,7 +220,7 @@ $this->title = 'Trucks';
             <!-- Single Service Area -->
             <div class="col-12 col-sm-6 col-lg-3">
                 <div class="single-service-area mb-80 wow fadeInUp" data-wow-delay="800ms">
-                    <img src="<?= \yii\helpers\Url::to(['/']) . 'images/s3.png' ?>" alt="">
+                    <img src="<?= \yii\helpers\Url::to(['/']) . 'images/uploads/products/at3tlh_jaSzNOmBdSDwSpvVXKro2y1Aa.jpg' ?>" alt="">
                     <h5>Coloring</h5>
                     <p>Ut enim ad minim veniam, quis trud exercitation...</p>
                 </div>
@@ -181,71 +231,27 @@ $this->title = 'Trucks';
 </section>
 <!-- Our Service Area End -->
 
-<!-- Why Choose Us Area Start -->
-<section class="why-choose-us-area bg-gray section-padding-80-0">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-12 col-lg-6">
-                <div class="choose-us-thumbnail mt-30 mb-80">
-                    <div class="choose-us-img bg-img" style="background-image: url(<?= \yii\helpers\Url::to(['/images/uploads/chuseus/']) .'/' .$choose[0]['image'] ?>);"></div>
-                </div>
-            </div>
-            <div class="col-12 col-lg-6">
-                <!-- Section Heading -->
-	            <?php
-	            if (!empty($choose)){
-		            foreach ($choose as $chus){
 
-		        ?>
-                <div class="section-heading">
-
-                    <h2><?=$chus['title']?></h2>
-                    <p>Расскажем откровенно и по-честному.</p>
-
-                </div>
-                <!-- Choose Us Content -->
-                <div class="choose-us-content mt-30 mb-80">
-                    <ul>
-
-                        <li><i class="fa fa-check-square-o" aria-hidden="true"></i><?=$chus['reasonone']?></li>
-                        <li><i class="fa fa-check-square-o" aria-hidden="true"></i><?=$chus['reasontwo']?></li>
-                        <li><i class="fa fa-check-square-o" aria-hidden="true"></i><?=$chus['reasonthree']?></li>
-                        <li><i class="fa fa-check-square-o" aria-hidden="true"></i><?=$chus['reasonfour']?></li>
-
-                    </ul>
-
-                </div>
-                  <?php
-                    }
-	            }
-	            ?>
-
-
-            </div>
-        </div>
-    </div>
-</section>
-<!-- Why Choose Us Area End -->
 
 
 <!-- Our Expert Area Start -->
 <section class="akame-our-expert-area section-padding-80-0">
 
     <!-- Side Thumbnail -->
-    <div class="side-thumbnail"
-         style="background-image: url(<?= \yii\helpers\Url::to(['/']) . 'images/14.png' ?>);"></div>
+
+    <div class="side-thumbnail" style="background-image: url(<?= \yii\helpers\Url::to(['/']) . 'images/uploads/yourpark/'.$material['0']['background'] ?>);"></div>
 
     <div class="container">
         <div class="row justify-content-end">
             <div class="col-12 col-lg-6">
                 <!-- Section Heading -->
                 <div class="section-heading">
-                    <h2>Our Experts</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. Quis nostrud exercitation ullamco laboris nisi ut aliquip ex.</p>
+                    <h2><?=$material['0']['title']?></h2>
+                    <p><?=$material['0']['text']?></p>
                 </div>
                 <!-- Our Certificate -->
                 <div class="our-certificate-area mb-60 d-flex align-items-center">
+
                     <img src="<?= \yii\helpers\Url::to(['/']) . 'images/certificate-1.png' ?>" alt="">
                     <img src="<?= \yii\helpers\Url::to(['/']) . 'images/certificate-2.png' ?>" alt="">
                     <img src="<?= \yii\helpers\Url::to(['/']) . 'images/certificate-3.png' ?>" alt="">
@@ -255,79 +261,49 @@ $this->title = 'Trucks';
     </div>
     <div class="container">
         <div class="row">
-
             <!-- Single Team Member -->
-            <div class="col-12 col-sm-6 col-lg-3">
-                <div class="single-team-member mb-80 wow fadeInUp" data-wow-delay="200ms">
-                    <div class="team-member-img">
-                        <img src="<?= \yii\helpers\Url::to(['/']) . 'images/10.jpg' ?>" alt="">
-                        <!-- Social Info -->
-                        <div class="team-social-info d-flex align-items-center justify-content-center">
+			<?php if (!empty($material)){
+				foreach ($material as $prk){
+					?>
 
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <div class="single-team-member mb-80 wow fadeInUp" data-wow-delay="800ms">
+                            <div class="team-member-img">
+                                <img src="<?= \yii\helpers\Url::to( [ 'images/uploads/yourpark/' ] ) . "/" . $prk['img'] ?>" alt="">
+                                <!-- Social Info -->
+                                <div class="team-social-info d-flex align-items-center justify-content-center">
+
+                                </div>
+                            </div>
+                            <div class="team-member-info">
+                                <h5><?= $prk['description']?></h5>
+
+                            </div>
                         </div>
                     </div>
-                    <div class="team-member-info">
-                        <h5>Mila Hartley</h5>
-                        <p>Hairdresser</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Single Team Member -->
-            <div class="col-12 col-sm-6 col-lg-3">
-                <div class="single-team-member mb-80 wow fadeInUp" data-wow-delay="400ms">
-                    <div class="team-member-img">
-                        <img src="<?= \yii\helpers\Url::to(['/']) . 'images/11.jpg' ?>" alt="">
-                        <!-- Social Info -->
-                        <div class="team-social-info d-flex align-items-center justify-content-center">
-
-                        </div>
-                    </div>
-                    <div class="team-member-info">
-                        <h5>Teigan Duran</h5>
-                        <p>Stylist</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Single Team Member -->
-            <div class="col-12 col-sm-6 col-lg-3">
-                <div class="single-team-member mb-80 wow fadeInUp" data-wow-delay="600ms">
-                    <div class="team-member-img">
-                        <img src="<?= \yii\helpers\Url::to(['/']) . 'images/12.jpg' ?>" alt="">
-                        <!-- Social Info -->
-                        <div class="team-social-info d-flex align-items-center justify-content-center">
-
-                        </div>
-                    </div>
-                    <div class="team-member-info">
-                        <h5>Tanya Ramsay</h5>
-                        <p>Hairstylist</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Single Team Member -->
-            <div class="col-12 col-sm-6 col-lg-3">
-                <div class="single-team-member mb-80 wow fadeInUp" data-wow-delay="800ms">
-                    <div class="team-member-img">
-                        <img src="<?= \yii\helpers\Url::to(['/']) . 'images/13.jpg' ?>" alt="">
-                        <!-- Social Info -->
-                        <div class="team-social-info d-flex align-items-center justify-content-center">
-
-                        </div>
-                    </div>
-                    <div class="team-member-info">
-                        <h5>Donna Carr</h5>
-                        <p>Baber</p>
-                    </div>
-                </div>
-            </div>
-
+					<?php
+				}
+			}?>
         </div>
+
     </div>
+
 </section>
 <!-- Our Expert Area End -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <!-- Border -->
 <div class="container">

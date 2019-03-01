@@ -39,6 +39,8 @@
                     ['label' => 'Услуги', 'icon' => 'dashboard', 'url' => ['/service']],
                     ['label' => 'Tехника', 'icon' => 'car', 'url' => ['/technology']],
 
+	                ['label' => 'Строй Материяли', 'icon' => 'fas fa-columns', 'url' => ['/yourpark']],
+
                     ['label' => 'Товары ', 'icon' => 'car', 'url' => ['/products']],
                     ['label' => 'Pictures', 'icon' => 'dashboard', 'url' => ['/pictures']],
                     ['label' => 'Info', 'icon' => 'dashboard', 'url' => ['/info']],

@@ -73,7 +73,7 @@ class Technology extends \yii\db\ActiveRecord
         return [
             'id' => 'ID',
             'title' => 'Title',
-	        'description'=>'Description',
+//	        'description'=>'Description',
             'image' => 'Image',
             'price_date' => 'Price Date',
             'min_price' => 'Min Price',

@@ -13,7 +13,7 @@ use yii\widgets\ActiveForm;
     <?php $form = ActiveForm::begin(); ?>
 
     <?= $form->field($model, 'title')->textInput(['maxlength' => true])->label('Названия') ?>
-	<?= $form->field($model, 'description')->textInput(['maxlength' => true])->label('Характеристика') ?>
+<!--	--><?//= $form->field($model, 'description')->textInput(['maxlength' => true])->label('Характеристика') ?>
     <?php
     if(!empty($model->image)){
         echo Html::img(\yii\helpers\Url::to('@home/images/uploads/equipment/'.$model->image),['width' => '100px','class'=>'img']);
