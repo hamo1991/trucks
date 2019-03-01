@@ -4,12 +4,12 @@ namespace common\models;
 
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use common\models\Yourpark;
+use common\models\Garden;
 
 /**
- * YourparkSearch represents the model behind the search form of `common\models\Yourpark`.
+ * GardenSearch represents the model behind the search form of `common\models\Garden`.
  */
-class YourparkSearch extends Yourpark
+class GardenSearch extends Garden
 {
     /**
      * {@inheritdoc}
@@ -18,7 +18,7 @@ class YourparkSearch extends Yourpark
     {
         return [
             [['id'], 'integer'],
-            [['background', 'title', 'description', 'img', 'text'], 'safe'],
+            [['image', 'title', 'content'], 'safe'],
         ];
     }
 
@@ -40,7 +40,7 @@ class YourparkSearch extends Yourpark
      */
     public function search($params)
     {
-        $query = Yourpark::find();
+        $query = Garden::find();
 
         // add conditions that should always apply here
 
@@ -61,11 +61,9 @@ class YourparkSearch extends Yourpark
             'id' => $this->id,
         ]);
 
-        $query->andFilterWhere(['like', 'background', $this->background])
+        $query->andFilterWhere(['like', 'image', $this->image])
             ->andFilterWhere(['like', 'title', $this->title])
-            ->andFilterWhere(['like', 'description', $this->description])
-            ->andFilterWhere(['like', 'img', $this->img])
-            ->andFilterWhere(['like', 'text', $this->text]);
+            ->andFilterWhere(['like', 'content', $this->content]);
 
         return $dataProvider;
     }

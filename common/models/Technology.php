@@ -28,7 +28,6 @@ class Technology extends \yii\db\ActiveRecord
     {
         return 'technology';
     }
-
 	public function behaviors()
 	{
 		return [
@@ -39,8 +38,6 @@ class Technology extends \yii\db\ActiveRecord
 			],
 		];
 	}
-
-
 
     /**
      * {@inheritdoc}

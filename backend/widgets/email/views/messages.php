@@ -11,7 +11,6 @@
                             <div class="pull-left">
                                 <?= strtoupper($message['name'])?>
                             </div>
-
                             <h4> <?= substr($message['content'],0,10).'....';?>
                                 <small><i class="fa fa-clock-o"></i> <?= $message['date']?></small>
                             </h4>

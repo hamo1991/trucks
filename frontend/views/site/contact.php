@@ -111,8 +111,8 @@ $this->params['breadcrumbs'][] = $this->title;
             </div>
         </div>
 
-        <div class="row ">
-            <div class="col-12 mycontactInput">
+        <div class="row">
+            <div class="col-12">
                 <!-- Form -->
 <!--                <form action="#" method="post" class="akame-contact-form border-0 p-0">-->
 <!--                    <div class="row">-->

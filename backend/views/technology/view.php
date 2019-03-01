@@ -33,11 +33,6 @@ $this->params['breadcrumbs'][] = $this->title;
                 'label' => 'Названия',
                 'attribute' => 'title',
             ],
-
-//	        [
-//		        'label' => 'Характеристика',
-//		        'attribute' => 'description',
-//	        ],
             [
                 'label' => 'Картинка',
                 'attribute' => 'image',
