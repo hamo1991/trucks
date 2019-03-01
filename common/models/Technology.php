@@ -28,16 +28,16 @@ class Technology extends \yii\db\ActiveRecord
     {
         return 'technology';
     }
-	public function behaviors()
-	{
-		return [
-			'slug' => [
-				'class' => SlugBehavior::class,
-				'in_attribute' => 'title',
-				'out_attribute' => 'slug',
-			],
-		];
-	}
+//	public function behaviors()
+//	{
+//		return [
+//			'slug' => [
+//				'class' => SlugBehavior::class,
+//				'in_attribute' => 'title',
+//				'out_attribute' => 'slug',
+//			],
+//		];
+//	}
 //    public function behaviors()
 //    {
 //        return [

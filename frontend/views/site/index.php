@@ -235,7 +235,7 @@ $this->title = 'Trucks';
     </div>
 </section>
 <!-- Our Service Area End -->
-<?php var_dump($choose)?>
+
 <!-- Why Choose Us Area Start -->
 <section class="why-choose-us-area bg-gray section-padding-80-0">
     <div class="container">
