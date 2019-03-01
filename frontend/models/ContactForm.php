@@ -30,6 +30,17 @@ class ContactForm extends \yii\db\ActiveRecord {
         ];
     }
 
+    public function attributeLabels()
+    {
+        return [
+            'name' => 'Имя',
+            'email' => 'Email',
+            'subject' => 'Номер телефона',
+            'body' => 'Сообщение'
+
+        ];
+    }
+
     /**
      * {@inheritdoc}
      */

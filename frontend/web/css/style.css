@@ -224,8 +224,6 @@ input:focus {
 .mb-15 {
   margin-bottom: 15px; }
 
-.mb-30 {
-  margin-bottom: 30px; }
 
 .mb-40 {
   margin-bottom: 40px; }
@@ -1076,6 +1074,7 @@ width: 674px;
       margin: 0 3px;
       font-size: 13px; } }
   .portfolio-menu .btn.active {
+    outline: none;!important;
     color: #bca858;
     border-bottom-color: #bca858; }
 

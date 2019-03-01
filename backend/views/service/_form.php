@@ -17,12 +17,11 @@ use yii\widgets\ActiveForm;
 
 	<?= $form->field($model, 'image')->fileInput(['maxlength' => true]) ?>
 
-
     <?= $form->field($model, 'is_new')->dropDownList([ '0'=>'Да', '1'=>'Нет', ]) ?>
 
-
-
     <?= $form->field($model, 'description')->textarea(['rows' => 6]) ?>
+
+    <?= $form->field($model, 'content')->textarea(['rows' => 6]) ?>
 
     <?= $form->field($model, 'price')->textInput() ?>
 

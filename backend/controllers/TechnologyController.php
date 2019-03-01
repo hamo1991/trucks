@@ -77,7 +77,7 @@ class TechnologyController extends Controller
 
                 $imgName = Yii::$app->security->generateRandomString() . '.' . $image->extension;
 
-                $filePath = Yii::getAlias('@frontend').'/web/images/uploads/equipment/';
+                $filePath = Yii::getAlias('@frontend').'/web/images/uploads/all/';
                 if(!is_dir($filePath)){
                     mkdir($filePath);
                 }
@@ -125,7 +125,7 @@ class TechnologyController extends Controller
 
                 $imgName = Yii::$app->security->generateRandomString() . '.' . $image->extension;
 
-                $filePath = Yii::getAlias('@frontend').'/web/images/uploads/equipment/';
+                $filePath = Yii::getAlias('@frontend').'/web/images/uploads/all/';
                 if(!is_dir($filePath)){
                     mkdir($filePath);
                 }
@@ -162,7 +162,7 @@ class TechnologyController extends Controller
     {
         $model = $this->findModel($id);
         $image = $model->image;
-        $imgPath = Yii::getAlias('@frontend') . '/web/images/uploads/equipment/';
+        $imgPath = Yii::getAlias('@frontend') . '/web/images/uploads/all/';
         $file = $imgPath . $image;
         if ($image == '') {
             $this->findModel($id)->delete();
