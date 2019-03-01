@@ -15,16 +15,12 @@ use yii\widgets\ActiveForm;
 	<?= $form->field($model, 'background')->fileInput() ?>
 
     <?= $form->field($model, 'title')->textInput(['maxlength' => true]) ?>
+
 	<?= $form->field($model, 'text')->textInput(['maxlength' => true]) ?>
-
-
 
 	<?= $form->field($model, 'img')->fileInput() ?>
 
-
 	<?= $form->field($model, 'description')->textInput(['maxlength' => true]) ?>
-
-
 
     <div class="form-group">
         <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>

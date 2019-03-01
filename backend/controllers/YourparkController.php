@@ -83,9 +83,6 @@ class YourparkController extends Controller
 
 	        }
 
-
-
-
 	        $imgFile = UploadedFile::getInstance($model, "img");
 
 	        if (!empty($imgFile)) {
@@ -116,8 +113,8 @@ class YourparkController extends Controller
     public function actionUpdate($id)
     {
         $model = $this->findModel($id);
-	    $oldbg= $model->background;
-	    $old_image=$model->img;
+	    $oldbg = $model->background;
+	    $old_image = $model->img;
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
 
@@ -143,10 +140,7 @@ class YourparkController extends Controller
 		        $model->save(['background']);
 	        }
 
-
-
 	        $imgFile = UploadedFile::getInstance($model, "img");
-
 
 	        if (!empty($imgFile)) {
 		        $imgPath = Yii::getAlias('@frontend') . '/web/images/uploads/yourpark/';
@@ -167,16 +161,6 @@ class YourparkController extends Controller
 		        $model->img = $old_image;
 		        $model->save(['img']);
 	        }
-
-
-
-
-
-
-
-
-
-
 
 
 	        return $this->redirect(['view', 'id' => $model->id]);

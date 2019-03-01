@@ -13,13 +13,6 @@ use yii\widgets\ActiveForm;
     <?php $form = ActiveForm::begin(); ?>
 
     <?= $form->field($model, 'title')->textInput(['maxlength' => true])->label('Названия') ?>
-<!--	--><?//= $form->field($model, 'description')->textInput(['maxlength' => true])->label('Характеристика') ?>
-    <?php
-    if(!empty($model->image)){
-        echo Html::img(\yii\helpers\Url::to('@home/images/uploads/equipment/'.$model->image),['width' => '100px','class'=>'img']);
-
-    }
-    ?>
 
     <?= $form->field($model, 'image')->fileInput()->label('Картинка') ?>
 
@@ -27,7 +20,11 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'min_price')->textInput()->label('Минимальная цена') ?>
 
-    <?= $form->field($model, 'is_new')->dropDownList([ '0', '1', ], ['prompt' => ''])->label('Новинка') ?>
+    <?= $form->field($model, 'content')->textInput() ?>
+
+    <?= $form->field($model, 'description')->textInput() ?>
+
+    <?= $form->field($model, 'is_new')->dropDownList([ '0', '1', ])->label('Новинка') ?>
 
 <!--    --><?//= $form->field($model, 'slug')->textInput(['maxlength' => true]) ?>
 

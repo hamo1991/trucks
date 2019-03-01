@@ -26,6 +26,10 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'image') ?>
 
+<!--    --><?//= $form->field($model, 'content') ?>
+<!--    -->
+<!--    --><?//= $form->field($model, 'description') ?>
+
     <?= $form->field($model, 'price_date') ?>
 
     <?= $form->field($model, 'min_price') ?>

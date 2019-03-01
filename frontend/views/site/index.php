@@ -79,6 +79,7 @@ $this->title = 'Trucks';
                                 <div class="overlay-content d-flex align-items-center justify-content-center">
                                     <div class="overlay-text text-center">
                                         <h4><?= $value['title'] ?></h4>
+                                        <p><?= $value['content'] ?></p>
 
                                     </div>
                                 </div>
@@ -94,7 +95,7 @@ $this->title = 'Trucks';
                     } else {
                         ?>
                         <!-- Single Portfolio Item -->
-                        <div class="col-12 col-sm-6 col-lg-3 akame-portfolio-item haircuts mb-30 wow fadeInUp"
+                        <div style="margin-bottom: 25px" class="col-12 col-sm-6 col-lg-3 akame-portfolio-item haircuts mb-30 wow fadeInUp"
                              data-wow-delay="200ms">
                             <div class="akame-portfolio-single-item">
                                 <img src="<?= \yii\helpers\Url::to(['/images/uploads/products']) . '/' . $value['image'] ?>" alt="">
@@ -151,12 +152,10 @@ $this->title = 'Trucks';
                 <!-- Choose Us Content -->
                 <div class="choose-us-content mt-30 mb-80">
                     <ul>
-
                         <li><i class="fa fa-check-square-o" aria-hidden="true"></i><?=$chus['reasonone']?></li>
                         <li><i class="fa fa-check-square-o" aria-hidden="true"></i><?=$chus['reasontwo']?></li>
                         <li><i class="fa fa-check-square-o" aria-hidden="true"></i><?=$chus['reasonthree']?></li>
                         <li><i class="fa fa-check-square-o" aria-hidden="true"></i><?=$chus['reasonfour']?></li>
-
                     </ul>
 
                 </div>
@@ -220,7 +219,7 @@ $this->title = 'Trucks';
             <!-- Single Service Area -->
             <div class="col-12 col-sm-6 col-lg-3">
                 <div class="single-service-area mb-80 wow fadeInUp" data-wow-delay="800ms">
-                    <img src="<?= \yii\helpers\Url::to(['/']) . 'images/uploads/products/at3tlh_jaSzNOmBdSDwSpvVXKro2y1Aa.jpg' ?>" alt="">
+                    <img src="<?= \yii\helpers\Url::to(['/']) . 'images/s1.png' ?>" alt="">
                     <h5>Coloring</h5>
                     <p>Ut enim ad minim veniam, quis trud exercitation...</p>
                 </div>

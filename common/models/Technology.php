@@ -2,7 +2,6 @@
 namespace common\models;
 
 use Yii;
-//use yii\behaviors\SluggableBehavior;
 use common\behaviors\SlugBehavior;
 
 /**
@@ -10,6 +9,7 @@ use common\behaviors\SlugBehavior;
  *
  * @property int $id
  * @property string $title
+ * @property string $content
  * @property string $description
  * @property string $image
  * @property int $price_date
@@ -17,7 +17,6 @@ use common\behaviors\SlugBehavior;
  * @property string $is_new
  * @property string $slug
  *
- * @property Pictures[] $pictures
  * @property Service[] $services
  */
 class Technology extends \yii\db\ActiveRecord
@@ -41,16 +40,7 @@ class Technology extends \yii\db\ActiveRecord
 		];
 	}
 
-//    public function behaviors()
-//    {
-//        return [
-//            [
-//                'class' => SluggableBehavior::className(),
-//                'attribute' => 'title',
-//                'ensureUnique' => true,
-//            ]
-//        ];
-//    }
+
 
     /**
      * {@inheritdoc}
@@ -61,6 +51,7 @@ class Technology extends \yii\db\ActiveRecord
             [['title', ], 'required'],
             [['price_date', 'min_price'], 'integer'],
             [['is_new'], 'string'],
+            [['content','description'], 'string'],
             [['title', 'image', 'slug'], 'string', 'max' => 255],
         ];
     }
@@ -73,7 +64,8 @@ class Technology extends \yii\db\ActiveRecord
         return [
             'id' => 'ID',
             'title' => 'Title',
-//	        'description'=>'Description',
+            'content' => 'Content',
+            'description' => 'Description',
             'image' => 'Image',
             'price_date' => 'Price Date',
             'min_price' => 'Min Price',
@@ -82,19 +74,4 @@ class Technology extends \yii\db\ActiveRecord
         ];
     }
 
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getPictures()
-    {
-        return $this->hasMany(Pictures::className(), ['technology_id' => 'id']);
-    }
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getServices()
-    {
-        return $this->hasMany(Service::className(), ['tech_id' => 'id']);
-    }
 }

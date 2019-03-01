@@ -31,22 +31,16 @@ $this->title = 'Transports';
         <div class="row">
             <div class="col-12">
                 <div class="portfolio-menu text-center mb-50">
-
                     <button class="btn active" data-filter="*">Все</button>
-
                     <?php  if(!empty($transports)){
                         foreach ($transports as $transport){
                             ?>
                             <button class="btn" data-filter=".<?= $transport['title'] ?>"><?= $transport['title']?></button>
                             <?php
                         }
-                        ?>
 
-
-
-                    <?php
-                    }?>
-
+                    }
+                    ?>
                 </div>
             </div>
         </div>
@@ -58,22 +52,18 @@ $this->title = 'Transports';
                     ?>
                     <div class="col-12 col-sm-6 col-lg-4 akame-portfolio-item <?=$string?> mb-30 wow fadeInUp" data-wow-delay="200ms">
                         <div class="akame-portfolio-single-item">
-                            <img src="<?= \yii\helpers\Url::to('@web/images/uploads/equipment/' . $trans['image']) ?>" alt="">
+                            <img src="<?= \yii\helpers\Url::to('@web/images/uploads/all/' . $trans['image']) ?>" alt="Image">
 
                             <!-- Overlay Content -->
-                            <div class="overlay-content d-flex align-items-center justify-content-center">
+                           <a href="<?= \yii\helpers\Url::to('@web/information/' . $trans['slug']) ?>"><div class="overlay-content d-flex align-items-center justify-content-center">
                                 <div class="overlay-text text-center">
                                     <h4><?= $trans['title']?></h4>
                                     <p><?=$trans['description']?></p>
-                                    <?php
-
-                                    var_dump($trans)
-                                    ?>
                                 </div>
                             </div>
-
+                           </a>
                             <!-- Thumbnail Zoom -->
-                            <a href="<?= \yii\helpers\Url::to('@web/images/uploads/equipment/' . $trans['image']) ?>" class="thumbnail-zoom"><i class="icon_search"></i></a>
+                            <a href="<?= \yii\helpers\Url::to('@web/images/uploads/all/' . $trans['image']) ?>" class="thumbnail-zoom"><i class="icon_search"></i></a>
                         </div>
                     </div>
             <?php

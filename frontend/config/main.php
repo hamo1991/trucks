@@ -42,8 +42,7 @@ return [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
-
-
+                'information/<slug>' => 'information/index'
             ],
         ],
 

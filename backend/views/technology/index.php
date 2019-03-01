@@ -28,8 +28,9 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
+
             'id',
-//	        'description',
+
             [
                 'label' => 'Названия',
                 'attribute' => 'title',
@@ -41,7 +42,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 'format' => 'raw',
                 'filter' => '',
                 'value' => function ($model) {
-                    return Html::img(\yii\helpers\Url::to('/frontend/web/images/uploads/equipment/' . $model->image), ['width' => '100px', 'class' => 'img']);
+                    return Html::img(\yii\helpers\Url::to('/frontend/web/images/uploads/all/' . $model->image), ['width' => '100px', 'class' => 'img']);
                 }
             ],
             [
@@ -56,7 +57,8 @@ $this->params['breadcrumbs'][] = $this->title;
 
             //'is_new',
 //            'slug',
-
+//            'content',
+//            'description',
             ['class' => 'yii\grid\ActionColumn'],
         ],
     ]); ?>

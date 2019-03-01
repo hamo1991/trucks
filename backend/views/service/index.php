@@ -31,13 +31,14 @@ $this->params['breadcrumbs'][] = $this->title;
 		        'format' => 'raw',
 		        'filter'=> '',
 		        'value' => function($model){
-                    return Html::img(\yii\helpers\Url::to('/frontend/web/images/uploads/service/'. $model->image),['width' => '120px','height' => '80px',]);
+                    return Html::img(\yii\helpers\Url::to('/frontend/web/images/uploads/all/'. $model->image),['width' => '120px','height' => '80px',]);
 		        }
 	        ] ,
             'slug',
             'is_new',
             //'title',
             //'description:ntext',
+            //'content:ntext',
             //'price',
 
             ['class' => 'yii\grid\ActionColumn'],

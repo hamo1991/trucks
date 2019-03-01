@@ -3,7 +3,6 @@
 namespace common\models;
 
 use Yii;
-use yii\behaviors\SluggableBehavior;
 use common\behaviors\SlugBehavior;
 /**
  * This is the model class for table "service".
@@ -14,9 +13,10 @@ use common\behaviors\SlugBehavior;
  * @property string $is_new
  * @property string $title
  * @property string $description
+ * @property string $content
  * @property int $price
  *
- * @property Pictures[] $pictures
+
  * @property Technology $tech
  */
 class Service extends \yii\db\ActiveRecord
@@ -47,7 +47,7 @@ class Service extends \yii\db\ActiveRecord
         return [
             [['title', ], 'required'],
             [['price'], 'integer'],
-            [['is_new', 'description'], 'string'],
+            [['is_new','content', 'description'], 'string'],
             [['image', 'slug', 'title'], 'string', 'max' => 255],
         ];
     }
@@ -64,16 +64,10 @@ class Service extends \yii\db\ActiveRecord
             'is_new' => 'Is New',
             'title' => 'Title',
             'description' => 'Description',
+            'content' => 'Content',
             'price' => 'Price',
         ];
     }
 
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getPictures()
-    {
-        return $this->hasMany(Pictures::className(), ['service_id' => 'id']);
-    }
 
 }

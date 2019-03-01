@@ -68,7 +68,7 @@ class ServiceController extends Controller
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             $imgFile = UploadedFile::getInstance($model, "image");
             if (!empty($imgFile)) {
-                $imgPath = Yii::getAlias('@frontend') . '/web/images/uploads/service/';
+                $imgPath = Yii::getAlias('@frontend') . '/web/images/uploads/all/';
                 $imgName = Yii::$app->security->generateRandomString() . '.' . $imgFile->extension;
                 $model->image = $imgName;
                 $path = $imgPath . $imgName;
@@ -104,7 +104,7 @@ class ServiceController extends Controller
             $imgFile = UploadedFile::getInstance($model, "image");
 
             if (!empty($imgFile)) {
-                $imgPath = Yii::getAlias('@frontend') . '/web/images/uploads/service/';
+                $imgPath = Yii::getAlias('@frontend') . '/web/images/uploads/all/';
                 $imgName = Yii::$app->security->generateRandomString() . '.' . $imgFile->extension;
                 $model->image = $imgName;
                 $path = $imgPath . $imgName;
@@ -145,7 +145,7 @@ class ServiceController extends Controller
 
         $model = $this->findModel($id);
         $image = $model->image;
-        $imgPath = Yii::getAlias('@frontend') . '/web/images/uploads/service/';
+        $imgPath = Yii::getAlias('@frontend') . '/web/images/uploads/all/';
         $file = $imgPath . $image;
         if ($image == '') {
             $this->findModel($id)->delete();
