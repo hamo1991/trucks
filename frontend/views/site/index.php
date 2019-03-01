@@ -292,13 +292,13 @@ $this->title = 'Trucks';
 
 <!-- Call To Action Area Start -->
 <section class="akame-cta-area bg-gray section-padding-80"
-         style="background-image: url(<?= \yii\helpers\Url::to(['/']) . 'images/slider_5ds.jpg' ?>);background-size: cover">
+         style="background-image: url(<?= \yii\helpers\Url::to(['/']) . 'images/banner-1.jpg' ?>);background-size: cover">
     <div class="container">
         <div class="row">
             <div class="col-12 col-sm-10 col-xl-5">
                 <div class="cta-content">
-                    <h2>Лучшее предложение на рынке!</h2>
-                    <p style="color: black;font-weight: bold;font-size: 17px">Быстрая доставка и точное соблюдение
+                    <h2 style="color: white">Лучшее предложение на рынке!</h2>
+                    <p style="color: white;font-weight: bold;font-size: 17px">Быстрая доставка и точное соблюдение
                         сроков</p>
                 </div>
             </div>
