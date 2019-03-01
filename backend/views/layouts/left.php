@@ -8,7 +8,7 @@
                 <img src="<?= $directoryAsset ?>/img/user2-160x160.jpg" class="img-circle" alt="User Image"/>
             </div>
             <div class="pull-left info">
-                <p>Alexander Pierce</p>
+                <p>Админ</p>
 
                 <a href=""><i class="fa fa-circle text-success"></i> Online</a>
             </div>
@@ -39,7 +39,7 @@
                     ['label' => 'Услуги', 'icon' => 'dashboard', 'url' => ['/service']],
                     ['label' => 'Tехника', 'icon' => 'car', 'url' => ['/technology']],
 
-	                ['label' => 'Строй Материяли', 'icon' => 'fas fa-columns', 'url' => ['/yourpark']],
+	                ['label' => 'Сипучие Материяли', 'icon' => 'fas fa-columns', 'url' => ['/yourpark']],
 
                     ['label' => 'Товары ', 'icon' => 'car', 'url' => ['/products']],
                     ['label' => 'Pictures', 'icon' => 'dashboard', 'url' => ['/pictures']],
