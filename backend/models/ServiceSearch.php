@@ -17,7 +17,7 @@ class ServiceSearch extends Service
     public function rules()
     {
         return [
-            [['id', 'tech_id', 'price'], 'integer'],
+            [['id','price'], 'integer'],
             [['image', 'slug', 'is_new', 'title', 'description'], 'safe'],
         ];
     }
@@ -59,7 +59,6 @@ class ServiceSearch extends Service
         // grid filtering conditions
         $query->andFilterWhere([
             'id' => $this->id,
-            'tech_id' => $this->tech_id,
             'price' => $this->price,
         ]);
 

@@ -29,9 +29,15 @@ $this->params['breadcrumbs'][] = $this->title;
     <?= DetailView::widget([
         'model' => $model,
         'attributes' => [
-            'id',
             'title',
-
+            [
+                'attribute' => 'image',
+                'format' => 'raw',
+                'filter'=> '',
+                'value' => function($model){
+                    return Html::img(\yii\helpers\Url::to('/frontend/web/images/uploads/chuseus/'. $model->image),['width' => '120px','height' => '80px',]);
+                }
+            ] ,
             'reasonone',
             'reasontwo',
             'reasonthree',

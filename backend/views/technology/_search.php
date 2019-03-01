@@ -22,6 +22,8 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'title') ?>
 
+	<?= $form->field($model, 'description') ?>
+
     <?= $form->field($model, 'image') ?>
 
     <?= $form->field($model, 'price_date') ?>

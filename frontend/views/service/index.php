@@ -12,8 +12,8 @@ $this->title = 'Services';
                     <h2>Наши Услуги</h2>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="<?= \yii\helpers\Url::to(['/']) . 'site/' ?>"><i class="icon_house_alt"></i> Home</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Services</li>
+                            <li class="breadcrumb-item"><a href="<?= \yii\helpers\Url::to(['/']) . 'site/' ?>"><i class="icon_house_alt"></i> Главная</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Наши Услуги</li>
                         </ol>
                     </nav>
                 </div>

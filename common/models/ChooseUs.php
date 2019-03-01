@@ -9,6 +9,7 @@ use Yii;
  *
  * @property int $id
  * @property string $title
+ * @property string $image
  * @property string $reasonone
  * @property string $reasontwo
  * @property string $reasonthree
@@ -31,7 +32,7 @@ class Chooseus extends \yii\db\ActiveRecord
     {
         return [
             [['title', ],'required'],
-            [['title', 'reasonone', 'reasontwo', 'reasonthree', 'reasonfour'], 'string', 'max' => 255],
+            [['title','image', 'reasonone', 'reasontwo', 'reasonthree', 'reasonfour'], 'string', 'max' => 255],
         ];
     }
 

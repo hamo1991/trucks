@@ -10,6 +10,7 @@ use common\behaviors\SlugBehavior;
  *
  * @property int $id
  * @property string $title
+ * @property string $description
  * @property string $image
  * @property int $price_date
  * @property int $min_price
@@ -28,16 +29,18 @@ class Technology extends \yii\db\ActiveRecord
     {
         return 'technology';
     }
-//	public function behaviors()
-//	{
-//		return [
-//			'slug' => [
-//				'class' => SlugBehavior::class,
-//				'in_attribute' => 'title',
-//				'out_attribute' => 'slug',
-//			],
-//		];
-//	}
+
+	public function behaviors()
+	{
+		return [
+			'slug' => [
+				'class' => SlugBehavior::className(),
+				'in_attribute' => 'title',
+				'out_attribute' => 'slug',
+			],
+		];
+	}
+
 //    public function behaviors()
 //    {
 //        return [
@@ -70,6 +73,7 @@ class Technology extends \yii\db\ActiveRecord
         return [
             'id' => 'ID',
             'title' => 'Title',
+	        'description'=>'Description',
             'image' => 'Image',
             'price_date' => 'Price Date',
             'min_price' => 'Min Price',

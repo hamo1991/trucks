@@ -11,7 +11,8 @@ $this->title = 'Trucks';
         if (!empty($slider)) {
             foreach ($slider as $slide) {
                 ?>
-                <div class="single-welcome-slide bg-img" style="background-image: url(<?='/images/uploads/slider/' . $slide['image'] ?>);">
+                <div class="single-welcome-slide bg-img"
+                     style="background-image: url(<?= '/images/uploads/slider/' . $slide['image'] ?>);">
                     <!-- Welcome Content -->
                     <div class="welcome-content h-100">
                         <div class="container h-100">
@@ -19,9 +20,10 @@ $this->title = 'Trucks';
                                 <!-- Welcome Text -->
                                 <div class="col-12 col-md-9 col-lg-6">
                                     <div class="welcome-text">
-                                        <h2  data-animation="fadeInUp" data-delay="100ms"><?= $slide['title'] ?></h2>
+                                        <h2 data-animation="fadeInUp" data-delay="100ms"><?= $slide['title'] ?></h2>
                                         <p data-animation="fadeInUp" data-delay="400ms"><?= $slide['content'] ?></p>
-<!--                                        <a href="--><?//= \yii\helpers\Url::to(['/']) . 'site/about' ?><!--" class="btn akame-btn" data-animation="fadeInUp" data-delay="700ms">About Us</a>-->
+                                        <!--                                        <a href="-->
+                                        <?//= \yii\helpers\Url::to(['/']) . 'site/about' ?><!--" class="btn akame-btn" data-animation="fadeInUp" data-delay="700ms">About Us</a>-->
                                     </div>
                                 </div>
 
@@ -33,18 +35,9 @@ $this->title = 'Trucks';
             }
         }
         ?>
-
-        <!-- Single Welcome Slide -->
-
-
-        <!-- Single Welcome Slide -->
-
-
     </div>
 </section>
 <!-- Welcome Area End -->
-
-
 
 <!-- Portfolio Area Start -->
 <section class="akame-portfolio section-padding-80 clearfix">
@@ -53,9 +46,8 @@ $this->title = 'Trucks';
             <!-- Section Heading -->
             <div class="col-12">
                 <div class="section-heading text-center">
-
-                    <h2>Наши работы</h2>
-                    <p>Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <h2>Наши товары</h2>
+                    <p>Лучшее предложение на рынке!</p>
                 </div>
             </div>
         </div>
@@ -65,113 +57,66 @@ $this->title = 'Trucks';
         <div class="row">
             <div class="col-12">
                 <div class="portfolio-menu text-center mb-30">
-                    <button class="btn active" data-filter="*">ВСЕ</button>
-                    <button class="btn" data-filter=".haircuts">СПЕЦТЕХНИКА</button>
-                    <button class="btn" data-filter=".dye">БЛАГОУСТРОЙСТВО</button>
-                    <button class="btn" data-filter=".shave">АСФАЛЬТИРОВАНЫЕ </button>
-                    <button class="btn" data-filter=".hairstyle">СЫПУЧИЕ МАТЕРИАЛЫ</button>
+
                 </div>
             </div>
         </div>
 
         <div class="row akame-portfolio-area">
-            <!-- Single Portfolio Item -->
-            <div class="col-12 col-sm-6 col-lg-3 akame-portfolio-item haircuts mb-30 wow fadeInUp" data-wow-delay="200ms">
-                <div class="akame-portfolio-single-item">
-                    <img src="<?= \yii\helpers\Url::to(['/']) . 'images/5.jpg' ?>" alt="">
 
-                    <!-- Overlay Content -->
-                    <div class="overlay-content d-flex align-items-center justify-content-center">
-                        <div class="overlay-text text-center">
-                            <h4>Hairstyle</h4>
-                            <p>Consectetur adipisicing elit sed doe</p>
+            <?php
+            if (!empty($products)) {
+                foreach ($products as $key => $value) {
+                    if ($key == 1) {
+                        ?>
+
+                        <!-- Single Portfolio Item -->
+                        <div class="col-12 col-sm-6 akame-portfolio-item dye mb-30 wow fadeInUp" data-wow-delay="300ms">
+                            <div class="akame-portfolio-single-item">
+                                <img src="<?= \yii\helpers\Url::to(['/images/uploads/products']) . '/' . $value['image'] ?>" alt="">
+
+                                <!-- Overlay Content -->
+                                <div class="overlay-content d-flex align-items-center justify-content-center">
+                                    <div class="overlay-text text-center">
+                                        <h4><?= $value['title'] ?></h4>
+
+                                    </div>
+                                </div>
+
+                                <!-- Thumbnail Zoom -->
+                                <a href="<?= \yii\helpers\Url::to(['/images/uploads/products']) . '/' . $value['image'] ?>" class="thumbnail-zoom"><i
+                                            class="icon_search"></i></a>
+                            </div>
                         </div>
-                    </div>
 
-                    <!-- Thumbnail Zoom -->
-                    <a href="<?= \yii\helpers\Url::to(['/']) . 'images/5.jpg' ?>" class="thumbnail-zoom"><i class="icon_search"></i></a>
-                </div>
-            </div>
 
-            <!-- Single Portfolio Item -->
-            <div class="col-12 col-sm-6 akame-portfolio-item dye mb-30 wow fadeInUp" data-wow-delay="300ms">
-                <div class="akame-portfolio-single-item">
-                    <img src="<?= \yii\helpers\Url::to(['/']) . 'images/6.jpg' ?>" alt="">
+                        <?php
+                    } else {
+                        ?>
+                        <!-- Single Portfolio Item -->
+                        <div class="col-12 col-sm-6 col-lg-3 akame-portfolio-item haircuts mb-30 wow fadeInUp"
+                             data-wow-delay="200ms">
+                            <div class="akame-portfolio-single-item">
+                                <img src="<?= \yii\helpers\Url::to(['/images/uploads/products']) . '/' . $value['image'] ?>" alt="">
 
-                    <!-- Overlay Content -->
-                    <div class="overlay-content d-flex align-items-center justify-content-center">
-                        <div class="overlay-text text-center">
-                            <h4>Hairstyle</h4>
-                            <p>Consectetur adipisicing elit sed doe</p>
+                                <!-- Overlay Content -->
+                                <div class="overlay-content d-flex align-items-center justify-content-center">
+                                    <div class="overlay-text text-center">
+                                        <h4><?= $value['title'] ?></h4>
+                                        <p><?= $value['content'] ?></p>
+                                    </div>
+                                </div>
+
+                                <!-- Thumbnail Zoom -->
+                                <a href="<?= \yii\helpers\Url::to(['/images/uploads/products']) . '/' . $value['image'] ?>" class="thumbnail-zoom"><i
+                                            class="icon_search"></i></a>
+                            </div>
                         </div>
-                    </div>
-
-                    <!-- Thumbnail Zoom -->
-                    <a href="<?= \yii\helpers\Url::to(['/']) . 'images/6.jpg' ?>" class="thumbnail-zoom"><i class="icon_search"></i></a>
-                </div>
-            </div>
-
-            <!-- Single Portfolio Item -->
-            <div class="col-12 col-lg-3 akame-portfolio-item shave mb-30 wow fadeInUp" data-wow-delay="400ms">
-                <div class="akame-portfolio-single-item">
-                    <img src="<?= \yii\helpers\Url::to(['/']) . 'images/7.jpg' ?>" alt="">
-
-                    <!-- Overlay Content -->
-                    <div class="overlay-content d-flex align-items-center justify-content-center">
-                        <div class="overlay-text text-center">
-                            <h4>Hairstyle</h4>
-                            <p>Consectetur adipisicing elit sed doe</p>
-                        </div>
-                    </div>
-
-                    <!-- Thumbnail Zoom -->
-                    <a href="<?= \yii\helpers\Url::to(['/']) . 'images/7.jpg' ?>" class="thumbnail-zoom"><i class="icon_search"></i></a>
-                </div>
-            </div>
-
-            <!-- Single Portfolio Item -->
-            <div class="col-12 col-sm-6 col-lg-3 akame-portfolio-item hairstyle mb-30 wow fadeInUp" data-wow-delay="500ms">
-                <div class="akame-portfolio-single-item">
-                    <img src="<?= \yii\helpers\Url::to(['/']) . 'images/8.jpg' ?>" alt="">
-
-                    <!-- Overlay Content -->
-                    <div class="overlay-content d-flex align-items-center justify-content-center">
-                        <div class="overlay-text text-center">
-                            <h4>Hairstyle</h4>
-                            <p>Consectetur adipisicing elit sed doe</p>
-                        </div>
-                    </div>
-
-                    <!-- Thumbnail Zoom -->
-                    <a href="<?= \yii\helpers\Url::to(['/']) . 'images/8.jpg' ?>" class="thumbnail-zoom"><i class="icon_search"></i></a>
-                </div>
-            </div>
-
-            <!-- Single Portfolio Item -->
-            <div class="col-12 col-sm-6 col-lg-3 akame-portfolio-item dye mb-30 wow fadeInUp" data-wow-delay="600ms">
-                <div class="akame-portfolio-single-item">
-                    <img src="<?= \yii\helpers\Url::to(['/']) . 'images/9.jpg' ?>" alt="">
-
-                    <!-- Overlay Content -->
-                    <div class="overlay-content d-flex align-items-center justify-content-center">
-                        <div class="overlay-text text-center">
-                            <h4>Hairstyle</h4>
-                            <p>Consectetur adipisicing elit sed doe</p>
-                        </div>
-                    </div>
-
-                    <!-- Thumbnail Zoom -->
-                    <a href="<?= \yii\helpers\Url::to(['/']) . 'images/9.jpg' ?>" class="thumbnail-zoom"><i class="icon_search"></i></a>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-12">
-                <div class="view-all-btn mt-30 text-center">
-                    <a href="portfolio.html" class="btn akame-btn">View All Work</a>
-                </div>
-            </div>
+                        <?php
+                    }
+                }
+            }
+            ?>
         </div>
     </div>
 </section>
@@ -207,7 +152,7 @@ $this->title = 'Trucks';
             <!-- Single Service Area -->
             <div class="col-12 col-sm-6 col-lg-3">
                 <div class="single-service-area mb-80 wow fadeInUp" data-wow-delay="400ms">
-                    <img src="<?= \yii\helpers\Url::to(['/']) . 'images/s3.png' ?>">
+                    <img src="<?= \yii\helpers\Url::to(['/']) . 'images/s3.png' ?>" alt="Photo">
                     <h5>Haircut</h5>
                     <p>Consectetur adipisicing elit, sed doe eiusmod.</p>
                 </div>
@@ -242,7 +187,6 @@ $this->title = 'Trucks';
         <div class="row align-items-center">
             <div class="col-12 col-lg-6">
                 <div class="choose-us-thumbnail mt-30 mb-80">
-
                     <div class="choose-us-img bg-img" style="background-image: url(<?= \yii\helpers\Url::to(['/images/uploads/chuseus/']) .'/' .$choose[0]['image'] ?>);"></div>
                 </div>
             </div>
@@ -256,15 +200,18 @@ $this->title = 'Trucks';
                 <div class="section-heading">
 
                     <h2><?=$chus['title']?></h2>
-                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <p>Расскажем откровенно и по-честному.</p>
+
                 </div>
                 <!-- Choose Us Content -->
                 <div class="choose-us-content mt-30 mb-80">
                     <ul>
+
                         <li><i class="fa fa-check-square-o" aria-hidden="true"></i><?=$chus['reasonone']?></li>
                         <li><i class="fa fa-check-square-o" aria-hidden="true"></i><?=$chus['reasontwo']?></li>
                         <li><i class="fa fa-check-square-o" aria-hidden="true"></i><?=$chus['reasonthree']?></li>
                         <li><i class="fa fa-check-square-o" aria-hidden="true"></i><?=$chus['reasonfour']?></li>
+
                     </ul>
 
                 </div>
@@ -281,12 +228,12 @@ $this->title = 'Trucks';
 <!-- Why Choose Us Area End -->
 
 
-
 <!-- Our Expert Area Start -->
 <section class="akame-our-expert-area section-padding-80-0">
 
     <!-- Side Thumbnail -->
-    <div class="side-thumbnail" style="background-image: url(<?= \yii\helpers\Url::to(['/']) . 'images/14.png' ?>);"></div>
+    <div class="side-thumbnail"
+         style="background-image: url(<?= \yii\helpers\Url::to(['/']) . 'images/14.png' ?>);"></div>
 
     <div class="container">
         <div class="row justify-content-end">
@@ -294,7 +241,8 @@ $this->title = 'Trucks';
                 <!-- Section Heading -->
                 <div class="section-heading">
                     <h2>Our Experts</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis nostrud exercitation ullamco laboris nisi ut aliquip ex.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Quis nostrud exercitation ullamco laboris nisi ut aliquip ex.</p>
                 </div>
                 <!-- Our Certificate -->
                 <div class="our-certificate-area mb-60 d-flex align-items-center">
@@ -388,18 +336,20 @@ $this->title = 'Trucks';
 
 
 <!-- Call To Action Area Start -->
-<section class="akame-cta-area bg-gray section-padding-80" style="background-image: url(<?= \yii\helpers\Url::to(['/']) . 'images/slider_5ds.jpg' ?>);background-size: cover">
-    <div class="container" >
+<section class="akame-cta-area bg-gray section-padding-80"
+         style="background-image: url(<?= \yii\helpers\Url::to(['/']) . 'images/slider_5ds.jpg' ?>);background-size: cover">
+    <div class="container">
         <div class="row">
             <div class="col-12 col-sm-10 col-xl-5">
                 <div class="cta-content">
                     <h2>Лучшее предложение на рынке!</h2>
-                    <p style="color: black;font-weight: bold;font-size: 17px">Быстрая доставка и точное соблюдение сроков</p>
+                    <p style="color: black;font-weight: bold;font-size: 17px">Быстрая доставка и точное соблюдение
+                        сроков</p>
                 </div>
             </div>
         </div>
     </div>
 
     <!-- CTA Thumbnail -->
-    <div class="cta-thumbnail bg-img" ></div>
+    <div class="cta-thumbnail bg-img"></div>
 </section>

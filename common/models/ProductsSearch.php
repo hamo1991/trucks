@@ -4,12 +4,12 @@ namespace common\models;
 
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use common\models\Technology;
+use common\models\Products;
 
 /**
- * TechnologySearch represents the model behind the search form of `common\models\Technology`.
+ * ProductsSearch represents the model behind the search form of `common\models\Products`.
  */
-class TechnologySearch extends Technology
+class ProductsSearch extends Products
 {
     /**
      * {@inheritdoc}
@@ -17,8 +17,8 @@ class TechnologySearch extends Technology
     public function rules()
     {
         return [
-            [['id', 'price_date', 'min_price'], 'integer'],
-            [['title','description', 'image', 'is_new', 'slug',], 'safe'],
+            [['id'], 'integer'],
+            [['title', 'content', 'image'], 'safe'],
         ];
     }
 
@@ -40,7 +40,7 @@ class TechnologySearch extends Technology
      */
     public function search($params)
     {
-        $query = Technology::find();
+        $query = Products::find();
 
         // add conditions that should always apply here
 
@@ -59,16 +59,11 @@ class TechnologySearch extends Technology
         // grid filtering conditions
         $query->andFilterWhere([
             'id' => $this->id,
-            'price_date' => $this->price_date,
-            'min_price' => $this->min_price,
-	        'description'=>$this->description,
         ]);
 
         $query->andFilterWhere(['like', 'title', $this->title])
-	        ->andFilterWhere(['like', 'image', $this->image])
-            ->andFilterWhere(['like', 'description', $this->image])
-            ->andFilterWhere(['like', 'is_new', $this->is_new])
-            ->andFilterWhere(['like', 'slug', $this->slug]);
+            ->andFilterWhere(['like', 'content', $this->content])
+            ->andFilterWhere(['like', 'image', $this->image]);
 
         return $dataProvider;
     }

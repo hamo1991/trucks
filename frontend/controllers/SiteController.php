@@ -17,6 +17,7 @@ use frontend\models\ContactForm;
 use common\models\Chooseus;
 use common\models\Slider;
 use common\models\About;
+use common\models\Products;
 
 
 /**
@@ -80,9 +81,12 @@ class SiteController extends Controller
     {
     	$choose=Chooseus::find()->asArray()->all();
         $slider = Slider::find()->asArray()->all();
+        $products = Products::find()->asArray()->all();
         return $this->render('index',[
             'slider' => $slider,
-	        'choose'=>$choose,
+            'products' => $products,
+	        'choose'=>$choose
+
         ]);
     }
 

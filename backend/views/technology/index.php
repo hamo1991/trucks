@@ -29,10 +29,12 @@ $this->params['breadcrumbs'][] = $this->title;
             ['class' => 'yii\grid\SerialColumn'],
 
             'id',
+	        'description',
             [
                 'label' => 'Названия',
                 'attribute' => 'title',
             ],
+
             [
                 'label' => 'Картинка',
                 'attribute' => 'image',
@@ -53,7 +55,7 @@ $this->params['breadcrumbs'][] = $this->title;
             ],
 
             //'is_new',
-            //'slug',
+//            'slug',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

@@ -77,12 +77,14 @@ AppAsset::register($this);
                         <!-- Nav Start -->
                         <div class="classynav">
                             <ul id="nav">
-                                <li><a href="<?= \yii\helpers\Url::to(['/']) . 'site/' ?>">Главная</a></li>
-                                <li><a href="<?= \yii\helpers\Url::to(['/']) . 'site/transports' ?>">Транспорты</a></li>
 
-                                <li><a href="<?= \yii\helpers\Url::to(['/']) . 'service/' ?>">Услуги</a></li>
-                                <li><a href="<?= \yii\helpers\Url::to(['/']) . 'site/about' ?>">О Нас</a></li>
-                                <li><a href="<?= \yii\helpers\Url::to(['/']) . 'site/contact' ?>">Контакт</a></li>
+                                <li><a href="<?= \yii\helpers\Url::to(['/']) . 'site/' ?>">ГЛАВНАЯ</a></li>
+                                <li><a href="<?= \yii\helpers\Url::to(['/']) . 'site/transports' ?>">СПЕЦТЕХНИКА</a></li>
+                                <li><a href="<?= \yii\helpers\Url::to(['/']) . 'service/' ?>">УСЛУГИ</a></li>
+                                <li><a href="<?= \yii\helpers\Url::to(['/']) . 'site/about' ?>">О НАС</a></li>
+                                <li><a href="<?= \yii\helpers\Url::to(['/']) . 'site/contact' ?>">КОНТАКТ</a></li>
+
+
 <!--                                --><?php
 //                                if (Yii::$app->user->isGuest) {
 //                                    ?>
@@ -132,8 +134,7 @@ AppAsset::register($this);
 <!--                    <a href="--><?//= \yii\helpers\Url::to(['/']) . 'site/' ?><!--" class="footer-logo"><img-->
 <!--                                src="--><?//= \yii\helpers\Url::to(['/']) . 'images/logo.jpg' ?><!--" alt=""></a>-->
 
-                    <p class="mb-30">We would love to serve you and let you enjoy your culinary experience. Excepteur
-                        sint occaecat cupidatat non proident.</p>
+                    <p class="mb-30">Мы занимаемся доставкой сыпучых материалов и арендой спецтехники.Наши приоритеты - надежность и порядочность.</p>
 
                     <!-- Copywrite Text -->
                     <div class="copywrite-text">
@@ -170,7 +171,7 @@ AppAsset::register($this);
                 <div class="single-footer-widget mb-80">
 
                     <!-- Widget Title -->
-                    <h4 class="widget-title">Contact Us</h4>
+                    <h4 class="widget-title">КОНТАКТ</h4>
 
                     <!-- Contact Address -->
                     <div class="contact-address">

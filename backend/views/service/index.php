@@ -25,15 +25,13 @@ $this->params['breadcrumbs'][] = $this->title;
         'filterModel' => $searchModel,
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
-//
             'title',
-            'tech_id',
 	        [
 		        'attribute' => 'image',
 		        'format' => 'raw',
 		        'filter'=> '',
 		        'value' => function($model){
-			        return Html::img(\yii\helpers\Url::to('@image/'.$model->image),['width'=>'120px','height'=>'100px',]);
+                    return Html::img(\yii\helpers\Url::to('/frontend/web/images/uploads/service/'. $model->image),['width' => '120px','height' => '80px',]);
 		        }
 	        ] ,
             'slug',

@@ -62,26 +62,28 @@ class ServiceController extends Controller
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
-    public function actionCreate()
-    {
+    public function actionCreate() {
         $model = new Service();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-	        $imgFile=UploadedFile::getInstance($model,'image');
-	        if (!empty($imgFile)){
-		        $filePath = Yii::getAlias('@frontend') . '/web/images/uploads/service/';
-		        $imgaName = Yii::$app->security->generateRandomString() . '.' . $imgFile->extension;
-		        $path=$filePath.$imgaName;
-		        if ($imgFile->saveAs($path)){
-			        $model->image = $imgaName;
-			        $model->save(['image']);
-		        }
-	        }
+            $imgFile = UploadedFile::getInstance($model, "image");
+            if (!empty($imgFile)) {
+                $imgPath = Yii::getAlias('@frontend') . '/web/images/uploads/service/';
+                $imgName = Yii::$app->security->generateRandomString() . '.' . $imgFile->extension;
+                $model->image = $imgName;
+                $path = $imgPath . $imgName;
+                if ($imgFile->saveAs($path)) {
+                    $model->save(['image']);
+                }
+
+            }
+
             return $this->redirect(['view', 'id' => $model->id]);
         }
 
         return $this->render('create', [
             'model' => $model,
+
         ]);
     }
 
@@ -92,41 +94,43 @@ class ServiceController extends Controller
      * @return mixed
      * @throws NotFoundHttpException if the model cannot be found
      */
-    public function actionUpdate($id)
-    {
+    public function actionUpdate($id) {
         $model = $this->findModel($id);
-	    $old_image = $model->image;
+
+        $old_image = $model->image;
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-	        $imgFile=UploadedFile::getInstance($model,'image');
-	        if (!empty($imgFile)){
-		        $filePath = Yii::getAlias('@frontend') . '/web/images/uploads/service/';
-		        $imgaName = Yii::$app->security->generateRandomString() . '.' . $imgFile->extension;
-		        $path=$filePath.$imgaName;
 
-		        if ($imgFile->saveAs($path)){
-			        if (file_exists($old_image)){
-				        unset($old_image);
-			        } else{
-				        $model->image = $imgaName;
-				        $model->save(['image']);
-			        }
-		        }
-	        }else{
-		        $model->image = $old_image;
-		        $model->save(['image']);
-	        }
+            $imgFile = UploadedFile::getInstance($model, "image");
+
+            if (!empty($imgFile)) {
+                $imgPath = Yii::getAlias('@frontend') . '/web/images/uploads/service/';
+                $imgName = Yii::$app->security->generateRandomString() . '.' . $imgFile->extension;
+                $model->image = $imgName;
+                $path = $imgPath . $imgName;
+                if ($imgFile->saveAs($path)) {
+                    if ($old_image == '') {
+                        $model->save(['image']);
+                    } elseif (file_exists($imgPath . $old_image)) {
+                        unlink($imgPath . $old_image);
+                        $model->save(['image']);
+
+                    }
+
+                }
+
+            } else {
+                $model->image = $old_image;
+                $model->save(['image']);
+            }
 
 
-
-
-
-
-	        return $this->redirect(['view', 'id' => $model->id]);
+            return $this->redirect(['/service']);
         }
 
         return $this->render('update', [
             'model' => $model,
+
         ]);
     }
 
@@ -137,11 +141,21 @@ class ServiceController extends Controller
      * @return mixed
      * @throws NotFoundHttpException if the model cannot be found
      */
-    public function actionDelete($id)
-    {
-        $this->findModel($id)->delete();
+    public function actionDelete($id) {
 
-        return $this->redirect(['index']);
+        $model = $this->findModel($id);
+        $image = $model->image;
+        $imgPath = Yii::getAlias('@frontend') . '/web/images/uploads/service/';
+        $file = $imgPath . $image;
+        if ($image == '') {
+            $this->findModel($id)->delete();
+        }elseif (file_exists($file)) {
+            unlink($file);
+            $this->findModel($id)->delete();
+        }
+
+
+        return $this->redirect(['/service']);
     }
 
     /**

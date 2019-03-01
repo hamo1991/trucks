@@ -3,17 +3,17 @@
 namespace backend\controllers;
 
 use Yii;
-use common\models\Chooseus;
-use common\models\ChooseusSearch;
+use common\models\Products;
+use common\models\ProductsSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use yii\web\UploadedFile;
 
 /**
- * ChooseusController implements the CRUD actions for Chooseus model.
+ * ProductsController implements the CRUD actions for Products model.
  */
-class ChooseusController extends Controller
+class ProductsController extends Controller
 {
     /**
      * {@inheritdoc}
@@ -31,12 +31,12 @@ class ChooseusController extends Controller
     }
 
     /**
-     * Lists all Chooseus models.
+     * Lists all Products models.
      * @return mixed
      */
     public function actionIndex()
     {
-        $searchModel = new ChooseusSearch();
+        $searchModel = new ProductsSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
@@ -46,7 +46,7 @@ class ChooseusController extends Controller
     }
 
     /**
-     * Displays a single Chooseus model.
+     * Displays a single Products model.
      * @param integer $id
      * @return mixed
      * @throws NotFoundHttpException if the model cannot be found
@@ -59,17 +59,17 @@ class ChooseusController extends Controller
     }
 
     /**
-     * Creates a new Chooseus model.
+     * Creates a new Products model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
     public function actionCreate() {
-        $model = new Chooseus();
+        $model = new Products();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             $imgFile = UploadedFile::getInstance($model, "image");
             if (!empty($imgFile)) {
-                $imgPath = Yii::getAlias('@frontend') . '/web/images/uploads/chuseus/';
+                $imgPath = Yii::getAlias('@frontend') . '/web/images/uploads/products/';
                 $imgName = Yii::$app->security->generateRandomString() . '.' . $imgFile->extension;
                 $model->image = $imgName;
                 $path = $imgPath . $imgName;
@@ -89,7 +89,7 @@ class ChooseusController extends Controller
     }
 
     /**
-     * Updates an existing Chooseus model.
+     * Updates an existing Products model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
      * @return mixed
@@ -105,7 +105,7 @@ class ChooseusController extends Controller
             $imgFile = UploadedFile::getInstance($model, "image");
 
             if (!empty($imgFile)) {
-                $imgPath = Yii::getAlias('@frontend') . '/web/images/uploads/chuseus/';
+                $imgPath = Yii::getAlias('@frontend') . '/web/images/uploads/products/';
                 $imgName = Yii::$app->security->generateRandomString() . '.' . $imgFile->extension;
                 $model->image = $imgName;
                 $path = $imgPath . $imgName;
@@ -126,7 +126,7 @@ class ChooseusController extends Controller
             }
 
 
-            return $this->redirect(['/chooseus']);
+            return $this->redirect(['/products']);
         }
 
         return $this->render('update', [
@@ -134,8 +134,10 @@ class ChooseusController extends Controller
 
         ]);
     }
+
+
     /**
-     * Deletes an existing Chooseus model.
+     * Deletes an existing Products model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
      * @return mixed
@@ -145,7 +147,7 @@ class ChooseusController extends Controller
 
         $model = $this->findModel($id);
         $image = $model->image;
-        $imgPath = Yii::getAlias('@frontend') . '/web/images/uploads/chuseus/';
+        $imgPath = Yii::getAlias('@frontend') . '/web/images/uploads/products/';
         $file = $imgPath . $image;
         if ($image == '') {
             $this->findModel($id)->delete();
@@ -155,19 +157,19 @@ class ChooseusController extends Controller
         }
 
 
-        return $this->redirect(['/chooseus']);
+        return $this->redirect(['/products']);
     }
 
     /**
-     * Finds the Chooseus model based on its primary key value.
+     * Finds the Products model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id
-     * @return Chooseus the loaded model
+     * @return Products the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = Chooseus::findOne($id)) !== null) {
+        if (($model = Products::findOne($id)) !== null) {
             return $model;
         }
 

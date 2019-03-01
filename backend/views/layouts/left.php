@@ -38,10 +38,10 @@
                     ['label' => 'Почему Мы', 'icon' => 'dashboard', 'url' => ['/chooseus']],
                     ['label' => 'Услуги', 'icon' => 'dashboard', 'url' => ['/service']],
                     ['label' => 'Tехника', 'icon' => 'car', 'url' => ['/technology']],
-                    ['label' => 'Фото', 'icon' => 'dashboard', 'url' => ['/pictures']],
-	                ['label' => 'test', 'icon' => 'dashboard', 'url' => ['/test']],
 
-                    ['label' => 'Информация', 'icon' => 'dashboard', 'url' => ['/info']],
+                    ['label' => 'Товары ', 'icon' => 'car', 'url' => ['/products']],
+                    ['label' => 'Pictures', 'icon' => 'dashboard', 'url' => ['/pictures']],
+                    ['label' => 'Info', 'icon' => 'dashboard', 'url' => ['/info']],
                     ['label' => 'Слайдер', 'icon' => 'fas fa-play', 'url' => ['/slider']],
                     ['label' => 'Сообщения', 'icon' => 'fas fa-envelope', 'url' => ['/email']],
 

@@ -14,13 +14,11 @@ use yii\widgets\ActiveForm;
 
 	<?= $form->field($model, 'title')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'tech_id')->textInput() ?>
 
 	<?= $form->field($model, 'image')->fileInput(['maxlength' => true]) ?>
 
-<!--    --><?//= $form->field($model, 'slug')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'is_new')->dropDownList([ '0'=>'Да', '1'=>'Нет', ], ['prompt' => '']) ?>
+    <?= $form->field($model, 'is_new')->dropDownList([ '0'=>'Да', '1'=>'Нет', ]) ?>
 
 
 
