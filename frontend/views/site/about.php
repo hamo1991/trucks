@@ -177,17 +177,10 @@ $this->params['breadcrumbs'][] = $this->title;
                             <h5>Jackson Nash</h5>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
     </div>
 </section>
-<!-- Testimonial Area End -->
-
-<!-- Border -->
-<div class="container">
-    <div class="border-top"></div>
-</div>
 
 

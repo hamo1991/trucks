@@ -18,7 +18,7 @@ class InfoSearch extends Info
     {
         return [
             [['id'], 'integer'],
-            [['type', 'content', 'slug'], 'safe'],
+            [['type', 'content'], 'safe'],
         ];
     }
 
@@ -62,8 +62,7 @@ class InfoSearch extends Info
         ]);
 
         $query->andFilterWhere(['like', 'type', $this->type])
-            ->andFilterWhere(['like', 'content', $this->content])
-            ->andFilterWhere(['like', 'slug', $this->slug]);
+            ->andFilterWhere(['like', 'content', $this->content]);
 
         return $dataProvider;
     }

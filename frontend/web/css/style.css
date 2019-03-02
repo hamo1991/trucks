@@ -702,6 +702,10 @@ width: 674px;
     display: block;
     margin-bottom: 30px; }
 
+.contact-address {
+  width: 300px;
+}
+
 .copywrite-text {
   position: relative;
   z-index: 1; }

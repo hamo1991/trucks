@@ -81,9 +81,3 @@ $this->title = 'Transports';
         </div>
     </div>
 </section>
-<!-- Portfolio Area End -->
-
-<!-- Border -->
-<div class="container">
-    <div class="border-top"></div>
-</div>

@@ -41,10 +41,9 @@ AppAsset::register($this);
                 </div>
                 <div class="col-7">
                     <div class="top-header-content text-right">
-                        <p><i class="fa fa-clock-o" aria-hidden="true"></i> Mon-Sat: 8.00 to 17.00 <span
+                        <p><i class="fa fa-clock-o" aria-hidden="true"></i> <?= \frontend\widgets\info\InfoWidget::widget(['action' => 'time']); ?> <span
                                     class="mx-2"></span> | <span class="mx-2"></span> <i class="fa fa-phone"
-                                                                                         aria-hidden="true"></i> Call
-                            us: (+12)-345-6789</p>
+                                                                                         aria-hidden="true"></i> Позвоните сейчас: <?= \frontend\widgets\info\InfoWidget::widget(['action' => 'phone']); ?></p>
                     </div>
                 </div>
             </div>
@@ -148,12 +147,12 @@ AppAsset::register($this);
             <div class="col-12 col-sm-6 col-md-4 col-xl-3">
                 <div class="single-footer-widget mb-80">
                     <!-- Widget Title -->
-                    <h4 class="widget-title">Opening times</h4>
+                    <h4 class="widget-title">Мы Открыты</h4>
 
                     <!-- Open Times -->
                     <div class="open-time">
-                        <p>Monday: Friday: 10.00 - 23.00</p>
-                        <p>Saturday: 10.00 - 19.00</p>
+                        <p><?= \frontend\widgets\info\InfoWidget::widget(['action' => 'time']); ?></p>
+<!--                        <p>Saturday: 10.00 - 19.00</p>-->
                     </div>
 
                     <!-- Social Info -->
@@ -175,9 +174,9 @@ AppAsset::register($this);
 
                     <!-- Contact Address -->
                     <div class="contact-address">
-                        <p>Tel: (+12) 345 678 910</p>
-                        <p>E-mail: Hello.colorlib@gmail.com</p>
-                        <p>Address: Iris Watson, P.O. Box 283 8562 Fusce Rd, NY</p>
+                        <p>Телефон: <?= \frontend\widgets\info\InfoWidget::widget(['action' => 'phone']); ?></p>
+                        <p>Эл. адрес: <?= \frontend\widgets\info\InfoWidget::widget(['action' => 'email']); ?></p>
+                        <p>Адрес: <?= \frontend\widgets\info\InfoWidget::widget(['action' => 'address']); ?></p>
                     </div>
                 </div>
             </div>

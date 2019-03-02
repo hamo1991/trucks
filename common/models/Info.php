@@ -10,7 +10,6 @@ use Yii;
  * @property int $id
  * @property string $type
  * @property string $content
- * @property string $slug
  */
 class Info extends \yii\db\ActiveRecord
 {
@@ -28,8 +27,7 @@ class Info extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['type', 'content', 'slug'], 'required'],
-            [['type', 'content', 'slug'], 'string', 'max' => 255],
+            [['type', 'content'], 'string', 'max' => 200],
         ];
     }
 
@@ -42,7 +40,6 @@ class Info extends \yii\db\ActiveRecord
             'id' => 'ID',
             'type' => 'Type',
             'content' => 'Content',
-            'slug' => 'Slug',
         ];
     }
 }

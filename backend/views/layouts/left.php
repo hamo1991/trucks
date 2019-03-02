@@ -38,7 +38,7 @@
                     ['label' => 'Tехника', 'icon' => 'car', 'url' => ['/technology']],
                     ['label' => 'Товары ', 'icon' => 'car', 'url' => ['/products']],
                     ['label' => 'Садик', 'icon' => 'dashboard', 'url' => ['/garden']],
-                    ['label' => 'Info', 'icon' => 'dashboard', 'url' => ['/info']],
+                    ['label' => 'Информация', 'icon' => 'dashboard', 'url' => ['/info']],
                     ['label' => 'Слайдер', 'icon' => 'fas fa-play', 'url' => ['/slider']],
                     ['label' => 'Сообщения', 'icon' => 'fas fa-envelope', 'url' => ['/email']],
 
