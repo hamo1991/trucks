@@ -24,9 +24,8 @@ $this->title = 'Services';
 </section>
 
 
-<section class=" akame-service-area">
+<section class="akame-service-area">
     <div class="myFlex">
-
         <?php
         if (!empty($services)) {
             foreach ($services as $service) {
@@ -43,7 +42,7 @@ $this->title = 'Services';
                                     $ser = explode('.', $service['description']);
                                     foreach ($ser as $s) {
                                         ?>
-                                        <li><span><?= $s ?></span></li>
+                                        <li style="padding-bottom: 12px"><span><?= $s ?></span></li>
                                         <?php
                                     }
                                 }
@@ -53,7 +52,6 @@ $this->title = 'Services';
                         </div>
                         <!-- Service Thumbnail -->
                     </div>
-
                 </div>
                 <a href="<?= \yii\helpers\Url::to('@web/information/' . $service['slug']) ?>">
                     <div class="myDiv">

@@ -19,8 +19,6 @@ class TechnologySearch extends Technology
         return [
             [['id', 'price_date', 'min_price'], 'integer'],
             [['title','content','description', 'image', 'is_new', 'slug'], 'safe'],
-
-
         ];
     }
 
@@ -63,14 +61,12 @@ class TechnologySearch extends Technology
             'id' => $this->id,
             'price_date' => $this->price_date,
             'min_price' => $this->min_price,
-//	        'description'=>$this->description,
         ]);
 
         $query->andFilterWhere(['like', 'title', $this->title])
             ->andFilterWhere(['like', 'image', $this->image])
             ->andFilterWhere(['like', 'image', $this->content])
             ->andFilterWhere(['like', 'image', $this->description])
-	        ->andFilterWhere(['like', 'image', $this->image])
             ->andFilterWhere(['like', 'is_new', $this->is_new])
             ->andFilterWhere(['like', 'slug', $this->slug]);
 

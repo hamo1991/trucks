@@ -15,7 +15,7 @@ $this->title = 'Transports';
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="<?= \yii\helpers\Url::to(['/']) . 'site/' ?>"><i class="icon_house_alt"></i> Главная</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Спецтехника</li>
+<!--                            <li class="breadcrumb-item active" aria-current="page">Спецтехника</li>-->
                         </ol>
                     </nav>
                 </div>
@@ -58,7 +58,7 @@ $this->title = 'Transports';
                            <a href="<?= \yii\helpers\Url::to('@web/information/' . $trans['slug']) ?>"><div class="overlay-content d-flex align-items-center justify-content-center">
                                 <div class="overlay-text text-center">
                                     <h4><?= $trans['title']?></h4>
-                                    <p><?=$trans['description']?></p>
+                                    <p>Consectetur adipisicing elit sed doe</p>
                                 </div>
                             </div>
                            </a>

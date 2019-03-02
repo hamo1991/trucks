@@ -7,7 +7,7 @@ use common\models\User;
 class UsersWidget extends \yii\bootstrap\Widget {
 
     public function run() {
-        $users = User::find()->asArray()->all();
+        $users = User::find()->count();
         return $users;
 
     }
