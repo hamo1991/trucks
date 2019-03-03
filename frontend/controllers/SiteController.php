@@ -20,6 +20,7 @@ use common\models\Slider;
 use common\models\About;
 use common\models\Products;
 use common\models\Garden;
+use common\models\Service;
 
 
 /**
@@ -81,16 +82,18 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-    	$choose=Chooseus::find()->asArray()->all();
+    	$choose = Chooseus::find()->asArray()->all();
         $slider = Slider::find()->asArray()->all();
         $products = Products::find()->asArray()->all();
         $garden = Garden::find()->asArray()->all();
+        $service = Service::find()->asArray()->all();
 
         return $this->render('index',[
             'slider' => $slider,
             'products' => $products,
 	        'choose'=>$choose,
-            'garden' => $garden
+            'garden' => $garden,
+            'service' => $service
 
         ]);
     }

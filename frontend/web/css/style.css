@@ -269,7 +269,7 @@ input:focus {
   padding-bottom: 80px; }
 
 .section-padding-80-0 {
-  padding-top: 80px;
+  padding-top: 40px;
   padding-bottom: 0; }
 
 /* :: 3.0 Preloader CSS */
@@ -316,6 +316,18 @@ input:focus {
   /*object-fit: cover;*/
   /*background-attachment: scroll;*/
 /*}*/
+.alignRight{
+  display: flex;
+  align-items:flex-end;
+}
+.serviceDiv{
+  height:400px;
+}
+.serviceDiv img{
+  height:250px;
+  object-fit: cover;
+}
+
 .myPad{
   padding-bottom:20px;
 
@@ -659,7 +671,7 @@ width: 674px;
 /* :: 9.0 Footer CSS */
 .footer-area {
   position: relative;
-  background-image: url("../images/sayagata-400px.png");
+  background-image: url("../images/dust_scratches.png");
   z-index: 1; }
 
 .single-footer-widget {

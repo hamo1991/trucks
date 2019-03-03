@@ -31,8 +31,9 @@
             items: 1,
             loop: true,
             autoplay: true,
-            smartSpeed: 1500
-        })
+            smartSpeed: 2000,
+            autoplayTimeout: 5000
+        });
         welcomeSlider.on('translate.owl.carousel', function () {
             var layer = $("[data-animation]");
             layer.each(function () {
@@ -40,6 +41,17 @@
                 $(this).removeClass('animated ' + anim_name).css('opacity', '0');
             });
         });
+
+
+        var serviceSlider = $('.service-slider');
+        serviceSlider.owlCarousel({
+            items: 3,
+            loop: true,
+            margin: 15,
+            autoplay: true,
+            smartSpeed: 1000
+        });
+
 
         $("[data-delay]").each(function () {
             var anim_del = $(this).data('delay');
@@ -120,7 +132,7 @@
     $('.portfolio-menu button.btn').on('click', function () {
         $('.portfolio-menu button.btn').removeClass('active');
         $(this).addClass('active');
-    })
+    });
 
     // *********************************
     // :: 8.0 Magnific Popup Active Code

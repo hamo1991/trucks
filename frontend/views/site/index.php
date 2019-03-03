@@ -25,7 +25,6 @@ $this->title = 'Trucks';
                                         <?//= \yii\helpers\Url::to(['/']) . 'site/about' ?><!--" class="btn akame-btn" data-animation="fadeInUp" data-delay="700ms">About Us</a>-->
                                     </div>
                                 </div>
-
                             </div>
                         </div>
                     </div>
@@ -99,9 +98,7 @@ $this->title = 'Trucks';
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <div class="portfolio-menu text-center mb-30">
-
-                </div>
+                <div class="portfolio-menu text-center mb-30"></div>
             </div>
         </div>
 
@@ -173,59 +170,50 @@ $this->title = 'Trucks';
     <div class="border-top mt-3"></div>
 </div>
 <!-- Our Service Area Start -->
+
+
 <section class="akame-service-area section-padding-80-0">
     <div class="container">
         <div class="row">
             <div class="col-12">
                 <!-- Section Heading -->
                 <div class="section-heading text-center">
-                    <h2>Our Services</h2>
-                    <p>The House of Hair Salon &amp; Spa, incididunt ut labore et dolore magna aliqua.</p>
+                    <h2>Наши Услуги</h2>
+                    <p>Для подробной информации обращайтесь</p>
                 </div>
             </div>
         </div>
+        <div class="row service-slider owl-carousel">
+        <?php
+        if (!empty($service)) {
+            foreach ($service as $s) {
+                ?>
+                    <div>
+                        <div class="single-service-area mb-80 serviceDiv">
+                            <a href="<?= \yii\helpers\Url::to('@web/information/' . $s['slug']) ?>">
+                            <img src="<?= \yii\helpers\Url::to(['/']) . 'images/uploads/all/' . $s['image'] ?>" alt="Photo">
+                           <div class="serviceCont">
+                            <h5><?= $s['title'] ?></h5></a>
+                        </div>
+                        </div>
+                    </div>
+                <?php
+            }
+        }
 
-        <div class="row owl">
-
-            <!-- Single Service Area -->
-            <div class="col-12 col-sm-6 col-lg-3">
-                <div class="single-service-area mb-80 wow fadeInUp" data-wow-delay="200ms">
-                    <img src="<?= \yii\helpers\Url::to(['/']) . 'images/s1.png' ?>" alt="">
-                    <h5>Coloring</h5>
-                    <p>Ut enim ad minim veniam, quis trud exercitation...</p>
-                </div>
-            </div>
-
-            <!-- Single Service Area -->
-            <div class="col-12 col-sm-6 col-lg-3">
-                <div class="single-service-area mb-80 wow fadeInUp" data-wow-delay="400ms">
-                    <img src="<?= \yii\helpers\Url::to(['/']) . 'images/s3.png' ?>" alt="Photo">
-                    <h5>Haircut</h5>
-                    <p>Consectetur adipisicing elit, sed doe eiusmod.</p>
-                </div>
-            </div>
-
-            <!-- Single Service Area -->
-            <div class="col-12 col-sm-6 col-lg-3">
-                <div class="single-service-area mb-80 wow fadeInUp" data-wow-delay="600ms">
-                    <img src="<?= \yii\helpers\Url::to(['/']) . 'images/s4.png' ?>" alt="">
-                    <h5>Hairstyle</h5>
-                    <p>Nemo enim ipsam voluptatem quia voluptas</p>
-                </div>
-            </div>
-
-            <!-- Single Service Area -->
-            <div class="col-12 col-sm-6 col-lg-3">
-                <div class="single-service-area mb-80 wow fadeInUp" data-wow-delay="800ms">
-                    <img src="<?= \yii\helpers\Url::to(['/']) . 'images/s3.png' ?>" alt="">
-                    <h5>Coloring</h5>
-                    <p>Ut enim ad minim veniam, quis trud exercitation...</p>
-                </div>
-            </div>
-
+        ?>
         </div>
+
+            <div style="margin-bottom: 50px" class="col-12">
+                <div class="view-all-btn text-center">
+                    <a style="font-weight: bold" href="<?= \yii\helpers\Url::to(['/']) . 'service/' ?>" class="btn akame-btn">Все Услуги</a>
+                </div>
+            </div>
+
     </div>
 </section>
+
+
 <!-- Our Service Area End -->
 
 <!-- Our Expert Area Start -->
@@ -291,14 +279,14 @@ $this->title = 'Trucks';
 </div>
 
 <!-- Call To Action Area Start -->
-<section class="akame-cta-area bg-gray section-padding-80"
-         style="background-image: url(<?= \yii\helpers\Url::to(['/']) . 'images/banner-1.jpg' ?>);background-size: cover">
-    <div class="container">
-        <div class="row">
-            <div class="col-12 col-sm-10 col-xl-5">
-                <div class="cta-content">
-                    <h2 style="color: white">Лучшее предложение на рынке!</h2>
-                    <p style="color: white;font-weight: bold;font-size: 17px">Быстрая доставка и точное соблюдение
+<section class="akame-cta-area bg-gray section-padding-80 "
+         style="background-image: url(<?= \yii\helpers\Url::to(['/']) . 'images/slider_5ds.jpg' ?>);background-size: cover">
+    <div class="container ">
+        <div class="row ">
+            <div class="col-12 col-sm-10 col-xl-5 alignRight">
+                <div class="cta-content ">
+                    <h2 style="color: black">Лучшее предложение на рынке!</h2>
+                    <p style="color: black;font-weight: bold;font-size: 17px">Быстрая доставка и точное соблюдение
                         сроков</p>
                 </div>
             </div>

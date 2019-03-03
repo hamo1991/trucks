@@ -11,7 +11,6 @@ $this->title = 'Transports';
             <div class="col-12">
                 <div class="breadcrumb-content">
                     <h2>Спецтехника</h2>
-
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="<?= \yii\helpers\Url::to(['/']) . 'site/' ?>"><i class="icon_house_alt"></i> Главная</a></li>

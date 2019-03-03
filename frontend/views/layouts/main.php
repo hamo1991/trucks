@@ -143,29 +143,7 @@ AppAsset::register($this);
                 </div>
             </div>
 
-            <!-- Single Footer Widget -->
-            <div class="col-12 col-sm-6 col-md-4 col-xl-3">
-                <div class="single-footer-widget mb-80">
-                    <!-- Widget Title -->
-                    <h4 class="widget-title">Ежедневно</h4>
 
-                    <!-- Open Times -->
-                    <div class="open-time">
-                        <p><?= \frontend\widgets\info\InfoWidget::widget(['action' => 'time']); ?></p>
-<!--                        <p>Saturday: 10.00 - 19.00</p>-->
-                    </div>
-
-                    <!-- Social Info -->
-<!--                    <div class="social-info">-->
-<!--                        <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>-->
-<!--                        <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>-->
-<!--                        <a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>-->
-<!--                        <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>-->
-<!--                    </div>-->
-                </div>
-            </div>
-
-            <!-- Single Footer Widget -->
             <div class="col-12 col-md-4 col-xl-3">
                 <div class="single-footer-widget mb-80">
 
@@ -180,6 +158,37 @@ AppAsset::register($this);
                     </div>
                 </div>
             </div>
+
+
+
+
+            <!-- Single Footer Widget -->
+            <div class="col-12 col-sm-6 col-md-4 col-xl-3">
+                <div class="single-footer-widget mb-80">
+                    <!-- Widget Title -->
+                    <h4 class="widget-title">Ежедневно</h4>
+
+                    <!-- Open Times -->
+                    <div class="open-time">
+                        <p><?= \frontend\widgets\info\InfoWidget::widget(['action' => 'time']); ?></p>
+                        <!--                        <p>Saturday: 10.00 - 19.00</p>-->
+                    </div>
+
+                    <!-- Social Info -->
+                    <!--                    <div class="social-info">-->
+                    <!--                        <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>-->
+                    <!--                        <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>-->
+                    <!--                        <a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>-->
+                    <!--                        <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>-->
+                    <!--                    </div>-->
+                </div>
+            </div>
+
+            <!-- Single Footer Widget -->
+
+
+
+
 
         </div>
     </div>
