@@ -5,12 +5,12 @@
         <!-- Sidebar user panel -->
         <div class="user-panel">
             <div class="pull-left image">
-                <img src="<?= $directoryAsset ?>/img/user2-160x160.jpg" class="img-circle" alt="User Image"/>
+                <img src="<?= \yii\helpers\Url::to(['/images/avatar5.png']) ?>" class="img-circle" alt="User Image"/>
             </div>
             <div class="pull-left info">
-                <p>Alexander Pierce</p>
+                <p>Админ</p>
 
-                <a href=""><i class="fa fa-circle text-success"></i> Online</a>
+                <a href=""><i class="fa fa-circle text-success"></i> Онлайн</a>
             </div>
         </div>
 
@@ -41,11 +41,8 @@
                     ['label' => 'Информация', 'icon' => 'dashboard', 'url' => ['/info']],
                     ['label' => 'Слайдер', 'icon' => 'fas fa-play', 'url' => ['/slider']],
                     ['label' => 'Сообщения', 'icon' => 'fas fa-envelope', 'url' => ['/email']],
-
                 ],
             ]
         ) ?>
-
     </section>
-
 </aside>
