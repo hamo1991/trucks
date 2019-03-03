@@ -29,7 +29,7 @@ class About extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['title', 'content','url'], 'required'],
+
             [['title'], 'string', 'max' => 100],
             [['content'], 'string'],
             [['image', 'url'], 'string', 'max' => 255],

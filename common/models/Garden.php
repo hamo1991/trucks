@@ -28,7 +28,7 @@ class Garden extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['title', 'content'], 'required'],
+
             [['image', 'title', 'content'], 'string', 'max' => 255],
         ];
     }

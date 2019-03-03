@@ -32,17 +32,25 @@
                 'items' => [
                     ['label' => 'Menu TX', 'options' => ['class' => 'header']],
                     ['label' => 'Gii', 'icon' => 'file-code-o', 'url' => ['/gii']],
-                    ['label' => 'О Нас', 'icon' => 'fas fa-columns', 'url' => ['/about']],
-                    ['label' => 'Почему Мы', 'icon' => 'dashboard', 'url' => ['/chooseus']],
-                    ['label' => 'Услуги', 'icon' => 'dashboard', 'url' => ['/service']],
+	                ['label' => 'Слайдер', 'icon' => 'fas fa-play', 'url' => ['/slider']],
+	                ['label' => 'Почему Мы', 'icon' => 'dashboard', 'url' => ['/chooseus']],
+	                ['label' => 'Товары ', 'icon' => 'car', 'url' => ['/products']],
+	                ['label' => 'Услуги', 'icon' => 'dashboard', 'url' => ['/service']],
+	                ['label' => 'Садик', 'icon' => 'dashboard', 'url' => ['/garden']],
+
+
+
                     ['label' => 'Tехника', 'icon' => 'car', 'url' => ['/technology']],
 
-                    ['label' => 'Товары ', 'icon' => 'car', 'url' => ['/products']],
-                    ['label' => 'Садик', 'icon' => 'dashboard', 'url' => ['/garden']],
 
-                    ['label' => 'Info', 'icon' => 'dashboard', 'url' => ['/info']],
-                    ['label' => 'Слайдер', 'icon' => 'fas fa-play', 'url' => ['/slider']],
+
+
+                    ['label' => 'Информация', 'icon' => 'dashboard', 'url' => ['/info']],
+
                     ['label' => 'Сообщения', 'icon' => 'fas fa-envelope', 'url' => ['/email']],
+
+	                ['label' => 'О Нас', 'icon' => 'fas fa-columns', 'url' => ['/about']],
+	                ['label' => 'Коментарии', 'icon' => 'fas fa-envelope', 'url' => ['/coments']],
 
                 ],
             ]

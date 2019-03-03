@@ -15,7 +15,7 @@ $this->title = 'Transports';
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="<?= \yii\helpers\Url::to(['/']) . 'site/' ?>"><i class="icon_house_alt"></i> Главная</a></li>
-<!--                            <li class="breadcrumb-item active" aria-current="page">Спецтехника</li>-->
+                            <li class="breadcrumb-item active" aria-current="page">Спецтехника</li>
                         </ol>
                     </nav>
                 </div>
@@ -35,7 +35,7 @@ $this->title = 'Transports';
                     <?php  if(!empty($transports)){
                         foreach ($transports as $transport){
                             ?>
-                            <button class="btn" data-filter=".<?= $transport['title'] ?>"><?= $transport['title']?></button>
+<!--                            <button class="btn" data-filter=".--><?//= $transport['title'] ?><!--">--><?//= $transport['title']?><!--</button>-->
                             <?php
                         }
 
@@ -58,7 +58,7 @@ $this->title = 'Transports';
                            <a href="<?= \yii\helpers\Url::to('@web/information/' . $trans['slug']) ?>"><div class="overlay-content d-flex align-items-center justify-content-center">
                                 <div class="overlay-text text-center">
                                     <h4><?= $trans['title']?></h4>
-                                    <p>Consectetur adipisicing elit sed doe</p>
+<!--                                    <p>Consectetur adipisicing elit sed doe</p>-->
                                 </div>
                             </div>
                            </a>
@@ -72,18 +72,12 @@ $this->title = 'Transports';
 
         </div>
 
-        <div class="row">
-            <div class="col-12">
-                <div class="view-all-btn mt-30 text-center">
-                    <a href="" class="btn akame-btn">View All Work</a>
-                </div>
-            </div>
-        </div>
+<!--        <div class="row">-->
+<!--            <div class="col-12">-->
+<!--                <div class="view-all-btn mt-30 text-center">-->
+<!--                    <a href="" class="btn akame-btn">Посмотреть все</a>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
     </div>
 </section>
-<!-- Portfolio Area End -->
-
-<!-- Border -->
-<div class="container">
-    <div class="border-top"></div>
-</div>

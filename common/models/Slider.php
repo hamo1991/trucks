@@ -3,6 +3,7 @@
 namespace common\models;
 
 use Yii;
+use common\behaviors\SlugBehavior;
 
 /**
  * This is the model class for table "slider".
@@ -23,6 +24,17 @@ class Slider extends \yii\db\ActiveRecord
     {
         return 'slider';
     }
+//	public function behaviors()
+//	{
+//		return [
+//			'slug' => [
+//				'class' => SlugBehavior::className(),
+//				'in_attribute' => 'title',
+//				'out_attribute' => 'slug',
+//			],
+//		];
+//	}
+
 
     /**
      * {@inheritdoc}
@@ -30,7 +42,7 @@ class Slider extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['slug'], 'required'],
+
             [['description', 'content'], 'string'],
             [['image', 'title', 'slug'], 'string', 'max' => 255],
         ];

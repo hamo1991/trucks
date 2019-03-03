@@ -36,7 +36,7 @@ $this->params['breadcrumbs'][] = $this->title;
             <!-- Section Heading -->
             <div class="col-12 col-lg-6">
                 <div class="section-heading text-right mb-80 pr-5 pt-3">
-                    <p>Москва</p>
+                    
                     <?php
                     if (!empty($about)) {
                     foreach ($about
@@ -51,8 +51,8 @@ $this->params['breadcrumbs'][] = $this->title;
             <div class="col-12 col-lg-6">
                 <div class="about--us--content mb-80">
                     <p><?= $a['content'] ?></p>
-                    <img src="<?= \yii\helpers\Url::to(['/']) . 'images/signature.png' ?>" alt="">
-                    <h4>Lara Croft</h4>
+<!--                    <img src="--><?//= \yii\helpers\Url::to(['/']) . 'images/signature.png' ?><!--" alt="">-->
+<!--                    <h4>Имя</h4>-->
                 </div>
             </div>
             <?php
@@ -84,7 +84,7 @@ $this->params['breadcrumbs'][] = $this->title;
             <div class="col-12 col-sm-6 col-lg-3">
                 <div class="single-cool-facts-area text-center mb-80 wow fadeInUp" data-wow-delay="200ms">
                     <span>ПРОЕКТЫ</span>
-                    <h2 class="counter">359</h2>
+                    <h2 class="counter">4600</h2>
                     <p>ЗАВЕРШЕННЫЕ ПРОЕКТЫ</p>
                 </div>
             </div>
@@ -93,7 +93,7 @@ $this->params['breadcrumbs'][] = $this->title;
             <div class="col-12 col-sm-6 col-lg-3">
                 <div class="single-cool-facts-area text-center mb-80 wow fadeInUp" data-wow-delay="400ms">
                     <span>КЛИЕНТЫ</span>
-                    <h2 class="counter">250</h2>
+                    <h2 class="counter">4600</h2>
                     <p>СЧАСТЛИВЫЕ КЛИЕНТЫ</p>
                 </div>
             </div>
@@ -111,7 +111,7 @@ $this->params['breadcrumbs'][] = $this->title;
             <div class="col-12 col-sm-6 col-lg-3">
                 <div class="single-cool-facts-area text-center mb-80 wow fadeInUp" data-wow-delay="800ms">
                     <span>ТЕХНОЛОГИЯ</span>
-                    <h2 class="counter">3</h2>
+                    <h2 class="counter">2</h2>
                     <p>НОВАЯ ТЕХНОЛОГИЯ</p>
                 </div>
             </div>
@@ -123,15 +123,22 @@ $this->params['breadcrumbs'][] = $this->title;
 <!-- Testimonial Area Start -->
 <section class="testimonial-area section-padding-80">
     <div class="container">
+        <div class="text-center myPad">
+            <h1>Отзывы клиентов о работе наших специалистов</h1>
+        </div>
         <div class="row justify-content-center">
+
             <div class="col-10">
+
                 <div class="testimonial-slides owl-carousel">
-
                     <!-- Single Testimonial Slide -->
+                    <?php if (!empty($coments)){
+                        foreach ($coments as $com){
+                           ?>
+
                     <div class="single-testimonial-slide">
                         <img src="<?= \yii\helpers\Url::to(['/']) . 'images/quote.png' ?>" alt="">
-                        <p>BlueFresh is so simple, it's so easy to use. And from the customer's standpoint it's very
-                            intuitive, the platform is pretty much unlimited features!</p>
+                        <p><?=$com['content']?></p>
                         <div class="ratings-name d-flex align-items-center justify-content-center">
                             <div class="ratings mr-3">
                                 <i class="icon_star"></i>
@@ -140,54 +147,18 @@ $this->params['breadcrumbs'][] = $this->title;
                                 <i class="icon_star"></i>
                                 <i class="icon_star"></i>
                             </div>
-                            <h5>Jackson Nash</h5>
+                            <h5><?=$com['title']?></h5>
                         </div>
                     </div>
+<?php    }
 
-                    <!-- Single Testimonial Slide -->
-                    <div class="single-testimonial-slide">
-                        <img src="<?= \yii\helpers\Url::to(['/']) . 'images/quote.png' ?>" alt="">
-                        <p>BlueFresh is so simple, it's so easy to use. And from the customer's standpoint it's very
-                            intuitive, the platform is pretty much unlimited features!</p>
-                        <div class="ratings-name d-flex align-items-center justify-content-center">
-                            <div class="ratings mr-3">
-                                <i class="icon_star"></i>
-                                <i class="icon_star"></i>
-                                <i class="icon_star"></i>
-                                <i class="icon_star"></i>
-                                <i class="icon_star"></i>
-                            </div>
-                            <h5>Jackson Nash</h5>
-                        </div>
-                    </div>
+                    }?>
 
-                    <!-- Single Testimonial Slide -->
-                    <div class="single-testimonial-slide">
-                        <img src="<?= \yii\helpers\Url::to(['/']) . 'images/quote.png' ?>" alt="">
-                        <p>BlueFresh is so simple, it's so easy to use. And from the customer's standpoint it's very
-                            intuitive, the platform is pretty much unlimited features!</p>
-                        <div class="ratings-name d-flex align-items-center justify-content-center">
-                            <div class="ratings mr-3">
-                                <i class="icon_star"></i>
-                                <i class="icon_star"></i>
-                                <i class="icon_star"></i>
-                                <i class="icon_star"></i>
-                                <i class="icon_star"></i>
-                            </div>
-                            <h5>Jackson Nash</h5>
-                        </div>
-                    </div>
 
                 </div>
             </div>
         </div>
     </div>
 </section>
-<!-- Testimonial Area End -->
-
-<!-- Border -->
-<div class="container">
-    <div class="border-top"></div>
-</div>
 
 

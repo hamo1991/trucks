@@ -45,10 +45,7 @@
                                 }
                                 ?>
                             </ul>
-                            <p>It’s time that you build your Salon &amp; Spa like a getaway for your customers whenever
-                                they feel stressed in life. Go an extra mile to make your customers feel great about
-                                themselves. Give your opinions on what is good for them and what’s not, but be a good
-                                listener. </p>
+
                         </div>
                     </div>
                 </div>

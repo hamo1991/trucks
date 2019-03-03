@@ -316,16 +316,25 @@ input:focus {
   /*object-fit: cover;*/
   /*background-attachment: scroll;*/
 /*}*/
+.myPad{
+  padding-bottom:20px;
+
+
+}
+.myPad>h1{
+  font-size:30px;
+  text-transform: uppercase;
+}
 .mb-30 {
   margin-bottom: 15px; }
 .single_padding{
   padding:40px;
 }
-.myFlex{
+
+  .myFlex{
   width:100%;
   display: flex;
   flex-wrap: wrap;
-
 }
 
 .myDiv{
@@ -703,6 +712,10 @@ width: 674px;
   .single-footer-widget .footer-logo {
     display: block;
     margin-bottom: 30px; }
+
+.contact-address {
+  width: 300px;
+}
 
 .copywrite-text {
   position: relative;

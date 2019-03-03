@@ -50,7 +50,9 @@ $this->params['breadcrumbs'][] = $this->title;
             'reasonthree',
             //'reasonfour',
 
-            ['class' => 'yii\grid\ActionColumn'],
+            ['class' => 'yii\grid\ActionColumn',
+             'template' => '{view}{update} {delete}'
+                ],
         ],
     ]); ?>
     <?php Pjax::end(); ?>

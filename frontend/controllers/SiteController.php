@@ -2,6 +2,7 @@
 
 namespace frontend\controllers;
 
+use common\models\Coments;
 use common\models\Technology;
 use Yii;
 use yii\base\InvalidParamException;
@@ -161,9 +162,10 @@ class SiteController extends Controller
     {
 
         $about = About::find()->asArray()->all();
-
+$coments= Coments::find()->asArray()->all();
         return $this->render('about',[
-            'about' => $about
+            'about' => $about,
+	        'coments'=>$coments,
         ]);
     }
 
@@ -245,4 +247,5 @@ class SiteController extends Controller
             'transports' => $transports
         ]);
     }
+
 }

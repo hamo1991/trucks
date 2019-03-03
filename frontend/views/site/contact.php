@@ -41,8 +41,8 @@ $this->params['breadcrumbs'][] = $this->title;
             <div class="col-12 col-sm-6 col-lg-3">
                 <div class="single-contact-information mb-80">
                     <i class="icon_phone"></i>
-                    <h4>Phone</h4>
-                    <p>+01-3-8888-6868</p>
+                    <h2>Телефон</h2>
+                    <p><?= \frontend\widgets\info\InfoWidget::widget(['action' => 'phone']); ?></p>
                 </div>
             </div>
 
@@ -50,8 +50,8 @@ $this->params['breadcrumbs'][] = $this->title;
             <div class="col-12 col-sm-6 col-lg-3">
                 <div class="single-contact-information mb-80">
                     <i class="icon_pin"></i>
-                    <h4>Address</h4>
-                    <p>Iris Watson, 283 Fusce Rd,NY</p>
+                    <h2>Адрес</h2>
+                    <p><?= \frontend\widgets\info\InfoWidget::widget(['action' => 'address']); ?></p>
                 </div>
             </div>
 
@@ -59,8 +59,8 @@ $this->params['breadcrumbs'][] = $this->title;
             <div class="col-12 col-sm-6 col-lg-3">
                 <div class="single-contact-information mb-80">
                     <i class="icon_clock"></i>
-                    <h4>Open time</h4>
-                    <p>10:00 am to 23:00 pm</p>
+                    <h2>Мы Открыты</h2>
+                    <p><?= \frontend\widgets\info\InfoWidget::widget(['action' => 'time']); ?>/p>
                 </div>
             </div>
 
@@ -68,8 +68,8 @@ $this->params['breadcrumbs'][] = $this->title;
             <div class="col-12 col-sm-6 col-lg-3">
                 <div class="single-contact-information mb-80">
                     <i class="icon_mail"></i>
-                    <h4>Email</h4>
-                    <p>info.colorlib@gmail.com</p>
+                    <h2>Эл. адрес</h2>
+                    <p><?= \frontend\widgets\info\InfoWidget::widget(['action' => 'email']); ?></p>
                 </div>
             </div>
         </div>

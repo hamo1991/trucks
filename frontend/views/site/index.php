@@ -56,8 +56,8 @@ $this->title = 'Trucks';
                         ?>
                         <div class="section-heading">
                             <h2><?= $chus['title'] ?></h2>
-                            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                                commodo consequat.</p>
+                            <p>Есть много причин зачем вибрат нас...
+                                </p>
                         </div>
                         <!-- Choose Us Content -->
                         <div class="choose-us-content mt-30 mb-80">
@@ -89,8 +89,8 @@ $this->title = 'Trucks';
             <!-- Section Heading -->
             <div class="col-12">
                 <div class="section-heading text-center">
-                    <h2>Наши товары</h2>
-                    <p>Лучшее предложение на рынке!</p>
+                    <h2>Доставка  материалов</h2>
+                    <p>Сыпучие материалы</p>
                 </div>
             </div>
         </div>
