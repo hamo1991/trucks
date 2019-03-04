@@ -60,13 +60,13 @@ class Technology extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'title' => 'Title',
-            'content' => 'Content',
-            'description' => 'Description',
-            'image' => 'Image',
-            'price_date' => 'Price Date',
-            'min_price' => 'Min Price',
-            'is_new' => 'Is New',
+            'title' => 'Заглавие',
+            'content' => 'Содержание',
+            'description' => 'Описание',
+            'image' => 'Изображение',
+            'price_date' => 'Суточная плата',
+            'min_price' => 'Минемальная плата',
+            'is_new' => 'Новая',
             'slug' => 'Slug',
         ];
     }

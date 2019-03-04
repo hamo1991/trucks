@@ -38,8 +38,8 @@ class Coments extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'title' => 'Title',
-            'content' => 'Content',
+            'title' => 'Заглавие',
+            'content' => 'Содержание',
         ];
     }
 }

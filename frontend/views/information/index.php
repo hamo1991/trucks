@@ -54,4 +54,5 @@
         }
         ?>
     </div>
+   <div class="text-center"><h1>Для побробной информации обрашайтесь</h1></div>
 </section>

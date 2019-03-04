@@ -38,8 +38,8 @@ class Info extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'type' => 'Type',
-            'content' => 'Content',
+            'type' => 'Тип',
+            'content' => 'Создержимое',
         ];
     }
 }

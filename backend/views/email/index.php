@@ -7,7 +7,7 @@ use yii\widgets\Pjax;
 /* @var $this yii\web\View */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Emails';
+$this->title = 'Майл';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="email-index">
@@ -21,10 +21,10 @@ $this->params['breadcrumbs'][] = $this->title;
             ['class' => 'yii\grid\SerialColumn'],
 
             'email:email',
-            'name',
-            'content',
-            'tel',
-            'date',
+            'name'=>'Название',
+            'content'=>'содержание',
+            'tel'=>'Номер',
+            'date'=>'Дата',
 
             [
                 'class' => 'yii\grid\ActionColumn',

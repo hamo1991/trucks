@@ -26,7 +26,7 @@ use yii\widgets\ActiveForm;
     <?= $form->field($model, 'description')->textInput()
     ?>
 
-    <?= $form->field($model, 'is_new')->dropDownList([ '0', '1', ])->label('Новинка') ?>
+    <?= $form->field($model, 'is_new')->dropDownList([ '0'=>'Нет', '1'=>'Да',] )->label('Новинка') ?>
 
 <!--    --><?//= $form->field($model, 'slug')->textInput(['maxlength' => true]) ?>
 

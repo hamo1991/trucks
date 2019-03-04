@@ -59,13 +59,13 @@ class Service extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'image' => 'Image',
+            'image' => 'Изображение',
             'slug' => 'Slug',
-            'is_new' => 'Is New',
-            'title' => 'Title',
-            'description' => 'Description',
-            'content' => 'Content',
-            'price' => 'Price',
+            'is_new' => 'Новый',
+            'title' => 'Заглавие',
+            'description' => 'Описание',
+            'content' => 'Содержание',
+            'price' => 'Цена',
         ];
     }
 

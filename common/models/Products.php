@@ -41,9 +41,9 @@ class Products extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'title' => 'Title',
-            'content' => 'Content',
-            'image' => 'Image',
+            'title' => 'Название',
+	            'content' => 'Содержание',
+            'image' => 'Изображение',
         ];
     }
 }

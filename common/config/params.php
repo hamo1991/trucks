@@ -1,6 +1,6 @@
 <?php
 return [
-    'adminEmail' => 'trucks2019@mail.ru',
-    'supportEmail' => 'trucks2019@mail.ru',
+    'adminEmail' => 'spectexnika.istra@mail.ru',
+    'supportEmail' => 'spectexnika.istra@mail.ru',
     'user.passwordResetTokenExpire' => 3600,
 ];

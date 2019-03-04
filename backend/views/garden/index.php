@@ -7,7 +7,7 @@ use yii\widgets\Pjax;
 /* @var $searchModel common\models\GardenSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Gardens';
+$this->title = 'Дворы';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="garden-index">
@@ -17,7 +17,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a('Create Garden', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Добавить двор', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?= GridView::widget([

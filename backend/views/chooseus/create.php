@@ -5,8 +5,8 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model common\models\Chooseus */
 
-$this->title = 'Create Chooseus';
-$this->params['breadcrumbs'][] = ['label' => 'Chooseuses', 'url' => ['index']];
+$this->title = 'Добавить причину';
+$this->params['breadcrumbs'][] = ['label' => 'Почему Мы', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="chooseus-create">

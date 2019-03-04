@@ -40,9 +40,9 @@ class Garden extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'image' => 'Image',
-            'title' => 'Title',
-            'content' => 'Content',
+            'image' => 'Изображение',
+            'title' => 'Заглавие',
+            'content' => 'Содержание',
         ];
     }
 }

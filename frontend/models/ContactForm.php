@@ -67,7 +67,7 @@ class ContactForm extends \yii\db\ActiveRecord {
 
         return Yii::$app->mailer->compose()
             ->setTo($email)
-            ->setFrom(['trucks2019@mail.ru' => $this->email])
+            ->setFrom(['spectexnika.istra@mail.ru' => $this->email])
             ->setSubject($this->subject)
             ->setTextBody($this->body)
             ->send();

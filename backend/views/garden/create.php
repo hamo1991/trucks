@@ -5,8 +5,8 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model common\models\Garden */
 
-$this->title = 'Create Garden';
-$this->params['breadcrumbs'][] = ['label' => 'Gardens', 'url' => ['index']];
+$this->title = 'Создать парк';
+$this->params['breadcrumbs'][] = ['label' => 'Парк', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="garden-create">
