@@ -8,7 +8,7 @@ use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
 use yii\captcha\Captcha;
 
-$this->title = 'Contact';
+$this->title = 'Контакт';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 
@@ -158,17 +158,17 @@ $this->params['breadcrumbs'][] = $this->title;
 </section>
 <!-- Contact Area End -->
 <script>
-    var map;
+    var map, circle, circleOptions, setCenter, marker;
     function initMap() {
         map = new google.maps.Map(document.getElementById('map'), {
-            center: {lat: 40.807240, lng: 43.847615},
-            zoom: 18
+            center: {lat: 55.9173945, lng: 36.8748043},
+            zoom: 13
         });
 
         var marker = new google.maps.Marker({
-            position: {lat: 40.807240, lng: 43.847615},
+            position: {lat: 55.9173945, lng: 36.8748043},
             map: map,
-            title: 'ArmShoes shop',
+            // title: 'ArmShoes shop',
             animation: google.maps.Animation.BOUNCE,
             draggable: true
         });

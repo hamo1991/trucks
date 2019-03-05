@@ -31,10 +31,9 @@ class AppAsset extends AssetBundle
         'js/jquery.magnific-popup.min.js',
         'js/owl.carousel.min.js',
         'js/popper.min.js',
-        'js/avoid.console.error.js',
+//        'js/avoid.console.error.js',
         'js/waypoints.min.js',
         'js/wow.min.js',
-//        'js/script.js'
 
 
     ];

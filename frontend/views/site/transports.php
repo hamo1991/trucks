@@ -2,7 +2,7 @@
 
 /* @var $this yii\web\View */
 
-$this->title = 'Transports';
+$this->title = 'Спецтехника';
 ?>
 
 <section class="breadcrumb-area section-padding-80">

@@ -43,14 +43,25 @@
         });
 
 
-        var serviceSlider = $('.service-slider');
-        serviceSlider.owlCarousel({
-            items: 3,
-            loop: true,
-            margin: 15,
-            autoplay: true,
-            smartSpeed: 1000
-        });
+        if (akame_window.width() > 690) {
+            var serviceSlider = $('.service-slider');
+            serviceSlider.owlCarousel({
+                items: 3,
+                loop: true,
+                margin: 15,
+                autoplay: true,
+                smartSpeed: 1000
+            });
+        }else {
+            var serviceSlider = $('.service-slider');
+            serviceSlider.owlCarousel({
+                items: 1,
+                loop: true,
+                autoplay: true,
+                smartSpeed: 1000
+            });
+        }
+
 
 
         $("[data-delay]").each(function () {

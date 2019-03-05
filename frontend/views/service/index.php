@@ -2,7 +2,7 @@
 
 /* @var $this yii\web\View */
 
-$this->title = 'Services';
+$this->title = 'Наши Услуги';
 ?>
 <section class="breadcrumb-area section-padding-80">
     <div class="container">
