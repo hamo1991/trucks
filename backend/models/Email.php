@@ -46,7 +46,7 @@ class Email extends \yii\db\ActiveRecord
         return [
             'id' => 'ID',
             'email' => 'Email',
-            'name' => 'Name',
+            'name' => 'Имя',
             'content' => 'Content',
             'date' => 'Date',
             'tel' => 'Tel',

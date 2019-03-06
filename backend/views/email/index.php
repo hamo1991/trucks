@@ -20,11 +20,11 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'email:email',
-            'name'=>'Название',
-            'content'=>'содержание',
-            'tel'=>'Номер',
-            'date'=>'Дата',
+            'email',
+            'name',
+            'content',
+            'tel',
+            'date',
 
             [
                 'class' => 'yii\grid\ActionColumn',

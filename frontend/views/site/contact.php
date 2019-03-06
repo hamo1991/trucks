@@ -60,7 +60,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 <div class="single-contact-information mb-80">
                     <i class="icon_clock"></i>
                     <h2>Мы Открыты</h2>
-                    <p><?= \frontend\widgets\info\InfoWidget::widget(['action' => 'time']); ?>/p>
+                    <p><?= \frontend\widgets\info\InfoWidget::widget(['action' => 'time']); ?>
                 </div>
             </div>
 
